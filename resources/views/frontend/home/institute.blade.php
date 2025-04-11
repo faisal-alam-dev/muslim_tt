@@ -12,7 +12,7 @@
                 <div class="institute-block_one-inner wow fadeInLeft" data-wow-delay="150ms" data-wow-duration="1000ms">
                     <div class="institute-block_one-bismillah" style="background-image:url({{ asset('frontend/assets/images/icons/bismillah-5.png') }})"></div>
                     <div class="institute-block_one-icon flaticon-quran-1"></div>
-                    <h4 class="institute-block_one-heading"><a href="course-detail.html">Expert Quran <br> Tutor</a></h4>
+                    <h4 class="institute-block_one-heading"><a href="#!">Expert Quran <br> Tutor</a></h4>
                     <div class="institute-block_one-text">All the classes of online Quran teaching are conducted by well qualified Islamic scholars</div>
                 </div>
             </div>
@@ -22,7 +22,7 @@
                 <div class="institute-block_one-inner wow fadeInLeft" data-wow-delay="150ms" data-wow-duration="1000ms">
                     <div class="institute-block_one-bismillah" style="background-image:url({{ asset('frontend/assets/images/icons/bismillah-5.png') }})"></div>
                     <div class="institute-block_one-icon flaticon-pray-1"></div>
-                    <h4 class="institute-block_one-heading"><a href="course-detail.html">We Value Our <br> Students</a></h4>
+                    <h4 class="institute-block_one-heading"><a href="#!">We Value Our <br> Students</a></h4>
                     <div class="institute-block_one-text">All the classes of online Quran teaching are conducted by well qualified Islamic scholars</div>
                 </div>
             </div>
@@ -32,7 +32,7 @@
                 <div class="institute-block_one-inner wow fadeInLeft" data-wow-delay="150ms" data-wow-duration="1000ms">
                     <div class="institute-block_one-bismillah" style="background-image:url({{ asset('frontend/assets/images/icons/bismillah-5.png') }})"></div>
                     <div class="institute-block_one-icon flaticon-education"></div>
-                    <h4 class="institute-block_one-heading"><a href="course-detail.html">Male Female <br> Teachers</a></h4>
+                    <h4 class="institute-block_one-heading"><a href="#!">Male Female <br> Teachers</a></h4>
                     <div class="institute-block_one-text">All the classes of online Quran teaching are conducted by well qualified Islamic scholars</div>
                 </div>
             </div>
@@ -42,7 +42,7 @@
                 <div class="institute-block_one-inner wow fadeInLeft" data-wow-delay="150ms" data-wow-duration="1000ms">
                     <div class="institute-block_one-bismillah" style="background-image:url({{ asset('frontend/assets/images/icons/bismillah-5.png') }})"></div>
                     <div class="institute-block_one-icon flaticon-time-management"></div>
-                    <h4 class="institute-block_one-heading"><a href="course-detail.html">Flexible <br> Timings</a></h4>
+                    <h4 class="institute-block_one-heading"><a href="#!">Flexible <br> Timings</a></h4>
                     <div class="institute-block_one-text">All the classes of online Quran teaching are conducted by well qualified Islamic scholars</div>
                 </div>
             </div>

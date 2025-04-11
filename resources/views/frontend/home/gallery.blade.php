@@ -8,7 +8,7 @@
             </div>
             <!-- Button Box -->
             <div class="gallery-one_button">
-                <a href="contact.html" class="theme-btn btn-style-one">
+                <a href="#!" class="theme-btn btn-style-one">
                     <span class="btn-wrap">
                         <span class="text-one">Quick Start Now</span>
                         <span class="text-two">Quick Start Now</span>
@@ -28,7 +28,7 @@
                         <div class="gallery-block_one-inner">
                             <div class="gallery-block_one-image">
                                 <img src="{{ asset('frontend/assets/images/gallery/1.jpg') }}" alt="" />
-                                <a class="gallery-block_one-arrow theme-btn flaticon-up-right-arrow" href="service-detail.html"></a>
+                                <a class="gallery-block_one-arrow theme-btn flaticon-up-right-arrow" href="#!"></a>
                             </div>
                         </div>
                     </div>
@@ -41,7 +41,7 @@
                         <div class="gallery-block_one-inner">
                             <div class="gallery-block_one-image">
                                 <img src="{{ asset('frontend/assets/images/gallery/2.jpg') }}" alt="" />
-                                <a class="gallery-block_one-arrow theme-btn flaticon-up-right-arrow" href="service-detail.html"></a>
+                                <a class="gallery-block_one-arrow theme-btn flaticon-up-right-arrow" href="#!"></a>
                             </div>
                         </div>
                     </div>
@@ -54,7 +54,7 @@
                         <div class="gallery-block_one-inner">
                             <div class="gallery-block_one-image">
                                 <img src="{{ asset('frontend/assets/images/gallery/3.jpg') }}" alt="" />
-                                <a class="gallery-block_one-arrow theme-btn flaticon-up-right-arrow" href="service-detail.html"></a>
+                                <a class="gallery-block_one-arrow theme-btn flaticon-up-right-arrow" href="#!"></a>
                             </div>
                         </div>
                     </div>
@@ -67,7 +67,7 @@
                         <div class="gallery-block_one-inner">
                             <div class="gallery-block_one-image">
                                 <img src="{{ asset('frontend/assets/images/gallery/4.jpg') }}" alt="" />
-                                <a class="gallery-block_one-arrow theme-btn flaticon-up-right-arrow" href="service-detail.html"></a>
+                                <a class="gallery-block_one-arrow theme-btn flaticon-up-right-arrow" href="#!"></a>
                             </div>
                         </div>
                     </div>

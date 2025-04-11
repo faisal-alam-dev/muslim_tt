@@ -14,7 +14,7 @@
                             <h1 class="slider-one_heading">Islamic Online <br> Madrasah</h1>
                             <div class="slider-one_text">Islamic online madrasah is an ISO certified educational institution of international standards</div>
                             <div class="slider-one_button">
-                                <a href="course-detail.html" class="theme-btn btn-style-two">
+                                <a href="#!" class="theme-btn btn-style-two">
                                     <span class="btn-wrap">
                                         <span class="text-one">Find the course</span>
                                         <span class="text-two">Find the course</span>
@@ -39,7 +39,7 @@
                             <h1 class="slider-one_heading">Islamic Online <br> Madrasah</h1>
                             <div class="slider-one_text">Islamic online madrasah is an ISO certified educational institution of international standards</div>
                             <div class="slider-one_button">
-                                <a href="course-detail.html" class="theme-btn btn-style-two">
+                                <a href="#!" class="theme-btn btn-style-two">
                                     <span class="btn-wrap">
                                         <span class="text-one">Find the course</span>
                                         <span class="text-two">Find the course</span>
@@ -64,7 +64,7 @@
                             <h1 class="slider-one_heading">Islamic Online <br> Madrasah</h1>
                             <div class="slider-one_text">Islamic online madrasah is an ISO certified educational institution of international standards</div>
                             <div class="slider-one_button">
-                                <a href="course-detail.html" class="theme-btn btn-style-two">
+                                <a href="#!" class="theme-btn btn-style-two">
                                     <span class="btn-wrap">
                                         <span class="text-one">Find the course</span>
                                         <span class="text-two">Find the course</span>

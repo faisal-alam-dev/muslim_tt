@@ -30,7 +30,7 @@
                 <div class="d-flex justify-content-between align-items-center flex-wrap">
 
                     <div class="logo-box">
-                        <div class="logo"><a href="index.html"><img src="{{ asset('frontend/assets/images/logo.svg') }}" alt="" title=""></a></div>
+                        <div class="logo"><a href="{{ route('frontend.index') }}"><img src="{{ asset('frontend/assets/images/logo.svg') }}" alt="" title=""></a></div>
                     </div>
 
                     <div class="nav-outer">
@@ -49,68 +49,68 @@
                                 <ul class="navigation clearfix">
                                     <li class="dropdown"><a href="#">Home</a>
                                         <ul>
-                                            <li><a href="index.html">Homepage 01</a></li>
-                                            <li><a href="index-2.html">Homepage 02</a></li>
-                                            <li><a href="index-3.html">Homepage 03</a></li>
-                                            <li><a href="index-4.html">Homepage 04 <i>New</i></a></li>
-                                            <li><a href="index-1.html">Dark Layout 04 <i>New</i></a></li>
+                                            <li><a href="#!">Homepage 01</a></li>
+                                            <li><a href="#!">Homepage 02</a></li>
+                                            <li><a href="#!">Homepage 03</a></li>
+                                            <li><a href="#!">Homepage 04 <i>New</i></a></li>
+                                            <li><a href="#!">Dark Layout 04 <i>New</i></a></li>
                                             <li class="dropdown"><a href="#">Header Styles</a>
                                                 <ul>
-                                                    <li><a href="index.html">Header 01</a></li>
-                                                    <li><a href="index-2.html">Header 02</a></li>
-                                                    <li><a href="index-3.html">Header 03</a></li>
-                                                    <li><a href="index-4.html">Header 04 <i>New</i></a></li>
+                                                    <li><a href="#!">Header 01</a></li>
+                                                    <li><a href="#!">Header 02</a></li>
+                                                    <li><a href="#!">Header 03</a></li>
+                                                    <li><a href="#!">Header 04 <i>New</i></a></li>
                                                 </ul>
                                             </li>
                                         </ul>
                                     </li>
                                     <li class="dropdown"><a href="#">About</a>
                                         <ul>
-                                            <li><a href="about.html">About us</a></li>
-                                            <li><a href="price.html">price</a></li>
+                                            <li><a href="#!">About us</a></li>
+                                            <li><a href="#!">price</a></li>
                                             <li class="dropdown"><a href="#">events</a>
                                                 <ul>
-                                                    <li><a href="events.html">events</a></li>
-                                                    <li><a href="event-detail.html">Event Detail</a></li>
+                                                    <li><a href="#!">events</a></li>
+                                                    <li><a href="#!">Event Detail</a></li>
                                                 </ul>
                                             </li>
                                         </ul>
                                     </li>
                                     <li class="dropdown"><a href="#">Pages</a>
                                         <ul>
-                                            <li><a href="faq.html">Faq's</a></li>
-                                            <li><a href="prayer-time.html">Prayer Time</a></li>
-                                            <li><a href="record-class.html">Record Class</a></li>
-                                            <li><a href="register.html">register</a></li>
-                                            <li><a href="not-found.html">Not Found</a></li>
+                                            <li><a href="#!">Faq's</a></li>
+                                            <li><a href="#!">Prayer Time</a></li>
+                                            <li><a href="#!">Record Class</a></li>
+                                            <li><a href="#!">register</a></li>
+                                            <li><a href="#!">Not Found</a></li>
                                             <li class="dropdown"><a href="#">scholars</a>
                                                 <ul>
-                                                    <li><a href="scholars.html">scholars</a></li>
-                                                    <li><a href="scholar-detail.html">scholar detail</a></li>
+                                                    <li><a href="#!">scholars</a></li>
+                                                    <li><a href="#!">scholar detail</a></li>
                                                 </ul>
                                             </li>
                                         </ul>
                                     </li>
                                     <li class="dropdown"><a href="#">service</a>
                                         <ul>
-                                            <li><a href="services.html">Services</a></li>
-                                            <li><a href="service-detail.html">service detail</a></li>
+                                            <li><a href="#!">Services</a></li>
+                                            <li><a href="#!">service detail</a></li>
                                         </ul>
                                     </li>
                                     <li class="dropdown"><a href="#">courses</a>
                                         <ul>
-                                            <li><a href="courses.html">courses</a></li>
-                                            <li><a href="course-detail.html">course detail</a></li>
+                                            <li><a href="#!">courses</a></li>
+                                            <li><a href="#!">course detail</a></li>
                                         </ul>
                                     </li>
                                     <li class="dropdown"><a href="#">Blog</a>
                                         <ul>
-                                            <li><a href="blog.html">Our Blog</a></li>
-                                            <li><a href="blog-classic.html">Blog Classic</a></li>
-                                            <li><a href="news-detail.html">Blog Detail</a></li>
+                                            <li><a href="#!">Our Blog</a></li>
+                                            <li><a href="#!">Blog Classic</a></li>
+                                            <li><a href="#!">Blog Detail</a></li>
                                         </ul>
                                     </li>
-                                    <li><a href="contact.html">Contact</a></li>
+                                    <li><a href="#!">Contact</a></li>
                                 </ul>
                             </div>
                         </nav>
@@ -123,13 +123,13 @@
                         <div class="search-box-btn search-box-outer"><span class="icon fa fa-search"></span></div>
 
                         <!-- User Box -->
-                        <a class="user-box theme-btn" href="register.html">
+                        <a class="user-box theme-btn" href="#!">
                             <span class="fa-regular fa-user fa-fw"></span>
                         </a>
 
                         <!-- Button Box -->
                         <div class="header_button-box">
-                            <a href="contact.html" class="theme-btn btn-style-one">
+                            <a href="#!" class="theme-btn btn-style-one">
                                 <span class="btn-wrap">
                                     <span class="text-one">Quick Join Now</span>
                                     <span class="text-two">Quick Join Now</span>
@@ -153,7 +153,7 @@
         <div class="close-btn"><span class="icon flaticon-close-1"></span></div>
 
         <nav class="menu-box">
-            <div class="nav-logo"><a href="index.html"><img src="{{ asset('frontend/assets/images/logo.svg') }}" alt="" title=""></a></div>
+            <div class="nav-logo"><a href="{{ route('frontend.index') }}"><img src="{{ asset('frontend/assets/images/logo.svg') }}" alt="" title=""></a></div>
             <div class="menu-outer"><!--Here Menu Will Come Automatically Via Javascript / Same Menu as in Header--></div>
         </nav>
     </div>

@@ -15,11 +15,11 @@
                         <div class="service-block_one-big_icon">
                             <img src="{{ asset('frontend/assets/images/icons/service-1.png') }}" alt="" />
                         </div>
-                        <h4 class="service-block_one-heading"><a href="service-detail.html">Online Quran <br> Classes</a></h4>
+                        <h4 class="service-block_one-heading"><a href="#!">Online Quran <br> Classes</a></h4>
                         <div class="service-block_one-text">There are many variations of passages of lorem ipsum available lorem ipsum dolor sit amet</div>
                     </div>
                     <div class="service-block_one-lower">
-                        <a class="service-block_one-more" href="service-detail.html">Read More<i class="fa-solid fa-arrow-right fa-fw"></i></a>
+                        <a class="service-block_one-more" href="#!">Read More<i class="fa-solid fa-arrow-right fa-fw"></i></a>
                     </div>
                 </div>
             </div>
@@ -32,11 +32,11 @@
                         <div class="service-block_one-big_icon">
                             <img src="{{ asset('frontend/assets/images/icons/service-1.png') }}" alt="" />
                         </div>
-                        <h4 class="service-block_one-heading"><a href="service-detail.html">Tafseer <br> Course</a></h4>
+                        <h4 class="service-block_one-heading"><a href="#!">Tafseer <br> Course</a></h4>
                         <div class="service-block_one-text">There are many variations of passages of lorem ipsum available lorem ipsum dolor sit amet</div>
                     </div>
                     <div class="service-block_one-lower">
-                        <a class="service-block_one-more" href="service-detail.html">Read More<i class="fa-solid fa-arrow-right fa-fw"></i></a>
+                        <a class="service-block_one-more" href="#!">Read More<i class="fa-solid fa-arrow-right fa-fw"></i></a>
                     </div>
                 </div>
             </div>
@@ -49,11 +49,11 @@
                         <div class="service-block_one-big_icon">
                             <img src="{{ asset('frontend/assets/images/icons/service-1.png') }}" alt="" />
                         </div>
-                        <h4 class="service-block_one-heading"><a href="service-detail.html">We Value <br> Our Students</a></h4>
+                        <h4 class="service-block_one-heading"><a href="#!">We Value <br> Our Students</a></h4>
                         <div class="service-block_one-text">There are many variations of passages of lorem ipsum available lorem ipsum dolor sit amet</div>
                     </div>
                     <div class="service-block_one-lower">
-                        <a class="service-block_one-more" href="service-detail.html">Read More<i class="fa-solid fa-arrow-right fa-fw"></i></a>
+                        <a class="service-block_one-more" href="#!">Read More<i class="fa-solid fa-arrow-right fa-fw"></i></a>
                     </div>
                 </div>
             </div>

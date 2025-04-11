@@ -22,7 +22,7 @@
                     </ul>
                     <!-- Button Box -->
                     <div class="price-block_one-button">
-                        <a href="price.html" class="theme-btn btn-style-one">
+                        <a href="#!" class="theme-btn btn-style-one">
                             <span class="btn-wrap">
                                 <span class="text-one">free trial</span>
                                 <span class="text-two">free trial</span>
@@ -47,7 +47,7 @@
                     </ul>
                     <!-- Button Box -->
                     <div class="price-block_one-button">
-                        <a href="price.html" class="theme-btn btn-style-one">
+                        <a href="#!" class="theme-btn btn-style-one">
                             <span class="btn-wrap">
                                 <span class="text-one">free trial</span>
                                 <span class="text-two">free trial</span>
@@ -72,7 +72,7 @@
                     </ul>
                     <!-- Button Box -->
                     <div class="price-block_one-button">
-                        <a href="price.html" class="theme-btn btn-style-one">
+                        <a href="#!" class="theme-btn btn-style-one">
                             <span class="btn-wrap">
                                 <span class="text-one">free trial</span>
                                 <span class="text-two">free trial</span>
@@ -97,7 +97,7 @@
                     </ul>
                     <!-- Button Box -->
                     <div class="price-block_one-button">
-                        <a href="price.html" class="theme-btn btn-style-one">
+                        <a href="#!" class="theme-btn btn-style-one">
                             <span class="btn-wrap">
                                 <span class="text-one">free trial</span>
                                 <span class="text-two">free trial</span>

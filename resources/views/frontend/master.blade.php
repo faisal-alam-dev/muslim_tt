@@ -27,11 +27,6 @@
 
     <div class="page-wrapper">
 
-        <!-- Cursor -->
-        <div class="cursor"></div>
-        <div class="cursor-follower"></div>
-        <!-- Cursor End -->
-
         <!-- Preloader -->
         @include('frontend.body.preloader')
         <!-- End Preloader -->

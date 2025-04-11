@@ -5,7 +5,7 @@
             <h3 class="cta-one_heading">Do not let Shaitan delay you from starting <br> to learn your deen.</h3>
             <!-- Button Box -->
             <div class="cta-one_button">
-                <a href="contact.html" class="theme-btn btn-style-one">
+                <a href="#!" class="theme-btn btn-style-one">
                     <span class="btn-wrap">
                         <span class="text-one">Quick Start Now</span>
                         <span class="text-two">Quick Start Now</span>
