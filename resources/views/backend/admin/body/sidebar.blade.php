@@ -4,8 +4,8 @@
 
         <div class="sidebar-brand">
             <a href="{{ route('admin.dashboard') }}">
-                <img alt="image" src="{{ asset('/frontend/images/favicon.jpg') }}" class="header-logo" />
-                <span class="logo-name">Rahman Anis & Co</span>
+                {{-- <img alt="image" src="{{ asset('/frontend/images/favicon.jpg') }}" class="header-logo" alt="muslim tt logo"/> --}}
+                <span class="logo-name">Muslim TT</span>
             </a>
         </div>
 

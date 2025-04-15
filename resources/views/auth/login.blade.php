@@ -7,7 +7,7 @@
 <head>
     <meta charset="UTF-8">
     <meta content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no" name="viewport">
-    <title>Login | Rahman Anis & Co - CA</title>
+    <title>Login</title>
     {{-- App CSS --}}
     <link rel="stylesheet" href="{{ asset('/backend/assets/css/app.min.css') }}">
     {{-- Bootstrap Social CSS --}}
@@ -97,7 +97,6 @@
 
     </div>
 
-
     {{-- App JS --}}
     <script src="{{ asset('/backend/assets/js/app.min.js') }}"></script>
     {{-- Script JS --}}
@@ -105,8 +104,5 @@
     {{-- Custom JS --}}
     <script src="{{ asset('/backend/assets/js/custom.js') }}"></script>
 </body>
-
-
-<!-- auth-login.html  21 Nov 2019 03:49:32 GMT -->
 
 </html>

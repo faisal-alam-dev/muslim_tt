@@ -67,7 +67,7 @@ class SliderController extends Controller
                 $manager = new ImageManager(new Driver());
                 $name_gen = hexdec(uniqid()) . '.' . $slider_image->getClientOriginalExtension();
                 $image = $manager->read($slider_image);
-                $image->resize(1600, 700);
+                $image->resize(1600, 880);
                 $image->toJpeg(80)->save(base_path('public/uploads/sliders/' . $name_gen));
                 $data->slider_image = 'uploads/sliders/' . $name_gen;
             }
@@ -143,7 +143,7 @@ class SliderController extends Controller
                 $manager = new ImageManager(new Driver());
                 $name_gen = hexdec(uniqid()) . '.' . $slider_image->getClientOriginalExtension();
                 $image = $manager->read($slider_image);
-                $image->resize(1600, 700);
+                $image->resize(1600, 880);
                 $image->toJpeg(80)->save(base_path('public/uploads/sliders/' . $name_gen));
                 $data->slider_image = 'uploads/sliders/' . $name_gen;
             }
