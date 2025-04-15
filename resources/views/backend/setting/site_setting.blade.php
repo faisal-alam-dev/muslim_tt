@@ -130,7 +130,7 @@
                                     <div class="form-group row mb-4">
                                         <div class="col-md-12">
                                             <label class="col-form-label">Branch Address</label>
-                                            <textarea class="form-control @error('branch_address') is-invalid @enderror" name="branch_address" data-parsley-required-message="Site Address is required*" required>{{ $site_setting->branch_address }}</textarea>
+                                            <textarea class="form-control @error('branch_address') is-invalid @enderror" name="branch_address" data-parsley-required-message="Site Address is required*">{{ $site_setting->branch_address }}</textarea>
                                         </div>
                                     </div>
 

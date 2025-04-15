@@ -28,7 +28,7 @@
     <div class="page-wrapper">
 
         <!-- Preloader -->
-        @include('frontend.body.preloader')
+        {{-- @include('frontend.body.preloader') --}}
         <!-- End Preloader -->
 
         <!-- Main Header -->
@@ -90,6 +90,9 @@
     <script src="{{ asset('frontend/assets/js/jquery-ui.js') }}"></script>
     <script src="{{ asset('frontend/assets/js/element-in-view.js') }}"></script>
     <script src="{{ asset('frontend/assets/js/script.js') }}"></script>
+
+    {{-- SweetAlert2 JS --}}
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
 </body>
 

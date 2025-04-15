@@ -47,23 +47,7 @@
 
                             <div class="navbar-collapse collapse clearfix" id="navbarSupportedContent">
                                 <ul class="navigation clearfix">
-                                    <li class="dropdown"><a href="#">Home</a>
-                                        <ul>
-                                            <li><a href="#!">Homepage 01</a></li>
-                                            <li><a href="#!">Homepage 02</a></li>
-                                            <li><a href="#!">Homepage 03</a></li>
-                                            <li><a href="#!">Homepage 04 <i>New</i></a></li>
-                                            <li><a href="#!">Dark Layout 04 <i>New</i></a></li>
-                                            <li class="dropdown"><a href="#">Header Styles</a>
-                                                <ul>
-                                                    <li><a href="#!">Header 01</a></li>
-                                                    <li><a href="#!">Header 02</a></li>
-                                                    <li><a href="#!">Header 03</a></li>
-                                                    <li><a href="#!">Header 04 <i>New</i></a></li>
-                                                </ul>
-                                            </li>
-                                        </ul>
-                                    </li>
+                                    <li><a href="{{ route('frontend.index') }}">Home</a></li>
                                     <li class="dropdown"><a href="#">About</a>
                                         <ul>
                                             <li><a href="#!">About us</a></li>
@@ -110,7 +94,7 @@
                                             <li><a href="#!">Blog Detail</a></li>
                                         </ul>
                                     </li>
-                                    <li><a href="#!">Contact</a></li>
+                                    <li><a href="{{ route('frontend.contact.us') }}">Contact</a></li>
                                 </ul>
                             </div>
                         </nav>
