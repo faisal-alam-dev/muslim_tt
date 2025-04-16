@@ -14,8 +14,8 @@
                         <div class="bismillah"><img src="{{ asset('frontend/assets/images/icons/bismillah.png') }}" alt="" /> </div>
                     </div>
                     <ul class="header-top_list-two">
-                        <li><span class="icon fa-regular fa-sun fa-fw"></span>Sunrise At: 5:15 AM</li>
-                        <li><span class="icon fa-solid fa-moon fa-fw"></span>Sunset At: 4:50 PM</li>
+                        {{-- <li><span class="icon fa-regular fa-sun fa-fw"></span>Sunrise At: 5:15 AM</li>
+                        <li><span class="icon fa-solid fa-moon fa-fw"></span>Sunset At: 4:50 PM</li> --}}
                         <li><span class="icon fa-solid fa-phone fa-fw"></span>Let’s Talk +88 01 27 14 101</li>
                     </ul>
                 </div>
@@ -30,7 +30,7 @@
                 <div class="d-flex justify-content-between align-items-center flex-wrap">
 
                     <div class="logo-box">
-                        <div class="logo"><a href="{{ route('frontend.index') }}"><img src="{{ asset('frontend/assets/images/logo.svg') }}" alt="" title=""></a></div>
+                        <div class="logo"><a href="{{ route('frontend.index') }}"><img src="{{ asset('uploads/demo_logo.png') }}" alt="" title=""></a></div>
                     </div>
 
                     <div class="nav-outer">
@@ -47,54 +47,64 @@
 
                             <div class="navbar-collapse collapse clearfix" id="navbarSupportedContent">
                                 <ul class="navigation clearfix">
-                                    <li><a href="{{ route('frontend.index') }}">Home</a></li>
-                                    <li class="dropdown"><a href="#">About</a>
+                                    <li><a href="{{ route('frontend.index') }}"><i class="fa-solid fa-house"></i></a></li>
+
+                                    <li class="dropdown"><a href="#">Umrah</a>
                                         <ul>
-                                            <li><a href="#!">About us</a></li>
-                                            <li><a href="#!">price</a></li>
-                                            <li class="dropdown"><a href="#">events</a>
-                                                <ul>
-                                                    <li><a href="#!">events</a></li>
-                                                    <li><a href="#!">Event Detail</a></li>
-                                                </ul>
-                                            </li>
+                                            <li><a href="#!">Umrah Packages</a></li>
+                                            <li><a href="#!">Benefit of Umrah</a></li>
+                                            <li><a href="#!">How to perform Umrah</a></li>
+                                            <li><a href="#!">Umrah Visa Requirement</a></li>
                                         </ul>
                                     </li>
-                                    <li class="dropdown"><a href="#">Pages</a>
+
+                                    <li class="dropdown"><a href="#">Hajj</a>
                                         <ul>
-                                            <li><a href="#!">Faq's</a></li>
-                                            <li><a href="#!">Prayer Time</a></li>
-                                            <li><a href="#!">Record Class</a></li>
-                                            <li><a href="#!">register</a></li>
-                                            <li><a href="#!">Not Found</a></li>
-                                            <li class="dropdown"><a href="#">scholars</a>
-                                                <ul>
-                                                    <li><a href="#!">scholars</a></li>
-                                                    <li><a href="#!">scholar detail</a></li>
-                                                </ul>
-                                            </li>
+                                            <li><a href="#!">Hajj Pre Registration</a></li>
+                                            <li><a href="#!">Hajj Visa Requirements</a></li>
+                                            <li><a href="#!">Hajj Packages 2025</a></li>
                                         </ul>
                                     </li>
-                                    <li class="dropdown"><a href="#">service</a>
+
+                                    <li class="dropdown"><a href="#">Facilities</a>
                                         <ul>
-                                            <li><a href="#!">Services</a></li>
-                                            <li><a href="#!">service detail</a></li>
+                                            <li><a href="#!">Visa Processing</a></li>
+                                            <li><a href="#!">Hotel Booking</a></li>
+                                            <li><a href="#!">Ziyarat Tours</a></li>
+                                            <li><a href="#!">Air Ticketing</a></li>
+                                            <li><a href="#!">Umrah Training</a></li>
                                         </ul>
                                     </li>
-                                    <li class="dropdown"><a href="#">courses</a>
+
+                                    <li class="dropdown"><a href="#">Guidance</a>
                                         <ul>
-                                            <li><a href="#!">courses</a></li>
-                                            <li><a href="#!">course detail</a></li>
+                                            <li><a href="#!">Umrah Guideline in English</a></li>
+                                            <li><a href="#!">Umrah Guideline in Bangla</a></li>
                                         </ul>
                                     </li>
-                                    <li class="dropdown"><a href="#">Blog</a>
+
+                                    <li class="dropdown"><a href="#">Management Board</a>
                                         <ul>
-                                            <li><a href="#!">Our Blog</a></li>
-                                            <li><a href="#!">Blog Classic</a></li>
-                                            <li><a href="#!">Blog Detail</a></li>
+                                            <li><a href="#!">Special Da'e</a></li>
+                                            <li><a href="#!">Umrah Guides</a></li>
+                                            <li><a href="#!">Sharia Consultant</a></li>
+                                            <li><a href="#!">Business Associate</a></li>
+                                            <li><a href="#!">Flagship Agency</a></li>
+                                            <li><a href="#!">Board of Director</a></li>
                                         </ul>
                                     </li>
-                                    <li><a href="{{ route('frontend.contact.us') }}">Contact</a></li>
+
+                                    <li class="dropdown"><a href="#">About Us</a>
+                                        <ul>
+                                            <li><a href="#!">Customer Reviews</a></li>
+                                            <li><a href="#!">Awards & Affiliations</a></li>
+                                            <li><a href="#!">Hours & Location</a></li>
+                                            <li><a href="#!">Blog</a></li>
+                                            <li><a href="#!">Career Opportunity</a></li>
+                                            {{-- <li><a href="#!">Contact Us</a></li> --}}
+                                        </ul>
+                                    </li>
+
                                 </ul>
                             </div>
                         </nav>
@@ -104,19 +114,19 @@
                     <div class="outer-box d-flex align-items-center flex-wrap">
 
                         <!-- Search Btn -->
-                        <div class="search-box-btn search-box-outer"><span class="icon fa fa-search"></span></div>
+                        {{-- <div class="search-box-btn search-box-outer"><span class="icon fa fa-search"></span></div> --}}
 
                         <!-- User Box -->
-                        <a class="user-box theme-btn" href="#!">
+                        {{-- <a class="user-box theme-btn" href="#!">
                             <span class="fa-regular fa-user fa-fw"></span>
-                        </a>
+                        </a> --}}
 
                         <!-- Button Box -->
                         <div class="header_button-box">
-                            <a href="#!" class="theme-btn btn-style-one">
+                            <a href="{{ route('frontend.contact.us') }}" class="theme-btn btn-style-one">
                                 <span class="btn-wrap">
-                                    <span class="text-one">Quick Join Now</span>
-                                    <span class="text-two">Quick Join Now</span>
+                                    <span class="text-one">Contact Us</span>
+                                    <span class="text-two">Contact Us</span>
                                 </span>
                             </a>
                         </div>
@@ -137,7 +147,7 @@
         <div class="close-btn"><span class="icon flaticon-close-1"></span></div>
 
         <nav class="menu-box">
-            <div class="nav-logo"><a href="{{ route('frontend.index') }}"><img src="{{ asset('frontend/assets/images/logo.svg') }}" alt="" title=""></a></div>
+            <div class="nav-logo"><a href="{{ route('frontend.index') }}"><img src="{{ asset('uploads/demo_logo.png') }}" alt="" title=""></a></div>
             <div class="menu-outer"><!--Here Menu Will Come Automatically Via Javascript / Same Menu as in Header--></div>
         </nav>
     </div>
