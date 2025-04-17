@@ -67,8 +67,8 @@ class AboutUsController extends Controller
                 $manager = new ImageManager(new Driver());
                 $name_gen = hexdec(uniqid()) . '.' . $about_us_image->getClientOriginalExtension();
                 $image = $manager->read($about_us_image);
-                // $image->resize(464, 500);
-                $image->toJpeg(80)->save(base_path('public/uploads/about_us/' . $name_gen));
+                $image->resize(476, 600);
+                $image->toJpeg(80)->save(public_path('uploads/about_us/' . $name_gen));
                 $data->about_us_image = 'uploads/about_us/' . $name_gen;
             }
 
