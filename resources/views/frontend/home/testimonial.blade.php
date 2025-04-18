@@ -1,113 +1,114 @@
-<section class="testimonial-one" style="background-image:url({{ asset('frontend/assets/images/background/testimonial-one_bg.png') }})">
+<section class="testimonial-three">
+    <div class="testimonial-three_bg" style="background-image:url({{ asset('frontend/assets/images/background/4.png') }})"></div>
     <div class="auto-container">
-        <div class="row clearfix">
-
-            <!-- Image Column -->
-            <div class="testimonial-one_image-column col-lg-4 col-md-12 col-sm-12">
-                <div class="testimonial-one_image">
-                    <img src="{{ asset('frontend/assets/images/resource/testimonial.jpg') }}" alt="" />
-                </div>
-            </div>
-
-            <!-- Carousel Column -->
-            <div class="testimonial-one_carousel-column col-lg-8 col-md-12 col-sm-12">
-                <div class="testimonial-one_carousel-outer">
-
-                    <!-- Ameen -->
-                    <div class="testimonial-one_ameen">
-                        <img src="{{ asset('frontend/assets/images/icons/ameen-2.png') }}" alt="" />
-                    </div>
-
-                    <!-- Carousel -->
-                    <div class="testimonial-one_carousel swiper-container">
-                        <div class="swiper-wrapper">
-
-                            <!-- Slide -->
-                            <div class="swiper-slide">
-                                <!-- Testimonial Block One -->
-                                <div class="testimonial-block_one">
-                                    <div class="testimonial-block_one-inner">
-                                        <div class="testimonial-block_one-rating">
-                                            <span class="fa-regular fa-star fa-fw"></span>
-                                            <span class="fa-regular fa-star fa-fw"></span>
-                                            <span class="fa-regular fa-star fa-fw"></span>
-                                            <span class="fa-regular fa-star fa-fw"></span>
-                                            <span class="fa-regular fa-star fa-fw"></span>
-                                        </div>
-                                        <h4 class="testimonial-block_one-heading">Customers Review</h4>
-                                        <div class="testimonial-block_one-text">Honestly i don’t have enough good words to write about resala academy everyone in resala academy are very nice very calm they are also flexible about your schedules. i just want say</div>
-                                        <div class="testimonial-block_one-author">
-                                            <div class="author-image">
-                                                <img src="{{ asset('frontend/assets/images/resource/author-1.png') }}" alt="" />
-                                            </div>
-                                            Hafiz bin Usif
-                                            <span>Quran Teacher</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <!-- Slide -->
-                            <div class="swiper-slide">
-                                <!-- Testimonial Block One -->
-                                <div class="testimonial-block_one">
-                                    <div class="testimonial-block_one-inner">
-                                        <div class="testimonial-block_one-rating">
-                                            <span class="fa-regular fa-star fa-fw"></span>
-                                            <span class="fa-regular fa-star fa-fw"></span>
-                                            <span class="fa-regular fa-star fa-fw"></span>
-                                            <span class="fa-regular fa-star fa-fw"></span>
-                                            <span class="fa-regular fa-star fa-fw"></span>
-                                        </div>
-                                        <h4 class="testimonial-block_one-heading">Customers Review</h4>
-                                        <div class="testimonial-block_one-text">Honestly i don’t have enough good words to write about resala academy everyone in resala academy are very nice very calm they are also flexible about your schedules. i just want say</div>
-                                        <div class="testimonial-block_one-author">
-                                            <div class="author-image">
-                                                <img src="{{ asset('frontend/assets/images/resource/author-1.png') }}" alt="" />
-                                            </div>
-                                            Hafiz bin Usif
-                                            <span>Quran Teacher</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <!-- Slide -->
-                            <div class="swiper-slide">
-                                <!-- Testimonial Block One -->
-                                <div class="testimonial-block_one">
-                                    <div class="testimonial-block_one-inner">
-                                        <div class="testimonial-block_one-rating">
-                                            <span class="fa-regular fa-star fa-fw"></span>
-                                            <span class="fa-regular fa-star fa-fw"></span>
-                                            <span class="fa-regular fa-star fa-fw"></span>
-                                            <span class="fa-regular fa-star fa-fw"></span>
-                                            <span class="fa-regular fa-star fa-fw"></span>
-                                        </div>
-                                        <h4 class="testimonial-block_one-heading">Customers Review</h4>
-                                        <div class="testimonial-block_one-text">Honestly i don’t have enough good words to write about resala academy everyone in resala academy are very nice very calm they are also flexible about your schedules. i just want say</div>
-                                        <div class="testimonial-block_one-author">
-                                            <div class="author-image">
-                                                <img src="{{ asset('frontend/assets/images/resource/author-1.png') }}" alt="" />
-                                            </div>
-                                            Hafiz bin Usif
-                                            <span>Quran Teacher</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                        </div>
-
-                        <!-- If we need pagination -->
-                        <div class="testimonial-one_pagination"></div>
-
-                    </div>
-                    <!-- End Carousel -->
-
-                </div>
-            </div>
-
+        <!-- Sec Title -->
+        <div class="sec-title style-two centered">
+            <div class="sec-title_title">Testimonials</div>
+            <h2 class="sec-title_heading">Trusted By Thousand Of Travelers</h2>
         </div>
+        <div class="testimonial-three_carousel swiper-container">
+            <div class="swiper-wrapper">
+
+                <!-- Slide -->
+                <div class="swiper-slide">
+                    <!-- Testimonial Block Three -->
+                    <div class="testimonial-block_three">
+                        <div class="testimonial-block_three-inner">
+                            <div class="d-flex justify-content-between align-items-center flex-wrap">
+                                <div class="testimonial-block_three-author">
+                                    <div class="author-image">
+                                        <img src="{{ asset('frontend/assets/images/resource/author-1.png') }}" alt="" />
+                                    </div>
+                                    Hafiz bin Usif
+                                    <span>Quran Teacher</span>
+                                </div>
+                                <div class="testimonial-block_three-rating">
+                                    <span class="fa-regular fa-star fa-fw"></span>
+                                    <span class="fa-regular fa-star fa-fw"></span>
+                                    <span class="fa-regular fa-star fa-fw"></span>
+                                    <span class="fa-regular fa-star fa-fw"></span>
+                                    <span class="fa-regular fa-star fa-fw"></span>
+                                </div>
+                            </div>
+                            <h4 class="testimonial-block_three-heading">Customers Review</h4>
+                            <div class="testimonial-block_three-text">Best platform for learning quran and arabic for kids. the way of teaching is the best and kids feel comfortable with them thank you mishkah for teaching</div>
+
+                            <!-- Icon -->
+                            <div class="testimonial-block_three-icon">
+                                <img src="{{ asset('frontend/assets/images/icons/featured-1.png') }}" alt="" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Slide -->
+                <div class="swiper-slide">
+                    <!-- Testimonial Block Three -->
+                    <div class="testimonial-block_three">
+                        <div class="testimonial-block_three-inner">
+                            <div class="d-flex justify-content-between align-items-center flex-wrap">
+                                <div class="testimonial-block_three-author">
+                                    <div class="author-image">
+                                        <img src="{{ asset('frontend/assets/images/resource/author-1.png') }}" alt="" />
+                                    </div>
+                                    Hafiz bin Usif
+                                    <span>Quran Teacher</span>
+                                </div>
+                                <div class="testimonial-block_three-rating">
+                                    <span class="fa-regular fa-star fa-fw"></span>
+                                    <span class="fa-regular fa-star fa-fw"></span>
+                                    <span class="fa-regular fa-star fa-fw"></span>
+                                    <span class="fa-regular fa-star fa-fw"></span>
+                                    <span class="fa-regular fa-star fa-fw"></span>
+                                </div>
+                            </div>
+                            <h4 class="testimonial-block_three-heading">Customers Review</h4>
+                            <div class="testimonial-block_three-text">Best platform for learning quran and arabic for kids. the way of teaching is the best and kids feel comfortable with them thank you mishkah for teaching</div>
+
+                            <!-- Icon -->
+                            <div class="testimonial-block_three-icon">
+                                <img src="{{ asset('frontend/assets/images/icons/featured-1.png') }}" alt="" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Slide -->
+                <div class="swiper-slide">
+                    <!-- Testimonial Block Three -->
+                    <div class="testimonial-block_three">
+                        <div class="testimonial-block_three-inner">
+                            <div class="d-flex justify-content-between align-items-center flex-wrap">
+                                <div class="testimonial-block_three-author">
+                                    <div class="author-image">
+                                        <img src="{{ asset('frontend/assets/images/resource/author-1.png') }}" alt="" />
+                                    </div>
+                                    Hafiz bin Usif
+                                    <span>Quran Teacher</span>
+                                </div>
+                                <div class="testimonial-block_three-rating">
+                                    <span class="fa-regular fa-star fa-fw"></span>
+                                    <span class="fa-regular fa-star fa-fw"></span>
+                                    <span class="fa-regular fa-star fa-fw"></span>
+                                    <span class="fa-regular fa-star fa-fw"></span>
+                                    <span class="fa-regular fa-star fa-fw"></span>
+                                </div>
+                            </div>
+                            <h4 class="testimonial-block_three-heading">Customers Review</h4>
+                            <div class="testimonial-block_three-text">Best platform for learning quran and arabic for kids. the way of teaching is the best and kids feel comfortable with them thank you mishkah for teaching</div>
+
+                            <!-- Icon -->
+                            <div class="testimonial-block_three-icon">
+                                <img src="{{ asset('frontend/assets/images/icons/featured-1.png') }}" alt="" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <!-- If we need pagination -->
+            <div class="testimonial-three_pagination"></div>
+        </div>
+
     </div>
 </section>

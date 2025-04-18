@@ -23,19 +23,13 @@
     @include('frontend.home.courses')
 
     <!-- CTA One -->
-    @include('frontend.home.cta')
+    {{-- @include('frontend.home.cta') --}}
 
     <!-- Institute One -->
     @include('frontend.home.institute')
 
     <!-- Testimonial One -->
     @include('frontend.home.testimonial')
-
-    <!-- Price One -->
-    @include('frontend.home.price')
-
-    <!-- Gallery One -->
-    @include('frontend.home.gallery')
 
     <!-- News One -->
     @include('frontend.home.news')
