@@ -22,11 +22,21 @@
 
             <li class="dropdown {{ request()->routeIs('admin.slider.list') ? 'active' : '' }}">
                 <a href="#" class="menu-toggle nav-link has-dropdown">
-                    <i data-feather="image"></i>
+                    <i data-feather="list"></i>
                     <span>Home Sliders</span>
                 </a>
                 <ul class="dropdown-menu">
                     <li><a class="nav-link" href="{{ route('admin.slider.list') }}">Slider</a></li>
+                </ul>
+            </li>
+
+            <li class="dropdown {{ request()->routeIs('admin.package.list') ? 'active' : '' }}">
+                <a href="#" class="menu-toggle nav-link has-dropdown">
+                    <i data-feather="list"></i>
+                    <span>Packages</span>
+                </a>
+                <ul class="dropdown-menu">
+                    <li><a class="nav-link" href="{{ route('admin.package.list') }}">Package List</a></li>
                 </ul>
             </li>
 

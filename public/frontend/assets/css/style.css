@@ -163,6 +163,7 @@ Main Slider Section
 	text-transform: capitalize;
 	margin-top: var(--margin-top-20);
 	margin-bottom: var(--margin-bottom-25);
+	line-height: 100px;
 
 	transition: all 900ms ease;
 	-moz-transition: all 900ms ease;
@@ -8338,7 +8339,9 @@ News Three
 
 .news-three {
 	position: relative;
-	padding: 120px 0px 120px;
+	/* padding: 120px 0px 120px; */
+	padding-top: 30px;
+	margin-bottom: 80px;
 }
 
 .news-three_bg {

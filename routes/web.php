@@ -13,6 +13,7 @@ use App\Http\Controllers\Backend\GalleryController;
 use App\Http\Controllers\Backend\JobApplyController;
 use App\Http\Controllers\Backend\OurContentsController;
 use App\Http\Controllers\Backend\OurTeamController;
+use App\Http\Controllers\Backend\PackageController;
 use App\Http\Controllers\Backend\PublicationsController;
 use App\Http\Controllers\Backend\ServiceCategoryController;
 use App\Http\Controllers\Backend\ServiceController;
@@ -112,6 +113,23 @@ Route::group(
                 Route::get('/edit/{id}', 'SliderEdit')->name('edit');
                 Route::post('/update', 'SliderUpdate')->name('update');
                 Route::get('/delete/{id}', 'SliderDelete')->name('delete');
+            },
+        );
+
+        // Package All Routes
+        Route::group(
+            [
+                'prefix' => 'package',
+                'controller' => PackageController::class,
+                'as' => 'package.',
+            ],
+            function () {
+                Route::get('/list', 'PackageList')->name('list');
+                Route::get('/add', 'PackageAdd')->name('add');
+                Route::post('/store', 'PackageStore')->name('store');
+                Route::get('/edit/{id}', 'PackageEdit')->name('edit');
+                Route::post('/update', 'PackageUpdate')->name('update');
+                Route::get('/delete/{id}', 'PackageDelete')->name('delete');
             },
         );
 

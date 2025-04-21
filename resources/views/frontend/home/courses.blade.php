@@ -6,8 +6,8 @@
 
         <!-- Sec Title -->
         <div class="sec-title style-two centered">
-            <div class="sec-title_title">Latest Courses</div>
-            <h2 class="sec-title_heading">Our Arabic & Islamic Courses</h2>
+            <div class="sec-title_title">Latest Packages</div>
+            <h2 class="sec-title_heading">Available Packages from Bangladesh</h2>
         </div>
 
         <div class="swiper-container custom_package_slider">
