@@ -47,10 +47,15 @@ Route::group(
                 'as' => 'frontend.',
             ],
             function () {
+                // Home About Us
+                Route::get('/about-us', 'AboutUs')->name('about.us');
+
+                // Home Packages
+                Route::get('/packages', 'PackagesList')->name('packages.list');
+                Route::get('/packages/{slug}', 'PackageDetails')->name('package.details');
+
                 Route::get('/services', 'AllServiceList')->name('all.services.list');
                 Route::get('/services/{slug}', 'ServiceDetails')->name('service.details');
-
-                Route::get('/about-us', 'AboutUs')->name('about.us');
 
                 Route::get('/important-enlistment', 'ImportantEnlistment')->name('important.enlistment');
 

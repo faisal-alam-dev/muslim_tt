@@ -19,8 +19,8 @@
     <!-- Students One -->
     @include('frontend.home.students')
 
-    <!-- Courses One -->
-    @include('frontend.home.courses')
+    <!-- Packages One -->
+    @include('frontend.home.packages')
 
     <!-- CTA One -->
     {{-- @include('frontend.home.cta') --}}

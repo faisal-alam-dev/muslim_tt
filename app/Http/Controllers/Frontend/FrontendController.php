@@ -12,6 +12,7 @@ use App\Models\Enlistment;
 use App\Models\Gallery;
 use App\Models\OurContents;
 use App\Models\OurTeam;
+use App\Models\Package;
 use App\Models\Publications;
 use App\Models\Service;
 use App\Models\ServiceCategory;
@@ -26,9 +27,14 @@ class FrontendController extends Controller
 {
     public function Index()
     {
+        // For Home Slider
         $slider = Slider::where('status', 'active')->orderBy('id', 'desc')->get();
 
+        // For Home About Us
         $about_us = AboutUs::where('id', 1)->latest()->get()->first();
+
+        // For Home Packages
+        $packages = Package::where('package_status', 'active')->orderBy('id', 'desc')->get();
 
         $services = Service::where('status', 'active')
             ->whereHas('serviceDetail.category', function ($q) {
@@ -47,7 +53,14 @@ class FrontendController extends Controller
 
         $client = Client::where('status', 'active')->orderBy('id', 'desc')->get();
 
-        return view('frontend.index', compact('slider', 'about_us', 'services', 'our_team', 'top_level_team', 'client'));
+        return view('frontend.index', compact('slider', 'about_us', 'packages', 'services', 'our_team', 'top_level_team', 'client'));
+    } // End Method
+
+    public function PackagesDetails($slug)
+    {
+        $service_list = Service::where('status', 'active')->orderBy('title', 'asc')->get();
+        $service = Service::where('slug', $slug)->first();
+        return view('frontend.details.service_details', compact('service_list', 'service'));
     } // End Method
 
     public function ServiceDetails($slug)
