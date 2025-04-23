@@ -56,11 +56,10 @@ class FrontendController extends Controller
         return view('frontend.index', compact('slider', 'about_us', 'packages', 'services', 'our_team', 'top_level_team', 'client'));
     } // End Method
 
-    public function PackagesDetails($slug)
+    public function PackageDetails($slug)
     {
-        $service_list = Service::where('status', 'active')->orderBy('title', 'asc')->get();
-        $service = Service::where('slug', $slug)->first();
-        return view('frontend.details.service_details', compact('service_list', 'service'));
+        $package = Package::where('package_name_slug', $slug)->first();
+        return view('frontend.details.package_details', compact('package'));
     } // End Method
 
     public function ServiceDetails($slug)

@@ -102,7 +102,7 @@
 
                                             <div class="col-md-12 mb-4">
                                                 <label class="col-form-label">Package Price (with food)</label>
-                                                <input type="text" class="form-control @error('package_price_with_food') is-invalid @enderror" name="package_price_with_food" value="{{ $packages->package_price_with_food }}" required data-parsley-required-message="Price is required*">
+                                                <input type="text" class="form-control" name="package_price_with_food" value="{{ $packages->package_price_with_food }}">
                                             </div>
 
                                             <div class="col-md-12 mb-4">
@@ -112,47 +112,47 @@
 
                                             <div class="col-md-12 mb-4">
                                                 <label class="col-form-label">Package Duration Start</label>
-                                                <input type="text" class="form-control @error('package_duration_start') is-invalid @enderror" name="package_duration_start" value="{{ $packages->package_duration_start }}" required data-parsley-required-message="Duration Start is required*">
+                                                <input type="text" class="form-control" name="package_duration_start" value="{{ $packages->package_duration_start }}">
                                             </div>
 
                                             <div class="col-md-12 mb-4">
                                                 <label class="col-form-label">Package Duration</label>
-                                                <input type="text" class="form-control @error('package_duration') is-invalid @enderror" name="package_duration" value="{{ $packages->package_duration }}" required data-parsley-required-message="Duration is required*">
+                                                <input type="text" class="form-control" name="package_duration" value="{{ $packages->package_duration }}">
                                             </div>
 
                                             <div class="col-md-12 mb-4">
                                                 <label class="col-form-label">Package Hotel Makkah</label>
-                                                <input type="text" class="form-control @error('package_hotel_makkah') is-invalid @enderror" name="package_hotel_makkah" value="{{ $packages->package_hotel_makkah }}" required data-parsley-required-message="Hotel Makkah is required*">
+                                                <input type="text" class="form-control" name="package_hotel_makkah" value="{{ $packages->package_hotel_makkah }}">
                                             </div>
 
                                             <div class="col-md-12 mb-4">
                                                 <label class="col-form-label">Package Hotel Madinah</label>
-                                                <input type="text" class="form-control @error('package_hotel_madinah') is-invalid @enderror" name="package_hotel_madinah" value="{{ $packages->package_hotel_madinah }}" required data-parsley-required-message="Hotel Madinah is required*">
+                                                <input type="text" class="form-control" name="package_hotel_madinah" value="{{ $packages->package_hotel_madinah }}">
                                             </div>
 
                                             <div class="col-md-12 mb-4">
                                                 <label class="col-form-label">Package Flights Up</label>
-                                                <input type="text" class="form-control @error('package_flights_up') is-invalid @enderror" name="package_flights_up" value="{{ $packages->package_flights_up }}" required data-parsley-required-message="Flights Up is required*">
+                                                <input type="text" class="form-control" name="package_flights_up" value="{{ $packages->package_flights_up }}">
                                             </div>
 
                                             <div class="col-md-12 mb-4">
                                                 <label class="col-form-label">Package Flights Down</label>
-                                                <input type="text" class="form-control @error('package_flights_down') is-invalid @enderror" name="package_flights_down" value="{{ $packages->package_flights_down }}" required data-parsley-required-message="Flights Down is required*">
+                                                <input type="text" class="form-control" name="package_flights_down" value="{{ $packages->package_flights_down }}">
                                             </div>
 
                                             <div class="col-md-12 mb-4">
                                                 <label class="col-form-label">Package Land Transport</label>
-                                                <input type="text" class="form-control @error('package_land_transport') is-invalid @enderror" name="package_land_transport" value="{{ $packages->package_land_transport }}" required data-parsley-required-message="Land Transport is required*">
+                                                <input type="text" class="form-control" name="package_land_transport" value="{{ $packages->package_land_transport }}">
                                             </div>
 
                                             <div class="col-md-12 mb-4">
                                                 <label class="col-form-label">Package Food</label>
-                                                <input type="text" class="form-control @error('package_food') is-invalid @enderror" name="package_food" value="{{ $packages->package_food }}" required data-parsley-required-message="Food is required*">
+                                                <input type="text" class="form-control" name="package_food" value="{{ $packages->package_food }}">
                                             </div>
 
                                             <div class="col-md-12 mb-4">
                                                 <label class="col-form-label">Package Special Services</label>
-                                                <input type="text" class="form-control @error('package_special_services') is-invalid @enderror" name="package_special_services" value="{{ $packages->package_special_services }}" required data-parsley-required-message="Special Services is required*">
+                                                <input type="text" class="form-control" name="package_special_services" value="{{ $packages->package_special_services }}">
                                             </div>
 
                                         </div>

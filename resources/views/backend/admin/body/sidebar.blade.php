@@ -26,7 +26,7 @@
                     <span>Home Sliders</span>
                 </a>
                 <ul class="dropdown-menu">
-                    <li><a class="nav-link" href="{{ route('admin.slider.list') }}">Slider</a></li>
+                    <li><a class="nav-link" href="{{ route('admin.slider.list') }}">Slider List</a></li>
                 </ul>
             </li>
 
