@@ -121,8 +121,9 @@
                                 <div class="sidebar-title">
                                     <h4>Apply for Package</h4>
                                 </div>
-                                <form action="" method="POST">
+                                <form action="{{ route('frontend.package.confirmation') }}" method="POST">
                                     @csrf
+                                    <input type="hidden" name="package_id" value="{{ $package->id }}">
                                     <div class="form-group">
                                         <label for="full_name">Full Name</label>
                                         <input type="text" id="full_name" name="full_name" class="form-control" placeholder="Enter your full name" required>

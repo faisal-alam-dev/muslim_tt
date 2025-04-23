@@ -17,7 +17,7 @@
     @include('frontend.home.service')
 
     <!-- Students One -->
-    @include('frontend.home.students')
+    {{-- @include('frontend.home.students') --}}
 
     <!-- Packages One -->
     @include('frontend.home.packages')

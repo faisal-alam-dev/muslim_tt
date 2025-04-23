@@ -13,6 +13,7 @@ use App\Models\Gallery;
 use App\Models\OurContents;
 use App\Models\OurTeam;
 use App\Models\Package;
+use App\Models\PackageConfirmation;
 use App\Models\Publications;
 use App\Models\Service;
 use App\Models\ServiceCategory;
@@ -61,6 +62,22 @@ class FrontendController extends Controller
         $package = Package::where('package_name_slug', $slug)->first();
         return view('frontend.details.package_details', compact('package'));
     } // End Method
+
+    public function PackageConfirmation(Request $request)
+    {
+        // dd($request->all());
+
+        $data = new PackageConfirmation();
+        $data->package_id = $request->package_id;
+        $data->user_name = $request->full_name;
+        $data->user_phone = $request->phone;
+        $data->user_email = $request->email;
+        $data->user_message = $request->message;
+        // dd($data);
+        $data->save();
+
+        return view('frontend.confirmation.package_confirmation');
+    }
 
     public function ServiceDetails($slug)
     {
