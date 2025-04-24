@@ -1,3 +1,7 @@
+@php
+    $site_setting = \App\Models\Setting::first();
+@endphp
+
 <footer class="main-footer style-two">
     <div class="footer_bg-image" style="background-image: url({{ asset('frontend/assets/images/background/footer-bg.jpg') }})"></div>
     <div class="auto-container">
@@ -16,8 +20,10 @@
                                     <div class="footer-logo"><a href="{{ route('frontend.index') }}"><img src="{{ asset('uploads/demo_logo_white.png') }}" alt="" title="" width="184px"></a></div>
                                     <!-- Footer List -->
                                     <div class="footer_list">
-                                        <li>58 Howard Street #2 cairo. <br> CA 941</li>
-                                        <li>(+88)311-2121101</li>
+                                        <li>{!! $site_setting->head_address !!}</li>
+                                        <li>{{ $site_setting->site_email }}</li>
+                                        <li>{!! $site_setting->site_phone !!}</li>
+                                        <li>{!! $site_setting->site_phone_alter !!}</li>
                                     </div>
                                     <!-- Social Box -->
                                     <div class="footer_socials">
@@ -53,12 +59,12 @@
                             <!-- Footer Column -->
                             <div class="footer-column col-lg-6 col-md-6 col-sm-12">
                                 <div class="footer-widget links-widget">
-                                    <h4 class="footer-title">Other Link</h4>
+                                    <h4 class="footer-title">Quick Link</h4>
                                     <ul class="footer-list">
-                                        <li><a href="#">Online Courses</a></li>
-                                        <li><a href="#">Audio Listening</a></li>
-                                        <li><a href="#">Sehri & Iftar</a></li>
-                                        <li><a href="#">Our Events</a></li>
+                                        <li><a href="{{ route('frontend.umrah.packages') }}">Umrah Packages</a></li>
+                                        <li><a href="{{ route('frontend.hajj.packages') }}">Hajj Packages</a></li>
+                                        <li><a href="#">Terms of use</a></li>
+                                        <li><a href="{{ route('frontend.privacy.policy') }}">Privacy Policy</a></li>
                                         <li><a href="#">Quran Hifz Classes</a></li>
                                     </ul>
                                 </div>
@@ -90,12 +96,8 @@
     <div class="footer-bottom">
         <div class="footer_bottom-bg" style="background-image: url({{ asset('frontend/assets/images/background/footer-bg_2.jpg') }})"></div>
         <div class="auto-container">
-            <div class="d-flex justify-content-between align-items-center flex-wrap">
-                <div class="copyright">All rights reserved 2025 &copy; template_mr</div>
-                <ul class="footer-nav">
-                    <li><a href="#">Terms of use</a></li>
-                    <li><a href="#">Privacy Policy</a></li>
-                </ul>
+            <div class="text-center">
+                <div class="copyright">All rights reserved 2025 &copy; <a href="{{ route('frontend.index') }}">Muslim Tour and Travels</a>. Developed by <a href="https://nebulaitbd.com/">Nebula IT.</a></div>
             </div>
         </div>
     </div>

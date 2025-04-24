@@ -8691,3 +8691,8 @@ News Three
 	padding: 30px;
 	margin-bottom: 40px;
 }
+
+.custom_font h2 {
+	color: var(--color-nine);
+	font-size: 25px;
+}

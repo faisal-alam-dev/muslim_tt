@@ -17,7 +17,7 @@
     <!-- End Page Title -->
 
     <!-- Error One -->
-    <section class="error-one" style="background-image:url({{ asset('frontend/assets/images/icons/stars.png') }}); padding-bottom: 200px;">
+    <section class="error-one" style="background-image:url({{ asset('frontend/assets/images/icons/stars.png') }});">
         <div class="error-one_icon" style="background-image:url({{ asset('frontend/assets/images/icons/moon.png') }})"></div>
         <div class="auto-container">
             <h2 style="color: #000;">Thank You!</h2>

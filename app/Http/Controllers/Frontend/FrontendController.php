@@ -91,6 +91,25 @@ class FrontendController extends Controller
         return view('frontend.pages.hajj_packages', compact('packages'));
     } // End Method
 
+    public function PrivacyPolicy()
+    {
+        return view('frontend.pages.privacy_policy');
+    } // End Method
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
     public function ServiceDetails($slug)
     {
         $service_list = Service::where('status', 'active')->orderBy('title', 'asc')->get();
@@ -176,10 +195,7 @@ class FrontendController extends Controller
         return view('frontend.details.blog_details', compact('blog', 'author'));
     } // End Method
 
-    public function PrivacyPolicy()
-    {
-        return view('frontend.pages.privacy_policy');
-    } // End Method
+
 
     public function TermsConditions()
     {

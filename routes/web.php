@@ -61,6 +61,9 @@ Route::group(
                 // Hajj Packages
                 Route::get('/hajj-packages', 'HajjPackages')->name('hajj.packages');
 
+                // Privacy Policy
+                Route::get('/privacy-policy', 'PrivacyPolicy')->name('privacy.policy');
+
                 Route::get('/services', 'AllServiceList')->name('all.services.list');
                 Route::get('/services/{slug}', 'ServiceDetails')->name('service.details');
 
