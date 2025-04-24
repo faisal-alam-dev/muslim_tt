@@ -79,6 +79,12 @@ class FrontendController extends Controller
         return view('frontend.confirmation.package_confirmation');
     } // End Method
 
+    public function UmrahPackages()
+    {
+        $packages = Package::where('package_status', 'active')->where('package_type', 'umrah')->orderBy('id', 'desc')->get();
+        return view('frontend.pages.umrah_packages', compact('packages'));
+    } // End Method
+
     public function ServiceDetails($slug)
     {
         $service_list = Service::where('status', 'active')->orderBy('title', 'asc')->get();

@@ -1,4 +1,4 @@
-<footer class="main-footer">
+<footer class="main-footer style-two">
     <div class="footer_bg-image" style="background-image: url({{ asset('frontend/assets/images/background/footer-bg.jpg') }})"></div>
     <div class="auto-container">
         <div class="inner-container">
@@ -13,7 +13,7 @@
                             <!-- Footer Column -->
                             <div class="footer-column col-lg-6 col-md-6 col-sm-12">
                                 <div class="footer-widget logo-widget">
-                                    <div class="footer-logo"><a href="{{ route('frontend.index') }}"><img src="{{ asset('frontend/assets/images/footer-logo.svg') }}" alt="" title=""></a></div>
+                                    <div class="footer-logo"><a href="{{ route('frontend.index') }}"><img src="{{ asset('uploads/demo_logo_white.png') }}" alt="" title="" width="184px"></a></div>
                                     <!-- Footer List -->
                                     <div class="footer_list">
                                         <li>58 Howard Street #2 cairo. <br> CA 941</li>
@@ -70,7 +70,7 @@
                                     <h4 class="footer-title">newsletter</h4>
                                     <div class="footer-text">Waiting for your message is not your important time</div>
                                     <div class="newsletter-box">
-                                        <form method="post" action="">
+                                        <form method="post" action="https://themazine.com/html/Alquran-2/alquran/contact.html">
                                             <div class="form-group">
                                                 <input type="email" name="search-field" value="" placeholder="email address" required>
                                                 <button type="submit" class="theme-btn fa-regular fa-paper-plane fa-fw"></button>
@@ -91,7 +91,7 @@
         <div class="footer_bottom-bg" style="background-image: url({{ asset('frontend/assets/images/background/footer-bg_2.jpg') }})"></div>
         <div class="auto-container">
             <div class="d-flex justify-content-between align-items-center flex-wrap">
-                <div class="copyright">All rights reserved 2025 &copy; <a href="https://nebulaitbd.com/" target="_blank">Nebula IT.</a></div>
+                <div class="copyright">All rights reserved 2025 &copy; template_mr</div>
                 <ul class="footer-nav">
                     <li><a href="#">Terms of use</a></li>
                     <li><a href="#">Privacy Policy</a></li>

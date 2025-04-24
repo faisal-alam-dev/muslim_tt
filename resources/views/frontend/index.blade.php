@@ -13,8 +13,8 @@
     <!-- Welcome One -->
     @include('frontend.home.welcome')
 
-    <!-- Service One -->
-    @include('frontend.home.service')
+    <!-- WHAT WE OFFER -->
+    @include('frontend.home.what_we_offer')
 
     <!-- Students One -->
     {{-- @include('frontend.home.students') --}}

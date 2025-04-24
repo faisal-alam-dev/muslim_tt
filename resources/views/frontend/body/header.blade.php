@@ -30,7 +30,7 @@
                 <div class="d-flex justify-content-between align-items-center flex-wrap">
 
                     <div class="logo-box">
-                        <div class="logo"><a href="{{ route('frontend.index') }}"><img src="{{ asset('uploads/demo_logo.png') }}" alt="" title=""></a></div>
+                        <div class="logo"><a href="{{ route('frontend.index') }}"><img src="{{ asset('uploads/demo_logo.png') }}" alt="" title="" width="184px"></a></div>
                     </div>
 
                     <div class="nav-outer">
@@ -51,7 +51,7 @@
 
                                     <li class="dropdown"><a href="#">Umrah</a>
                                         <ul>
-                                            <li><a href="#!">Umrah Packages</a></li>
+                                            <li><a href="{{ route('frontend.umrah.packages') }}">Umrah Packages</a></li>
                                             <li><a href="#!">Benefit of Umrah</a></li>
                                             <li><a href="#!">How to perform Umrah</a></li>
                                             <li><a href="#!">Umrah Visa Requirement</a></li>

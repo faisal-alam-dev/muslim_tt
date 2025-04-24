@@ -15,11 +15,11 @@
                         <div class="service-block_one-big_icon">
                             <img src="{{ asset('frontend/assets/images/icons/service-1.png') }}" alt="" />
                         </div>
-                        <h4 class="service-block_one-heading"><a href="#!">Umrah Packages</a></h4>
+                        <h4 class="service-block_one-heading"><a href="{{ route('frontend.umrah.packages') }}">Umrah Packages</a></h4>
                         <div class="service-block_one-text">Affordable and hassle-free Umrah packages with visa, flights, hotels, transport, and guided tours. Book now for a spiritual journey of a lifetime!</div>
                     </div>
                     <div class="service-block_one-lower">
-                        <a class="service-block_one-more" href="#!">Read More<i class="fa-solid fa-arrow-right fa-fw"></i></a>
+                        <a class="service-block_one-more" href="{{ route('frontend.umrah.packages') }}">Read More<i class="fa-solid fa-arrow-right fa-fw"></i></a>
                     </div>
                 </div>
             </div>

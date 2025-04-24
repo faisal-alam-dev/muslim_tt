@@ -55,6 +55,9 @@ Route::group(
                 Route::get('/package/{slug}', 'PackageDetails')->name('package.details');
                 Route::post('/package/confirmation', 'PackageConfirmation')->name('package.confirmation');
 
+                // Umrah Packages
+                Route::get('/umrah-packages', 'UmrahPackages')->name('umrah.packages');
+
                 Route::get('/services', 'AllServiceList')->name('all.services.list');
                 Route::get('/services/{slug}', 'ServiceDetails')->name('service.details');
 
