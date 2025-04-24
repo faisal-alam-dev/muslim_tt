@@ -16,6 +16,7 @@
 
             <div class="row ">
 
+                {{-- Sliders --}}
                 <div class="col-xl-4 col-lg-6 col-md-6 col-sm-6 col-xs-12">
                     <div class="card">
                         <div class="card-statistic-4">
@@ -23,13 +24,36 @@
                                 <div class="row ">
                                     <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 pr-0 pt-3">
                                         <div class="card-content">
-                                            <h5 class="font-20"><a href="{{ route('admin.slider.list') }}" class="custom_dashboard_title">Home Sliders</a></h5>
+                                            <h5 class="font-20"><a href="{{ route('admin.slider.list') }}" class="custom_dashboard_title">Sliders</a></h5>
                                             <h2 class="mb-3 font-18">{{ $slider->count() }}</h2>
                                         </div>
                                     </div>
                                     <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 pl-0">
                                         <div class="banner-img">
                                             <img src="{{ asset('/backend/assets/img/banner/1.png') }}" alt="">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                {{-- Package Messages --}}
+                <div class="col-xl-4 col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                    <div class="card">
+                        <div class="card-statistic-4">
+                            <div class="align-items-center justify-content-between">
+                                <div class="row ">
+                                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 pr-0 pt-3">
+                                        <div class="card-content">
+                                            <h5 class="font-20"><a href="{{ url('admin/package/confirmation-message') }}" class="custom_dashboard_title">Package Messages</a></h5>
+                                            <h2 class="mb-3 font-18">{{ $package_messages->count() }}</h2>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 pl-0">
+                                        <div class="banner-img">
+                                            <img src="{{ asset('/backend/assets/img/banner/chairman_message.svg') }}" style="width: 140px;">
                                         </div>
                                     </div>
                                 </div>
@@ -52,28 +76,6 @@
                                     <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 pl-0">
                                         <div class="banner-img">
                                             <img src="{{ asset('/backend/assets/img/banner/about_us.svg') }}" style="width: 140px;">
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-xl-4 col-lg-6 col-md-6 col-sm-6 col-xs-12">
-                    <div class="card">
-                        <div class="card-statistic-4">
-                            <div class="align-items-center justify-content-between">
-                                <div class="row ">
-                                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 pr-0 pt-3">
-                                        <div class="card-content">
-                                            <h5 class="font-20"><a href="{{ url('admin/about-message/list') }}" class="custom_dashboard_title">Managing Partner Message</a></h5>
-                                            <h2 class="mb-3 font-18">{{ $chairman_message->count() }}</h2>
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 pl-0">
-                                        <div class="banner-img">
-                                            <img src="{{ asset('/backend/assets/img/banner/chairman_message.svg') }}" style="width: 140px;">
                                         </div>
                                     </div>
                                 </div>

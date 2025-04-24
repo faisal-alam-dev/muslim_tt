@@ -77,7 +77,7 @@ class FrontendController extends Controller
         $data->save();
 
         return view('frontend.confirmation.package_confirmation');
-    }
+    } // End Method
 
     public function ServiceDetails($slug)
     {

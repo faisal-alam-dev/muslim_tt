@@ -13,14 +13,14 @@
                                 {{-- <div class="slider-one_title">Largest Online Madrasah</div> --}}
                                 <h1 class="slider-one_heading">{!! $item->title !!}</h1>
                                 <div class="slider-one_text">{!! $item->short_description !!}</div>
-                                {{-- <div class="slider-one_button">
-                                <a href="#!" class="theme-btn btn-style-two">
+                                <div class="slider-one_button">
+                                <a href="{{ $item->link }}" class="theme-btn btn-style-two">
                                     <span class="btn-wrap">
-                                        <span class="text-one">Find the package</span>
-                                        <span class="text-two">Find the package</span>
+                                        <span class="text-one">Discover More</span>
+                                        <span class="text-two">Discover More</span>
                                     </span>
                                 </a>
-                            </div> --}}
+                            </div>
                             </div>
                         </div>
 

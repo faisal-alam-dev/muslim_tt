@@ -20,23 +20,26 @@
                 </a>
             </li>
 
+            {{-- Sliders --}}
             <li class="dropdown {{ request()->routeIs('admin.slider.list') ? 'active' : '' }}">
                 <a href="#" class="menu-toggle nav-link has-dropdown">
                     <i data-feather="list"></i>
-                    <span>Home Sliders</span>
+                    <span>Sliders</span>
                 </a>
                 <ul class="dropdown-menu">
                     <li><a class="nav-link" href="{{ route('admin.slider.list') }}">Slider List</a></li>
                 </ul>
             </li>
 
-            <li class="dropdown {{ request()->routeIs('admin.package.list') ? 'active' : '' }}">
+            {{-- Packages --}}
+            <li class="dropdown {{ request()->routeIs(['admin.package.list', 'admin.package.confirmation.message']) ? 'active' : '' }}">
                 <a href="#" class="menu-toggle nav-link has-dropdown">
                     <i data-feather="list"></i>
                     <span>Packages</span>
                 </a>
                 <ul class="dropdown-menu">
                     <li><a class="nav-link" href="{{ route('admin.package.list') }}">Package List</a></li>
+                    <li><a class="nav-link" href="{{ route('admin.package.confirmation.message') }}">Package Messages</a></li>
                 </ul>
             </li>
 
@@ -54,6 +57,7 @@
                     <li><a class="nav-link" href="{{ route('admin.our-team.list') }}">Our Team</a></li>
                 </ul>
             </li>
+
 
             <li class="dropdown {{ request()->routeIs(['admin.service.list', 'admin.client.list']) ? 'active' : '' }}">
                 <a href="#" class="menu-toggle nav-link has-dropdown">

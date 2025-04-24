@@ -136,6 +136,11 @@ Route::group(
                 Route::get('/edit/{id}', 'PackageEdit')->name('edit');
                 Route::post('/update', 'PackageUpdate')->name('update');
                 Route::get('/delete/{id}', 'PackageDelete')->name('delete');
+
+                Route::get('/confirmation-message', 'PackageConfirmationMessage')->name('confirmation.message');
+                Route::post('/confirmation-status', 'PackageConfirmationStatus')->name('confirmation.status');
+                Route::get('/confirmation-delete/{id}', 'PackageConfirmationDelete')->name('confirmation.delete');
+                Route::post('/confirmation-bulk-delete', 'PackageConfirmationBulkDelete')->name('confirmation.bulk.delete');
             },
         );
 

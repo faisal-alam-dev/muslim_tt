@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Backend;
 
 use App\Http\Controllers\Controller;
 use App\Models\Package;
+use App\Models\PackageConfirmation;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Log;
@@ -159,4 +160,65 @@ class PackageController extends Controller
             return redirect()->back()->with('error', 'Something went wrong!')->withInput();
         }
     } // End Method
+
+    // ==========================================================================
+    //                  Package Confirmation Message
+    // ==========================================================================
+    public function PackageConfirmationMessage()
+    {
+        $title = 'Package Confirmation Message List';
+
+        $package_confirmation_message = PackageConfirmation::latest()->get();
+
+        return view('backend.packages.confirmation_message', compact('title', 'package_confirmation_message'));
+    } // End Method
+
+    public function PackageConfirmationStatus(Request $request)
+    {
+        try {
+            DB::beginTransaction();
+
+            $data = PackageConfirmation::findOrFail($request->id);
+            $data->status = $request->status;
+            $data->save();
+
+            DB::commit();
+
+            return redirect()->route('admin.package.confirmation.message')->with('success', 'Package Confirmation Status Updated Successfully');
+        } catch (\Exception $e) {
+            DB::rollBack();
+            Log::error('Error occurred while updating package confirmation status: ' . $e->getMessage());
+            return redirect()->back()->with('error', 'Something went wrong!');
+        }
+    }
+
+    public function PackageConfirmationDelete($id)
+    {
+        DB::beginTransaction();
+
+        try {
+            $data = PackageConfirmation::findOrFail($id);
+            $data->delete();
+
+            DB::commit();
+
+            return redirect()->route('admin.package.confirmation.message')->with('success', 'Package Confirmation Deleted Successfully');
+        } catch (\Exception $e) {
+            DB::rollBack();
+
+            Log::error('Error occurred while deleting package confirmation: ' . $e->getMessage());
+
+            return redirect()->back()->with('error', 'Something Went Wrong!');
+        }
+    } // End Method
+
+    public function PackageConfirmationBulkDelete(Request $request)
+    {
+        $ids = $request->ids;
+        if (!empty($ids)) {
+            PackageConfirmation::whereIn('id', $ids)->delete();
+            return redirect()->back()->with('success', 'Selected package confirmations have been deleted successfully');
+        }
+        return redirect()->back()->with('error', 'No package confirmations selected for deletion');
+    }
 }

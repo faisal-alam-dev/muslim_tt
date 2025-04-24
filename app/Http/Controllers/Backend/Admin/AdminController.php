@@ -8,6 +8,7 @@ use App\Models\Blog;
 use App\Models\Contact;
 use App\Models\Gallery;
 use App\Models\OurTeam;
+use App\Models\PackageConfirmation;
 use App\Models\Service;
 use App\Models\Slider;
 use App\Models\User;
@@ -26,9 +27,11 @@ class AdminController extends Controller
     {
         $slider = Slider::where('status', 'active')->latest()->get();
 
+        $package_messages = PackageConfirmation::latest()->get();
+
         $about_us = AboutUs::where('id', 1)->latest()->get();
 
-        $chairman_message = AboutUs::where('id', 2)->latest()->get();
+        // $chairman_message = AboutUs::where('id', 2)->latest()->get();
 
         $our_team = OurTeam::where('status', 'active')->latest()->get();
 
@@ -38,7 +41,7 @@ class AdminController extends Controller
 
         $contact_message = Contact::latest()->get();
 
-        return view('backend.admin.index', compact('slider', 'about_us', 'chairman_message', 'our_team', 'service', 'galleries', 'contact_message'));
+        return view('backend.admin.index', compact('slider', 'package_messages', 'about_us', 'our_team', 'service', 'galleries', 'contact_message'));
     } // End Method
 
     public function AdminLogout(Request $request)
