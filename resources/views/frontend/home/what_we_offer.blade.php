@@ -32,11 +32,11 @@
                         <div class="service-block_one-big_icon">
                             <img src="{{ asset('frontend/assets/images/icons/service-1.png') }}" alt="" />
                         </div>
-                        <h4 class="service-block_one-heading"><a href="#!">Hajj Packages</a></h4>
+                        <h4 class="service-block_one-heading"><a href="{{ route('frontend.hajj.packages') }}">Hajj Packages</a></h4>
                         <div class="service-block_one-text">All-inclusive Hajj packages with visa, flights, hotels, transport, and guided rituals. Secure your spot for a smooth and sacred pilgrimage experience.</div>
                     </div>
                     <div class="service-block_one-lower">
-                        <a class="service-block_one-more" href="#!">Read More<i class="fa-solid fa-arrow-right fa-fw"></i></a>
+                        <a class="service-block_one-more" href="{{ route('frontend.hajj.packages') }}">Read More<i class="fa-solid fa-arrow-right fa-fw"></i></a>
                     </div>
                 </div>
             </div>

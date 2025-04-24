@@ -58,6 +58,9 @@ Route::group(
                 // Umrah Packages
                 Route::get('/umrah-packages', 'UmrahPackages')->name('umrah.packages');
 
+                // Hajj Packages
+                Route::get('/hajj-packages', 'HajjPackages')->name('hajj.packages');
+
                 Route::get('/services', 'AllServiceList')->name('all.services.list');
                 Route::get('/services/{slug}', 'ServiceDetails')->name('service.details');
 

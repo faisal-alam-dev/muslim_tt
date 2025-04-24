@@ -60,9 +60,9 @@
 
                                     <li class="dropdown"><a href="#">Hajj</a>
                                         <ul>
+                                            <li><a href="{{ route('frontend.hajj.packages') }}">Hajj Packages</a></li>
                                             <li><a href="#!">Hajj Pre Registration</a></li>
                                             <li><a href="#!">Hajj Visa Requirements</a></li>
-                                            <li><a href="#!">Hajj Packages 2025</a></li>
                                         </ul>
                                     </li>
 
