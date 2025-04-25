@@ -101,20 +101,18 @@ class FrontendController extends Controller
         return view('frontend.pages.privacy_policy');
     } // End Method
 
+    public function BlogList()
+    {
+        return view('frontend.pages.blog');
+    } // End Method
 
+    public function BlogDetails()
+    {
+        // $blog = Blog::where('slug', $slug)->first();
+        // $author = User::where('id', $blog->created_by)->first()->name;
+        return view('frontend.details.blog_details');
+    } // End Method
 
-
-
-
-
-
-
-
-
-
-
-
-    
     public function ServiceDetails($slug)
     {
         $service_list = Service::where('status', 'active')->orderBy('title', 'asc')->get();
@@ -187,20 +185,18 @@ class FrontendController extends Controller
         return view('frontend.pages.contact_us', compact('site_setting'));
     } // End Method
 
-    public function BlogList()
-    {
-        $blog = Blog::where('status', 'active')->latest()->get();
-        return view('frontend.pages.our_blog', compact('blog'));
-    } // End Method
+    // public function BlogList()
+    // {
+    //     $blog = Blog::where('status', 'active')->latest()->get();
+    //     return view('frontend.pages.our_blog', compact('blog'));
+    // }
 
-    public function BlogDetails($slug)
-    {
-        $blog = Blog::where('slug', $slug)->first();
-        $author = User::where('id', $blog->created_by)->first()->name;
-        return view('frontend.details.blog_details', compact('blog', 'author'));
-    } // End Method
-
-
+    // public function BlogDetails($slug)
+    // {
+    //     $blog = Blog::where('slug', $slug)->first();
+    //     $author = User::where('id', $blog->created_by)->first()->name;
+    //     return view('frontend.details.blog_details', compact('blog', 'author'));
+    // }
 
     public function TermsConditions()
     {

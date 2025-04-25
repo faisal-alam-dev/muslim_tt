@@ -44,7 +44,7 @@
                                         <li><a href="#">Scholars</a></li>
                                         <li><a href="#">Courses</a></li>
                                         <li><a href="#">Latest News</a></li>
-                                        <li><a href="#">Contact</a></li>
+                                        <li><a href="{{ route('frontend.contact.us') }}">Contact</a></li>
                                     </ul>
                                 </div>
                             </div>

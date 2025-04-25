@@ -47,7 +47,16 @@
 
                             <div class="navbar-collapse collapse clearfix" id="navbarSupportedContent">
                                 <ul class="navigation clearfix">
-                                    <li><a href="{{ route('frontend.index') }}"><i class="fa-solid fa-house"></i></a></li>
+
+                                    <li><a href="{{ route('frontend.index') }}">Home</a></li>
+
+                                    <li class="dropdown"><a href="#">About Us</a>
+                                        <ul>
+                                            <li><a href="#!">About Us</a></li>
+                                            <li><a href="#!">Customer Reviews</a></li>
+                                            <li><a href="#!">Board of Director</a></li>
+                                        </ul>
+                                    </li>
 
                                     <li class="dropdown"><a href="#">Umrah</a>
                                         <ul>
@@ -83,27 +92,7 @@
                                         </ul>
                                     </li>
 
-                                    <li class="dropdown"><a href="#">Management Board</a>
-                                        <ul>
-                                            <li><a href="#!">Special Da'e</a></li>
-                                            <li><a href="#!">Umrah Guides</a></li>
-                                            <li><a href="#!">Sharia Consultant</a></li>
-                                            <li><a href="#!">Business Associate</a></li>
-                                            <li><a href="#!">Flagship Agency</a></li>
-                                            <li><a href="#!">Board of Director</a></li>
-                                        </ul>
-                                    </li>
-
-                                    <li class="dropdown"><a href="#">About Us</a>
-                                        <ul>
-                                            <li><a href="#!">Customer Reviews</a></li>
-                                            <li><a href="#!">Awards & Affiliations</a></li>
-                                            <li><a href="#!">Hours & Location</a></li>
-                                            <li><a href="#!">Blog</a></li>
-                                            <li><a href="#!">Career Opportunity</a></li>
-                                            {{-- <li><a href="#!">Contact Us</a></li> --}}
-                                        </ul>
-                                    </li>
+                                    <li><a href="{{ route('frontend.blog.list') }}">Blog</a></li>
 
                                 </ul>
                             </div>

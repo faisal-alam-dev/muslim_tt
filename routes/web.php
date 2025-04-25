@@ -50,7 +50,7 @@ Route::group(
                 // Home About Us
                 Route::get('/about-us', 'AboutUs')->name('about.us');
 
-                // Home Packages
+                // Packages
                 Route::get('/package', 'PackagesList')->name('packages.list');
                 Route::get('/package/{slug}', 'PackageDetails')->name('package.details');
                 Route::post('/package/confirmation', 'PackageConfirmation')->name('package.confirmation');
@@ -66,6 +66,11 @@ Route::group(
 
                 // Privacy Policy
                 Route::get('/privacy-policy', 'PrivacyPolicy')->name('privacy.policy');
+
+                // Blog
+                Route::get('/blog', 'BlogList')->name('blog.list');
+                // Route::get('/blog/{slug}', 'BlogDetails')->name('blog.details');
+                Route::get('/blog-details', 'BlogDetails')->name('blog.details');
 
                 Route::get('/services', 'AllServiceList')->name('all.services.list');
                 Route::get('/services/{slug}', 'ServiceDetails')->name('service.details');

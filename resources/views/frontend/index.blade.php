@@ -31,8 +31,8 @@
     <!-- Testimonial One -->
     @include('frontend.home.testimonial')
 
-    <!-- News One -->
-    @include('frontend.home.news')
+    <!-- Blog -->
+    @include('frontend.home.blog')
 
     <!-- CTA One -->
     @include('frontend.home.cta_two')
