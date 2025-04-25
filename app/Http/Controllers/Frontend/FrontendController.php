@@ -91,6 +91,11 @@ class FrontendController extends Controller
         return view('frontend.pages.hajj_packages', compact('packages'));
     } // End Method
 
+    public function TermsOfUse()
+    {
+        return view('frontend.pages.terms_of_use');
+    } // End Method
+
     public function PrivacyPolicy()
     {
         return view('frontend.pages.privacy_policy');
