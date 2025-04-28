@@ -1,3 +1,8 @@
+@php
+    $site_setting = \App\Models\Setting::first();
+@endphp
+
+
 <!DOCTYPE html>
 <html>
 

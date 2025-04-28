@@ -8,15 +8,15 @@
                     <div class="left-box d-flex align-items-center flex-wrap">
                         <!-- Info List -->
                         <ul class="header-top_list">
-                            <li><span class="icon fa-solid fa-envelope fa-fw"></span>Support24@gmail.com</li>
-                            <li><span class="icon fa-solid fa-location-dot fa-fw"></span>Suite 80 Golden Street Germeney</li>
+                            <li><span class="icon fa-solid fa-envelope fa-fw"></span>{{ $site_setting->site_email }}</li>
+                            <li><span class="icon fa-solid fa-location-dot fa-fw"></span>{!! $site_setting->head_address !!}y</li>
                         </ul>
                         <div class="bismillah"><img src="{{ asset('frontend/assets/images/icons/bismillah.png') }}" alt="" /> </div>
                     </div>
                     <ul class="header-top_list-two">
                         {{-- <li><span class="icon fa-regular fa-sun fa-fw"></span>Sunrise At: 5:15 AM</li>
                         <li><span class="icon fa-solid fa-moon fa-fw"></span>Sunset At: 4:50 PM</li> --}}
-                        <li><span class="icon fa-solid fa-phone fa-fw"></span>Let’s Talk +88 01 27 14 101</li>
+                        <li><span class="icon fa-solid fa-phone fa-fw"></span>Let’s Talk {!! $site_setting->site_phone !!}</li>
                     </ul>
                 </div>
             </div>

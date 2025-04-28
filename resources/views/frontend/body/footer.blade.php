@@ -1,7 +1,3 @@
-@php
-    $site_setting = \App\Models\Setting::first();
-@endphp
-
 <footer class="main-footer style-two">
     <div class="footer_bg-image" style="background-image: url({{ asset('frontend/assets/images/background/footer-bg.jpg') }})"></div>
     <div class="auto-container">
