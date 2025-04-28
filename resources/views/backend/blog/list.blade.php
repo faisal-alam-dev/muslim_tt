@@ -1,6 +1,6 @@
 @extends('backend.admin.master')
 
-@section('admin_title', $title )
+@section('admin_title', $title)
 
 @section('admin_content')
 
@@ -35,7 +35,6 @@
 
                                         <thead>
                                             <tr>
-                                                <th>SN</th>
                                                 <th>Image</th>
                                                 <th>Title</th>
                                                 <th>Category</th>
@@ -47,7 +46,6 @@
                                         <tbody>
                                             @foreach ($blogs as $key => $item)
                                                 <tr>
-                                                    <td>{{ $blogs->count() - $key }}</td>
                                                     <td>
                                                         @if ($item->blogDetail && $item->blogDetail->blog_image)
                                                             <div class="table_slider_list_image" style="background-image: url({{ asset($item->blogDetail->blog_image) }});"></div>

@@ -1,6 +1,6 @@
 @extends('backend.admin.master')
 
-@section('admin_title', $title )
+@section('admin_title', $title)
 
 @section('admin_content')
 
@@ -61,12 +61,12 @@
                                         </div>
                                     </div>
 
-                                    <div class="form-group row mb-4">
+                                    {{-- <div class="form-group row mb-4">
                                         <div class="col-md-8">
                                             <label class="col-form-label">Short Description</label>
                                             <textarea name="short_description" rows="4" class="form-control @error('short_description') is-invalid @enderror" required data-parsley-required-message="Service Short Description is required*">{{ old('short_description') }}</textarea>
                                         </div>
-                                    </div>
+                                    </div> --}}
 
                                     <div class="form-group row mb-4">
                                         <div class="col-md-8">

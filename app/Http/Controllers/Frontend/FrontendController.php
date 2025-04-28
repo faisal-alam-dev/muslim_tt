@@ -37,6 +37,9 @@ class FrontendController extends Controller
         // For Home Packages
         $packages = Package::where('package_status', 'active')->orderBy('id', 'desc')->get();
 
+        // For Home Blogs
+        $blog = Blog::where('status', 'active')->latest()->take(3)->get();
+
         $services = Service::where('status', 'active')
             ->whereHas('serviceDetail.category', function ($q) {
                 $q->where('name', 'home');
@@ -54,7 +57,7 @@ class FrontendController extends Controller
 
         $client = Client::where('status', 'active')->orderBy('id', 'desc')->get();
 
-        return view('frontend.index', compact('slider', 'about_us', 'packages', 'services', 'our_team', 'top_level_team', 'client'));
+        return view('frontend.index', compact('slider', 'about_us', 'packages', 'blog', 'services', 'our_team', 'top_level_team', 'client'));
     } // End Method
 
     public function PackageDetails($slug)
@@ -103,14 +106,17 @@ class FrontendController extends Controller
 
     public function BlogList()
     {
-        return view('frontend.pages.blog');
+        $blog = Blog::where('status', 'active')->latest()->get();
+        return view('frontend.pages.blog', compact('blog'));
     } // End Method
 
-    public function BlogDetails()
+    public function BlogDetails($slug)
     {
-        // $blog = Blog::where('slug', $slug)->first();
-        // $author = User::where('id', $blog->created_by)->first()->name;
-        return view('frontend.details.blog_details');
+        $blog_details = Blog::where('slug', $slug)->first();
+
+        $blog = Blog::where('status', 'active')->latest()->take(3)->get();
+
+        return view('frontend.details.blog_details', compact('blog_details', 'blog'));
     } // End Method
 
     public function ServiceDetails($slug)
@@ -184,12 +190,6 @@ class FrontendController extends Controller
         $site_setting = Setting::first();
         return view('frontend.pages.contact_us', compact('site_setting'));
     } // End Method
-
-    // public function BlogList()
-    // {
-    //     $blog = Blog::where('status', 'active')->latest()->get();
-    //     return view('frontend.pages.our_blog', compact('blog'));
-    // }
 
     // public function BlogDetails($slug)
     // {

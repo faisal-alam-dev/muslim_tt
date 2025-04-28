@@ -1,6 +1,6 @@
 @extends('backend.admin.master')
 
-@section('admin_title', $title )
+@section('admin_title', $title)
 
 @section('admin_content')
 
@@ -64,12 +64,12 @@
                                         </div>
                                     </div>
 
-                                    <div class="form-group row mb-4">
+                                    {{-- <div class="form-group row mb-4">
                                         <div class="col-md-8">
                                             <label class="col-form-label">Short Description</label>
                                             <textarea name="short_description" class="form-control">{{ $blogDetails->short_description ?? '' }}</textarea>
                                         </div>
-                                    </div>
+                                    </div> --}}
 
                                     <div class="form-group row mb-4">
                                         <div class="col-md-8">

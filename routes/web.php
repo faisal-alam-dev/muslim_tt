@@ -69,8 +69,7 @@ Route::group(
 
                 // Blog
                 Route::get('/blog', 'BlogList')->name('blog.list');
-                // Route::get('/blog/{slug}', 'BlogDetails')->name('blog.details');
-                Route::get('/blog-details', 'BlogDetails')->name('blog.details');
+                Route::get('/blog-details/{slug}', 'BlogDetails')->name('blog.details');
 
                 Route::get('/services', 'AllServiceList')->name('all.services.list');
                 Route::get('/services/{slug}', 'ServiceDetails')->name('service.details');

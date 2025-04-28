@@ -15,4 +15,9 @@ class Blog extends Model
     {
         return $this->hasOne(BlogDetails::class, 'blog_id', 'id');
     }
+
+    public function user()
+    {
+        return $this->belongsTo(User::class, 'created_by', 'id')->orWhere('updated_by', 'id');
+    }
 }

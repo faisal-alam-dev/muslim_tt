@@ -41,7 +41,7 @@ class BlogController extends Controller
                 'title' => 'required|max:100',
                 'blog_category_id' => 'required|integer|exists:blog_categories,id',
                 'blog_image' => 'required|image|mimes:jpeg,png,jpg|max:1024',
-                'short_description' => 'required|string|max:150',
+                // 'short_description' => 'required|string|max:150',
                 'long_description' => 'required|string',
             ],
             [
@@ -54,8 +54,8 @@ class BlogController extends Controller
                 'blog_image.image' => 'Blog image must be an image',
                 'blog_image.mimes' => 'Blog image must be a file of type: jpeg, png, jpg, gif, svg',
                 'blog_image.max' => 'Blog image must be less than 1MB',
-                'short_description.required' => 'Short description is required',
-                'short_description.max' => 'Short description must be less than 150 characters',
+                // 'short_description.required' => 'Short description is required',
+                // 'short_description.max' => 'Short description must be less than 150 characters',
                 'long_description.required' => 'Long description is required',
             ],
         );
@@ -77,7 +77,7 @@ class BlogController extends Controller
             $blogDetails = new BlogDetails();
             $blogDetails->blog_id = $blog->id;
             $blogDetails->blog_category_id = $request->blog_category_id;
-            $blogDetails->short_description = $request->short_description;
+            // $blogDetails->short_description = $request->short_description;
             $blogDetails->long_description = $request->long_description;
             $blogDetails->meta_title = $request->meta_title;
             $blogDetails->meta_description = $request->meta_description;
@@ -88,7 +88,7 @@ class BlogController extends Controller
                 $manager = new ImageManager(new Driver());
                 $name_gen = hexdec(uniqid()) . '.' . $blog_image->getClientOriginalExtension();
                 $image = $manager->read($blog_image);
-                // $image->resize(1600, 500);
+                $image->resize(1542, 1100);
                 $image->toJpeg(80)->save(base_path('public/uploads/blog/' . $name_gen));
                 $blogDetails->blog_image = 'uploads/blog/' . $name_gen;
             }
@@ -124,7 +124,7 @@ class BlogController extends Controller
                 'title' => 'required|max:100',
                 'blog_category_id' => 'required|integer|exists:blog_categories,id',
                 'blog_image' => 'image|mimes:jpeg,png,jpg|max:1024',
-                'short_description' => 'required|string|max:150',
+                // 'short_description' => 'required|string|max:150',
                 'long_description' => 'required|string',
                 'status' => 'required',
             ],
@@ -138,8 +138,8 @@ class BlogController extends Controller
                 'blog_image.image' => 'Blog image must be an image',
                 'blog_image.mimes' => 'Blog image must be a file of type: jpeg, png, jpg, gif, svg',
                 'blog_image.max' => 'Blog image must be less than 1MB',
-                'short_description.required' => 'Short description is required',
-                'short_description.max' => 'Short description must be less than 150 characters',
+                // 'short_description.required' => 'Short description is required',
+                // 'short_description.max' => 'Short description must be less than 150 characters',
                 'long_description.required' => 'Long description is required',
                 'status.required' => 'Status is required',
             ],
@@ -169,7 +169,7 @@ class BlogController extends Controller
                 $blogDetails->blog_id = $blog->id;
             }
             $blogDetails->blog_category_id = $request->blog_category_id;
-            $blogDetails->short_description = $request->short_description;
+            // $blogDetails->short_description = $request->short_description;
             $blogDetails->long_description = $request->long_description;
             $blogDetails->meta_title = $request->meta_title;
             $blogDetails->meta_description = $request->meta_description;
@@ -183,7 +183,7 @@ class BlogController extends Controller
                 $manager = new ImageManager(new Driver());
                 $name_gen = hexdec(uniqid()) . '.' . $blog_image->getClientOriginalExtension();
                 $image = $manager->read($blog_image);
-                // $image->resize(1600, 500);
+                $image->resize(1542, 1100);
                 $image->toJpeg(80)->save(base_path('public/uploads/blog/' . $name_gen));
                 $blogDetails->blog_image = 'uploads/blog/' . $name_gen;
             }
@@ -214,7 +214,7 @@ class BlogController extends Controller
 
             $imagePath = public_path($blogDetails->blog_image);
             if (is_file($imagePath) && file_exists($imagePath)) {
-                unlink($imagePath); 
+                unlink($imagePath);
             }
 
             $blog->delete();
