@@ -39,7 +39,7 @@
                 </a>
                 <ul class="dropdown-menu">
                     <li><a class="nav-link" href="{{ route('admin.package.list') }}">Package List</a></li>
-                    <li><a class="nav-link" href="{{ route('admin.package.confirmation.message') }}">Package Messages</a></li>
+                    <li><a class="nav-link" href="{{ route('admin.package.confirmation.message') }}">Package Booking</a></li>
                 </ul>
             </li>
 

@@ -166,7 +166,7 @@ class PackageController extends Controller
     // ==========================================================================
     public function PackageConfirmationMessage()
     {
-        $title = 'Package Confirmation Message List';
+        $title = 'Package Booking List';
 
         $package_confirmation_message = PackageConfirmation::latest()->get();
 
@@ -184,10 +184,10 @@ class PackageController extends Controller
 
             DB::commit();
 
-            return redirect()->route('admin.package.confirmation.message')->with('success', 'Package Confirmation Status Updated Successfully');
+            return redirect()->route('admin.package.confirmation.message')->with('success', 'Package Booking Status Updated Successfully');
         } catch (\Exception $e) {
             DB::rollBack();
-            Log::error('Error occurred while updating package confirmation status: ' . $e->getMessage());
+            Log::error('Error occurred while updating package booking status: ' . $e->getMessage());
             return redirect()->back()->with('error', 'Something went wrong!');
         }
     }
@@ -198,15 +198,25 @@ class PackageController extends Controller
 
         try {
             $data = PackageConfirmation::findOrFail($id);
+
+            if (!$data) {
+                abort(404);
+            }
+
+            $filePath = public_path($data->nid_passport);
+            if (is_file($filePath) && file_exists($filePath)) {
+                unlink($filePath);
+            }
+
             $data->delete();
 
             DB::commit();
 
-            return redirect()->route('admin.package.confirmation.message')->with('success', 'Package Confirmation Deleted Successfully');
+            return redirect()->route('admin.package.confirmation.message')->with('success', 'Package Booking Deleted Successfully');
         } catch (\Exception $e) {
             DB::rollBack();
 
-            Log::error('Error occurred while deleting package confirmation: ' . $e->getMessage());
+            Log::error('Error occurred while deleting package booking: ' . $e->getMessage());
 
             return redirect()->back()->with('error', 'Something Went Wrong!');
         }
@@ -216,9 +226,19 @@ class PackageController extends Controller
     {
         $ids = $request->ids;
         if (!empty($ids)) {
+            $files = PackageConfirmation::whereIn('id', $ids)->pluck('nid_passport');
+
+            foreach ($files as $file) {
+                $filePath = public_path($file);
+                if (is_file($filePath) && file_exists($filePath)) {
+                    unlink($filePath);
+                }
+            }
+
             PackageConfirmation::whereIn('id', $ids)->delete();
-            return redirect()->back()->with('success', 'Selected package confirmations have been deleted successfully');
+
+            return redirect()->back()->with('success', 'Selected package bookings have been deleted successfully');
         }
-        return redirect()->back()->with('error', 'No package confirmations selected for deletion');
+        return redirect()->back()->with('error', 'No package bookings selected for deletion');
     }
 }

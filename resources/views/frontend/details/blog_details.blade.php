@@ -43,9 +43,11 @@
                                         {{ $blog_details->user->name }}
                                     </div>
                                     <!-- Post Meta -->
-                                    <ul class="blog-detail_meta">
-                                        {{-- <li><span class="icon fa-brands fa-rocketchat fa-fw"></span>03 Comment</li> --}}
-                                        <li><span class="icon fa-solid fa-clock fa-fw"></span>{{ \Carbon\Carbon::parse($blog_details->date)->format('F j, Y') }}</li>
+                                    <ul class="news-block_four-meta d-flex align-items-center justify-content-between flex-wrap ml-3">
+                                        <li class="text-truncate" style="max-width: 150px;" title="{{ $blog_details->blogDetail->category->name }}">
+                                            {{ $blog_details->blogDetail->category->name }}
+                                        </li>
+                                        <li><span class="icon fa-solid fa-clock fa-fw"></span>{{ \Carbon\Carbon::parse($blog_details->date)->format('d M Y') }}</li>
                                     </ul>
                                 </div>
 
@@ -88,26 +90,6 @@
                                     <button type="submit"><span class="icon fa fa-search"></span></button>
                                 </div>
                             </form>
-                        </div>
-
-                        <!-- Popular Category Widget -->
-                        <div class="sidebar-widget style-two category-widget">
-                            <div class="widget-content">
-                                <!-- Sidebar Title -->
-                                <div class="sidebar-title">
-                                    <h4>Blog Categories</h4>
-                                </div>
-                                <div class="content">
-                                    <ul class="category-list">
-                                        <li><a href="#">web design <span>10</span></a></li>
-                                        <li><a href="#">Online Class <span>07</span></a></li>
-                                        <li><a href="#">Digital Class <span>09</span></a></li>
-                                        <li><a href="#">Lear About islam <span>15</span></a></li>
-                                        <li><a href="#">Digital business <span>11</span></a></li>
-                                        <li><a href="#">Learn Quran <span>02</span></a></li>
-                                    </ul>
-                                </div>
-                            </div>
                         </div>
 
                         <!-- Post Widget -->

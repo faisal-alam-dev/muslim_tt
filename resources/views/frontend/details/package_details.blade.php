@@ -121,7 +121,7 @@
                                 <div class="sidebar-title">
                                     <h4>Apply for Package</h4>
                                 </div>
-                                <form action="{{ route('frontend.package.confirmation') }}" method="POST">
+                                <form action="{{ route('frontend.package.confirmation') }}" method="POST" enctype="multipart/form-data">
                                     @csrf
                                     <input type="hidden" name="package_id" value="{{ $package->id }}">
                                     <div class="form-group">
@@ -134,7 +134,11 @@
                                     </div>
                                     <div class="form-group">
                                         <label for="email">Email</label>
-                                        <input type="email" id="email" name="email" class="form-control" placeholder="Enter your email address" required>
+                                        <input type="email" id="email" name="email" class="form-control" placeholder="Enter your email address">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="file">NID or Password</label>
+                                        <input type="file" id="file" name="nid_passport" class="form-control" accept="image/*,application/pdf,video/*,.doc,.docx,.txt" required>
                                     </div>
                                     <div class="form-group">
                                         <label for="message">Message or Comments</label>

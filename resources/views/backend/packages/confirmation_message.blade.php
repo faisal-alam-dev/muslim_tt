@@ -31,71 +31,83 @@
                                 <div class="table-responsive">
                                     <form id="deleteSelectedForm" action="{{ route('admin.package.confirmation.bulk.delete') }}" method="POST">
                                         @csrf
-                                        <table class="table table-striped table-hover" id="tableExport" style="width:100%;">
-                                            <thead>
-                                                <tr>
-                                                    <th>
-                                                        <input type="checkbox" id="selectAll" />
-                                                    </th>
-                                                    <th>Package Name</th>
-                                                    <th>Package Type</th>
-                                                    <th>User Name</th>
-                                                    <th>User Phone</th>
-                                                    <th>User Email</th>
-                                                    <th>User Message</th>
-                                                    <th>Status</th>
-                                                    <th>Action</th>
-                                                </tr>
-                                            </thead>
-
-                                            <tbody>
-                                                @foreach ($package_confirmation_message as $key => $item)
+                                        <div style="overflow-x: auto;">
+                                            <table class="table table-striped table-hover" id="tableExport" style="width:100%; white-space: nowrap;">
+                                                <thead>
                                                     <tr>
-                                                        <td>
-                                                            <input type="checkbox" class="selectItem" name="ids[]" value="{{ $item->id }}">
-                                                        </td>
-                                                        <td>{{ $item->package->package_name }}</td>
-                                                        <td>
-                                                            <div class="badges">
-                                                                @if ($item->package->package_type == 'umrah')
-                                                                    <span class="badge badge-info">Umrah</span>
-                                                                @elseif ($item->package->package_type == 'hajj')
-                                                                    <span class="badge badge-dark">Hajj</span>
-                                                                @endif
-                                                            </div>
-                                                        </td>
-                                                        <td>{{ $item->user_name }}</td>
-                                                        <td>{{ $item->user_phone }}</td>
-                                                        <td>{{ $item->user_email }}</td>
-                                                        <td>{{ $item->user_message }}</td>
-                                                        <td>
-                                                            <div class="badges">
-                                                                @if ($item->status == 'pending')
-                                                                    <span class="badge badge-warning">Pending</span>
-                                                                @elseif ($item->status == 'confirmed')
-                                                                    <span class="badge badge-success">Confirmed</span>
-                                                                @elseif ($item->status == 'cancelled')
-                                                                    <span class="badge badge-danger">Cancelled</span>
-                                                                @endif
-                                                            </div>
-                                                        </td>
-                                                        <td>
-                                                            <div class="table_actions">
-
-                                                                <a href="#" class="btn btn-outline-primary statusBtn" data-toggle="modal" data-target="#PackageStatusModal" data-id="{{ $item->id }}">
-                                                                    <i class="fas fa-eye"></i> Status
-                                                                </a>
-
-                                                                <a href="{{ route('admin.package.confirmation.delete', $item->id) }}" class="btn btn-outline-danger">
-                                                                    <i class="fas fa-trash"></i> Delete
-                                                                </a>
-
-                                                            </div>
-                                                        </td>
+                                                        <th>
+                                                            <input type="checkbox" id="selectAll" />
+                                                        </th>
+                                                        <th>Package Name</th>
+                                                        <th>Package Type</th>
+                                                        <th>User Name</th>
+                                                        <th>User Phone</th>
+                                                        <th>User Email</th>
+                                                        <th>User Message</th>
+                                                        <th>User File</th>
+                                                        <th>Status</th>
+                                                        <th>Action</th>
                                                     </tr>
-                                                @endforeach
-                                            </tbody>
-                                        </table>
+                                                </thead>
+
+                                                <tbody>
+                                                    @foreach ($package_confirmation_message as $key => $item)
+                                                        <tr>
+                                                            <td>
+                                                                <input type="checkbox" class="selectItem" name="ids[]" value="{{ $item->id }}">
+                                                            </td>
+                                                            <td>{{ $item->package->package_name }}</td>
+                                                            <td>
+                                                                <div class="badges">
+                                                                    @if ($item->package->package_type == 'umrah')
+                                                                        <span class="badge badge-info">Umrah</span>
+                                                                    @elseif ($item->package->package_type == 'hajj')
+                                                                        <span class="badge badge-dark">Hajj</span>
+                                                                    @endif
+                                                                </div>
+                                                            </td>
+                                                            <td>{{ $item->user_name }}</td>
+                                                            <td>{{ $item->user_phone }}</td>
+                                                            <td>{{ $item->user_email }}</td>
+                                                            <td>{{ $item->user_message }}</td>
+                                                            <td>
+                                                                @if ($item->nid_passport)
+                                                                    <a href="{{ asset($item->nid_passport) }}" target="_blank" class="btn btn-outline-info">
+                                                                        <i class="fas fa-file"></i> View File
+                                                                    </a>
+                                                                @else
+                                                                    <span class="text-muted">No File</span>
+                                                                @endif
+                                                            </td>
+                                                            <td>
+                                                                <div class="badges">
+                                                                    @if ($item->status == 'pending')
+                                                                        <span class="badge badge-warning">Pending</span>
+                                                                    @elseif ($item->status == 'confirmed')
+                                                                        <span class="badge badge-success">Confirmed</span>
+                                                                    @elseif ($item->status == 'cancelled')
+                                                                        <span class="badge badge-danger">Cancelled</span>
+                                                                    @endif
+                                                                </div>
+                                                            </td>
+                                                            <td>
+                                                                <div class="table_actions">
+
+                                                                    <a href="#" class="btn btn-outline-primary statusBtn" data-toggle="modal" data-target="#PackageStatusModal" data-id="{{ $item->id }}">
+                                                                        <i class="fas fa-eye"></i> Status
+                                                                    </a>
+
+                                                                    <a href="{{ route('admin.package.confirmation.delete', $item->id) }}" class="btn btn-outline-danger">
+                                                                        <i class="fas fa-trash"></i> Delete
+                                                                    </a>
+
+                                                                </div>
+                                                            </td>
+                                                        </tr>
+                                                    @endforeach
+                                                </tbody>
+                                            </table>
+                                        </div>
 
                                         <button type="submit" class="btn btn-outline-danger" id="deleteSelectedButton" disabled>Delete Selected</button>
                                     </form>

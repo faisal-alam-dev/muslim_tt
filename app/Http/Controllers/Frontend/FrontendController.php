@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Frontend;
 use App\Http\Controllers\Controller;
 use App\Models\AboutUs;
 use App\Models\Blog;
+use App\Models\BlogCategory;
 use App\Models\Career;
 use App\Models\Circular;
 use App\Models\Client;
@@ -23,6 +24,8 @@ use App\Models\SuccessfulPortfolios;
 use App\Models\User;
 use App\Models\WhoWeAre;
 use Illuminate\Http\Request;
+use Intervention\Image\ImageManager;
+use Intervention\Image\Drivers\Gd\Driver;
 
 class FrontendController extends Controller
 {
@@ -76,6 +79,15 @@ class FrontendController extends Controller
         $data->user_phone = $request->phone;
         $data->user_email = $request->email;
         $data->user_message = $request->message;
+        if ($request->file('nid_passport')) {
+            $nid_passport = $request->file('nid_passport');
+            $manager = new ImageManager(new Driver());
+            $name_gen = hexdec(uniqid()) . '.' . $nid_passport->getClientOriginalExtension();
+            $image = $manager->read($nid_passport);
+            // $image->resize(810, 504);
+            $image->toJpeg(80)->save(public_path('uploads/packages/package_booking/' . $name_gen));
+            $data->nid_passport = 'uploads/packages/package_booking/' . $name_gen;
+        }
         // dd($data);
         $data->save();
 
@@ -114,7 +126,7 @@ class FrontendController extends Controller
     {
         $blog_details = Blog::where('slug', $slug)->first();
 
-        $blog = Blog::where('status', 'active')->latest()->take(3)->get();
+        $blog = Blog::where('status', 'active')->latest()->get();
 
         return view('frontend.details.blog_details', compact('blog_details', 'blog'));
     } // End Method
