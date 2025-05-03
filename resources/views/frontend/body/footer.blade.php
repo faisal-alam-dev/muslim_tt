@@ -34,13 +34,13 @@
                             <!-- Footer Column -->
                             <div class="footer-column col-lg-6 col-md-6 col-sm-12">
                                 <div class="footer-widget links-widget">
-                                    <h4 class="footer-title">Links</h4>
+                                    <h4 class="footer-title">Quick Link</h4>
                                     <ul class="footer-list">
-                                        <li><a href="#">About us</a></li>
-                                        <li><a href="#">Scholars</a></li>
-                                        <li><a href="#">Courses</a></li>
-                                        <li><a href="#">Latest News</a></li>
-                                        <li><a href="{{ route('frontend.contact.us') }}">Contact</a></li>
+                                        <li><a href="{{ route('frontend.umrah.packages') }}">Umrah Packages</a></li>
+                                        <li><a href="{{ route('frontend.hajj.packages') }}">Hajj Packages</a></li>
+                                        <li><a href="#">Client Testimonials</a></li>
+                                        <li><a href="{{ route('frontend.terms.of.use') }}">Terms of use</a></li>
+                                        <li><a href="{{ route('frontend.privacy.policy') }}">Privacy Policy</a></li>
                                     </ul>
                                 </div>
                             </div>
@@ -66,13 +66,13 @@
                             <!-- Footer Column -->
                             <div class="footer-column col-lg-6 col-md-6 col-sm-12">
                                 <div class="footer-widget links-widget">
-                                    <h4 class="footer-title">Quick Link</h4>
+                                    <h4 class="footer-title">Facilities</h4>
                                     <ul class="footer-list">
-                                        <li><a href="{{ route('frontend.umrah.packages') }}">Umrah Packages</a></li>
-                                        <li><a href="{{ route('frontend.hajj.packages') }}">Hajj Packages</a></li>
-                                        <li><a href="#">Client Testimonials</a></li>
-                                        <li><a href="{{ route('frontend.terms.of.use') }}">Terms of use</a></li>
-                                        <li><a href="{{ route('frontend.privacy.policy') }}">Privacy Policy</a></li>
+                                        <li><a href="{{ route('frontend.visa.processing') }}">Visa Processing</a></li>
+                                        <li><a href="{{ route('frontend.hotel.booking') }}">Hotel Booking</a></li>
+                                        <li><a href="{{ route('frontend.ziyarat.tours') }}">Ziyarat Tours</a></li>
+                                        <li><a href="{{ route('frontend.air.ticketing') }}">Air Ticketing</a></li>
+                                        <li><a href="{{ route('frontend.umrah.training') }}">Umrah Training</a></li>
                                     </ul>
                                 </div>
                             </div>

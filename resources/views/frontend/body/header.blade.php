@@ -77,11 +77,11 @@
 
                                     <li class="dropdown"><a href="#">Facilities</a>
                                         <ul>
-                                            <li><a href="#!">Visa Processing</a></li>
-                                            <li><a href="#!">Hotel Booking</a></li>
-                                            <li><a href="#!">Ziyarat Tours</a></li>
-                                            <li><a href="#!">Air Ticketing</a></li>
-                                            <li><a href="#!">Umrah Training</a></li>
+                                            <li><a href="{{ route('frontend.visa.processing') }}">Visa Processing</a></li>
+                                            <li><a href="{{ route('frontend.hotel.booking') }}">Hotel Booking</a></li>
+                                            <li><a href="{{ route('frontend.ziyarat.tours') }}">Ziyarat Tours</a></li>
+                                            <li><a href="{{ route('frontend.air.ticketing') }}">Air Ticketing</a></li>
+                                            <li><a href="{{ route('frontend.umrah.training') }}">Umrah Training</a></li>
                                         </ul>
                                     </li>
 

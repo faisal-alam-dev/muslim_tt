@@ -141,15 +141,30 @@ class FrontendController extends Controller
         return view('frontend.pages.guidance.guideline_in_bangla');
     } // End Method
 
+    public function VisaProcessing()
+    {
+        return view('frontend.pages.facilities.visa_processing');
+    } // End Method
 
+    public function HotelBooking()
+    {
+        return view('frontend.pages.facilities.hotel_booking');
+    } // End Method
 
+    public function ZiyaratTours()
+    {
+        return view('frontend.pages.facilities.ziyarat_tours');
+    } // End Method
 
+    public function AirTicketing()
+    {
+        return view('frontend.pages.facilities.air_ticketing');
+    } // End Method
 
-
-
-
-
-
+    public function UmrahTraining()
+    {
+        return view('frontend.pages.facilities.umrah_training');
+    } // End Method
 
 
 

@@ -71,15 +71,16 @@ Route::group(
                 Route::get('/blog', 'BlogList')->name('blog.list');
                 Route::get('/blog-details/{slug}', 'BlogDetails')->name('blog.details');
 
-                // Guideline in English
+                // Guidance
                 Route::get('/guideline-in-english', 'GuidelineInEnglish')->name('guideline.in.english');
-
-                // Guideline in Bangla
                 Route::get('/guideline-in-bangla', 'GuidelineInBangla')->name('guideline.in.bangla');
 
-
-
-
+                // Facilities
+                Route::get('/visa-processing', 'VisaProcessing')->name('visa.processing');
+                Route::get('/hotel-booking', 'HotelBooking')->name('hotel.booking');
+                Route::get('/ziyarat-tours', 'ZiyaratTours')->name('ziyarat.tours');
+                Route::get('/air-ticketing', 'AirTicketing')->name('air.ticketing');
+                Route::get('/umrah-training', 'UmrahTraining')->name('umrah.training');
 
 
 
