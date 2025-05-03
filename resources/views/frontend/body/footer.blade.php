@@ -55,30 +55,25 @@
                             <!-- Footer Column -->
                             <div class="footer-column col-lg-6 col-md-6 col-sm-12">
                                 <div class="footer-widget links-widget">
-                                    <h4 class="footer-title">Quick Link</h4>
+                                    <h4 class="footer-title">Guidance</h4>
                                     <ul class="footer-list">
-                                        <li><a href="{{ route('frontend.umrah.packages') }}">Umrah Packages</a></li>
-                                        <li><a href="{{ route('frontend.hajj.packages') }}">Hajj Packages</a></li>
-                                        <li><a href="{{ route('frontend.terms.of.use') }}">Terms of use</a></li>
-                                        <li><a href="{{ route('frontend.privacy.policy') }}">Privacy Policy</a></li>
-                                        <li><a href="#">Quran Hifz Classes</a></li>
+                                        <li><a href="{{ route('frontend.guideline.in.english') }}">Umrah Guideline English</a></li>
+                                        <li><a href="{{ route('frontend.guideline.in.bangla') }}">Umrah Guideline Bangla</a></li>
                                     </ul>
                                 </div>
                             </div>
 
                             <!-- Footer Column -->
                             <div class="footer-column col-lg-6 col-md-6 col-sm-12">
-                                <div class="footer-widget newsletter-widget">
-                                    <h4 class="footer-title">newsletter</h4>
-                                    <div class="footer-text">Waiting for your message is not your important time</div>
-                                    <div class="newsletter-box">
-                                        <form method="post" action="https://themazine.com/html/Alquran-2/alquran/contact.html">
-                                            <div class="form-group">
-                                                <input type="email" name="search-field" value="" placeholder="email address" required>
-                                                <button type="submit" class="theme-btn fa-regular fa-paper-plane fa-fw"></button>
-                                            </div>
-                                        </form>
-                                    </div>
+                                <div class="footer-widget links-widget">
+                                    <h4 class="footer-title">Quick Link</h4>
+                                    <ul class="footer-list">
+                                        <li><a href="{{ route('frontend.umrah.packages') }}">Umrah Packages</a></li>
+                                        <li><a href="{{ route('frontend.hajj.packages') }}">Hajj Packages</a></li>
+                                        <li><a href="#">Client Testimonials</a></li>
+                                        <li><a href="{{ route('frontend.terms.of.use') }}">Terms of use</a></li>
+                                        <li><a href="{{ route('frontend.privacy.policy') }}">Privacy Policy</a></li>
+                                    </ul>
                                 </div>
                             </div>
 
@@ -93,7 +88,7 @@
         <div class="footer_bottom-bg" style="background-image: url({{ asset('frontend/assets/images/background/footer-bg_2.jpg') }})"></div>
         <div class="auto-container">
             <div class="text-center">
-                <div class="copyright">All rights reserved 2025 &copy; <a href="{{ route('frontend.index') }}">Muslim Tour and Travels</a>. Developed by <a href="https://nebulaitbd.com/">Nebula IT.</a></div>
+                <div class="copyright">All rights reserved 2025 &copy; <a href="{{ route('frontend.index') }}">Muslim Tour and Travels</a>. Developed by <a href="https://nebulaitbd.com/" target="_blank;">Nebula IT.</a></div>
             </div>
         </div>
     </div>

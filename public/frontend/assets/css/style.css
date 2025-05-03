@@ -8696,3 +8696,17 @@ News Three
 	color: var(--color-nine);
 	font-size: 25px;
 }
+
+.accordion-box_two .block .acc-btn {
+	color: var(--white-color);
+	background-color: var(--main-color);
+}
+
+.accordion-box_two .block .acc-btn.active {
+	color: var(--white-color);
+	background-color: var(--black-color);
+}
+
+.accordion-box_two .block .icon-outer .icon {
+	color: var(--white-color);
+}

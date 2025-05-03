@@ -9,7 +9,7 @@
         <div class="auto-container">
             <h2>Terms of use</h2>
             <ul class="bread-crumb clearfix">
-                <li><a href="index.html">Home</a></li>
+                <li><a href="{{ route('frontend.index') }}">Home</a></li>
                 <li>Terms of use</li>
             </ul>
         </div>

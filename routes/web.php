@@ -71,6 +71,20 @@ Route::group(
                 Route::get('/blog', 'BlogList')->name('blog.list');
                 Route::get('/blog-details/{slug}', 'BlogDetails')->name('blog.details');
 
+                // Guideline in English
+                Route::get('/guideline-in-english', 'GuidelineInEnglish')->name('guideline.in.english');
+
+                // Guideline in Bangla
+                Route::get('/guideline-in-bangla', 'GuidelineInBangla')->name('guideline.in.bangla');
+
+
+
+
+
+
+
+
+
                 Route::get('/services', 'AllServiceList')->name('all.services.list');
                 Route::get('/services/{slug}', 'ServiceDetails')->name('service.details');
 

@@ -121,6 +121,10 @@
                     icon: 'success',
                     confirmButtonText: 'OK',
                     timer: 3000
+                }).then((result) => {
+                    if (result.isConfirmed || result.dismiss === Swal.DismissReason.timer) {
+                        location.reload();
+                    }
                 });
             @endif
         });

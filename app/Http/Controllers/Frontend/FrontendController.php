@@ -131,6 +131,36 @@ class FrontendController extends Controller
         return view('frontend.details.blog_details', compact('blog_details', 'blog'));
     } // End Method
 
+    public function GuidelineInEnglish()
+    {
+        return view('frontend.pages.guidance.guideline_in_english');
+    } // End Method
+
+    public function GuidelineInBangla()
+    {
+        return view('frontend.pages.guidance.guideline_in_bangla');
+    } // End Method
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     public function ServiceDetails($slug)
     {
         $service_list = Service::where('status', 'active')->orderBy('title', 'asc')->get();

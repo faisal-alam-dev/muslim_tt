@@ -58,7 +58,7 @@
                                         </ul>
                                     </li>
 
-                                    <li class="dropdown"><a href="#">Umrah</a>
+                                    <li class="dropdown"><a>Umrah</a>
                                         <ul>
                                             <li><a href="{{ route('frontend.umrah.packages') }}">Umrah Packages</a></li>
                                             <li><a href="#!">Benefit of Umrah</a></li>
@@ -67,7 +67,7 @@
                                         </ul>
                                     </li>
 
-                                    <li class="dropdown"><a href="#">Hajj</a>
+                                    <li class="dropdown"><a>Hajj</a>
                                         <ul>
                                             <li><a href="{{ route('frontend.hajj.packages') }}">Hajj Packages</a></li>
                                             <li><a href="#!">Hajj Pre Registration</a></li>
@@ -85,10 +85,10 @@
                                         </ul>
                                     </li>
 
-                                    <li class="dropdown"><a href="#">Guidance</a>
+                                    <li class="dropdown"><a>Guidance</a>
                                         <ul>
-                                            <li><a href="#!">Umrah Guideline in English</a></li>
-                                            <li><a href="#!">Umrah Guideline in Bangla</a></li>
+                                            <li><a href="{{ route('frontend.guideline.in.english') }}">Umrah Guideline in English</a></li>
+                                            <li><a href="{{ route('frontend.guideline.in.bangla') }}">Umrah Guideline in Bangla</a></li>
                                         </ul>
                                     </li>
 

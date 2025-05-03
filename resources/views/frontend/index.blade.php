@@ -10,8 +10,8 @@
     <!-- Featured One -->
     @include('frontend.home.featured')
 
-    <!-- Welcome One -->
-    @include('frontend.home.welcome')
+    <!-- About Us -->
+    @include('frontend.home.about_us')
 
     <!-- WHAT WE OFFER -->
     @include('frontend.home.what_we_offer')
