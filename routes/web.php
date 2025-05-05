@@ -60,6 +60,8 @@ Route::group(
 
                 // Hajj Packages
                 Route::get('/hajj-packages', 'HajjPackages')->name('hajj.packages');
+                Route::get('/hajj-pre-registration', 'HajjPreRegistration')->name('hajj.pre.registration');
+                Route::get('/hajj-visa-requirements', 'HajjVisaRequirements')->name('hajj.visa.requirements');
 
                 // Terms of use
                 Route::get('/terms-of-use', 'TermsOfUse')->name('terms.of.use');

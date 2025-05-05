@@ -103,7 +103,17 @@ class FrontendController extends Controller
     public function HajjPackages()
     {
         $packages = Package::where('package_status', 'active')->where('package_type', 'hajj')->orderBy('id', 'desc')->get();
-        return view('frontend.pages.hajj_packages', compact('packages'));
+        return view('frontend.pages.hajj.hajj_packages', compact('packages'));
+    } // End Method
+
+    public function HajjPreRegistration()
+    {
+        return view('frontend.pages.hajj.hajj_pre_registration');
+    } // End Method
+
+    public function HajjVisaRequirements()
+    {
+        return view('frontend.pages.hajj.hajj_visa_requirements');
     } // End Method
 
     public function TermsOfUse()
