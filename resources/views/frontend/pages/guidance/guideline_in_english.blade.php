@@ -34,14 +34,14 @@
 
                     <div class="scholar-detail_content-column col-lg-6 col-md-6 col-sm-12">
                         <div class="scholar-detail_content-outer wow fadeInRight" data-wow-delay="0ms" data-wow-duration="1000ms">
-                            <p class="text-justify">Undertaking the sacred journey of Umrah is a deeply enriching experience that leaves a lasting impact on the hearts and souls of believers. This holy journey to the blessed cities of Mecca and Medina is a unique opportunity for believers to draw closer to Allah, seek forgiveness, and renew their faith.</p>
-                            <p class="text-justify">It is an opportunity for self-reflection, repentance, and seeking Allah's blessings. This guide by <b>Hijaz Hajj &amp; Umrah Kafela</b> will provide you with essential Umrah guidelines to ensure a smooth and spiritually enriching experience.</p>
+                            <p class="text-justify">Performing Umrah is a profound spiritual journey that purifies the soul and strengthens faith. As you prepare to visit the sacred cities of Makkah and Madinah, following the correct steps ensures your worship is accepted and fulfilling.</p>
+                            <p class="text-justify">From entering Ihram to performing Tawaf and Sa’i, each step holds deep significance. This guide by <b>Muslim Tour & Travels</b> provides a step-by-step breakdown to help you perform Umrah with ease and devotion, maximizing the blessings of this sacred pilgrimage.</p>
                             <!-- Button Box -->
                             <div class="welcome-three_button">
                                 <a href="{{ route('frontend.umrah.packages') }}" class="theme-btn btn-style-one">
                                     <span class="btn-wrap">
-                                        <span class="text-one">Plan Your Umrah Trip</span>
-                                        <span class="text-two">Plan Your Umrah Trip</span>
+                                        <span class="text-one">Book Your Umrah Package</span>
+                                        <span class="text-two">Book Your Umrah Package</span>
                                     </span>
                                 </a>
                             </div>
@@ -83,21 +83,21 @@
 
                     <div class="scholar-detail_content-column col-lg-6 col-md-6 col-sm-12">
                         <div class="scholar-detail_content-outer wow fadeInRight" data-wow-delay="0ms" data-wow-duration="1000ms">
-                            <h3 class="scholar-detail_title mb-3">Understanding Umrah: A divine pilgrimage</h3>
-                            <p class="text-justify">Umrah is an act of worship performed by millions of Muslims every year. Following in the footsteps of Prophet Muhammad (PBUH), believers experience deep spiritual connections, seek Allah's blessings, and find opportunities for self-reflection and repentance.</p>
-                            <h3 class="scholar-detail_title" style="font-size: 25px;">Umrah has four (4) different customs:</h3>
+                            <h3 class="scholar-detail_title mb-3">Understanding Umrah: A Divine Pilgrimage</h3>
+                            <p class="text-justify">Umrah is a sacred journey to Makkah, performed by Muslims to purify the soul and strengthen faith. Though optional, it holds immense spiritual significance, allowing believers to follow the Sunnah of Prophet Muhammad (PBUH), seek forgiveness, and renew their devotion to Allah.</p>
+                            <h3 class="scholar-detail_title" style="font-size: 25px;">Umrah consists of four (4) essential rituals:</h3>
                             <ul class="scholar-detail_list mt-0">
-                                <li>Putting up of Ihram</li>
-                                <li>Tawaf</li>
-                                <li>Sa’yee</li>
-                                <li>Halq or Taqsir</li>
+                                <li>Ihram (Sacred State)</li>
+                                <li>Tawaf (Circumambulation of the Kaaba)</li>
+                                <li>Sa'i (Walking between Safa and Marwah)</li>
+                                <li>Halq or Taqsir (Shaving or Trimming Hair)</li>
                             </ul>
                             <!-- Button Box -->
                             <div class="welcome-three_button">
                                 <a href="tel:+88 0XXXX XXX XXX" class="theme-btn btn-style-one">
                                     <span class="btn-wrap">
-                                        <span class="text-one">Talk To Our Expert</span>
-                                        <span class="text-two">Talk To Our Expert</span>
+                                        <span class="text-one">Plan Your Spiritual Journey</span>
+                                        <span class="text-two">Plan Your Spiritual Journey</span>
                                     </span>
                                 </a>
                             </div>
@@ -120,47 +120,47 @@
                 <div class="row clearfix align-items-center">
                     <div class="scholar-detail_content-column col-lg-12 col-md-12 col-sm-12">
                         <div class="scholar-detail_content-outer wow fadeInRight" data-wow-delay="0ms" data-wow-duration="1000ms">
-                            <h3 class="scholar-detail_title mb-3">Preparing for Umrah: Step-by-step guide</h3>
-                            <p class="text-justify">Preparing for Umrah is not just about physical arrangements; it's about nurturing your soul and heart and anticipating the spiritual journey that lies ahead.</p>
+                            <h3 class="scholar-detail_title mb-3">Preparing for Umrah: Step-by-Step Guide</h3>
+                            <p class="text-justify">Preparing for Umrah is a sacred process that combines logistical planning with deep spiritual devotion. Follow these steps to ensure a blessed and fulfilling journey.</p>
                         </div>
                     </div>
                 </div>
 
                 <div class="row clearfix align-items-center">
-
                     <div class="scholar-detail_content-column col-lg-6 col-md-6 col-sm-12">
                         <div class="scholar-detail_content-outer wow fadeInRight" data-wow-delay="0ms" data-wow-duration="1000ms">
-                            <h3 class="scholar-detail_title" style="font-size: 25px;">The Niyyah</h3>
-                            <p class="text-justify">Before embarking on the sacred pilgrimage of Umrah, Muslims are encouraged to set their hearts on the profound act of Niyyah, or intention. The Niyyah for Umrah is a heartfelt commitment to embark on this spiritual journey solely for the sake of Allah, seeking His pleasure and blessings.</p>
-                            <h3 class="scholar-detail_title" style="font-size: 25px;">Attaining a state of Ihram</h3>
-                            <p class="text-justify">Before commencing the journey, pilgrims must enter the state of Ihram, a sacred state of purity and devotion. This involves wearing the designated white clothing for men and dressing modestly for women. <b>During Ihram,</b> certain actions are prohibited, such as <b>cutting hair or nails, using perfume,</b> and <b>engaging in arguments or harmful behavior.</b></p>
+                            <h3 class="scholar-detail_title" style="font-size: 25px;">1. Sincere Intention (Niyyah)</h3>
+                            <p class="text-justify">Begin with a pure <b>niyyah</b> (intention) to perform Umrah solely for Allah’s sake. Renew your intention throughout the journey to maintain spiritual focus.</p>
+
+                            <h3 class="scholar-detail_title" style="font-size: 25px;">2. Entering Ihram</h3>
+                            <p class="text-justify">Before crossing the Miqat boundary, enter the state of <b>Ihram</b>—men wear two white cloths, while women dress modestly. Avoid prohibited acts like cutting hair, using perfume, or quarreling.</p>
                         </div>
                     </div>
 
                     <div class="scholar-detail_image-column col-lg-6 col-md-6 col-sm-12">
                         <div class="scholar-detail_image-outer wow fadeInLeft" data-wow-delay="0ms" data-wow-duration="1000ms">
                             <div class="scholar-detail_image">
-                                <img src="{{ asset('frontend/assets/images/step-by-step-guide.jpg') }}" alt="" />
+                                <img src="{{ asset('frontend/assets/images/step-by-step-guide.jpg') }}" alt="Pilgrims performing Umrah" />
                             </div>
                         </div>
                     </div>
-
                 </div>
 
                 <div class="row clearfix align-items-center">
                     <div class="scholar-detail_content-column col-lg-12 col-md-12 col-sm-12">
                         <div class="scholar-detail_content-outer wow fadeInRight" data-wow-delay="0ms" data-wow-duration="1000ms">
-                            <h3 class="scholar-detail_title" style="font-size: 25px;">Reciting Talbiyah</h3>
-                            <p class="text-justify">Talbiyah is a profound and sacred invocation recited by Muslims during the pilgrimage of Hajj and Umrah. Derived from the Arabic word "labbayk," meaning "here I am," it reflects the pilgrim's humble response to Allah's call to embark on this spiritual journey.</p>
-                            <p class="text-justify">Talbiya is, <br>لَبَّيْكَ اللهُمَّ لَبَّيْكَ - لَبَّيْكَ لَا شَرِيْكَ لَكَ لَبَّيْكَ - إِنَّ الْحَمْدَ وَالنِّعْمَةَ لَكَ وَالْمُلْكَ - لَا شَرِيْكَ لَكَ<br><b>Pronunciation: </b>Labbayk allahumma labbayeek, labbayeeka l’aa sharika laka labbayeek, innal-ḥamda wan-ni’mata, laka wal-mulk, l’aa sharika lak.</p>
-                            <h3 class="scholar-detail_title" style="font-size: 25px;">Engaging in spiritual preparation</h3>
-                            <p class="text-justify">Preparing for Umrah requires more than just physical arrangements. Pilgrims are encouraged to engage in spiritual preparation by seeking forgiveness, reading the Quran, and increasing acts of worship in the days leading up to their departure.</p>
-                            <!-- Button Box -->
-                            <div class="welcome-three_button">
+                            <h3 class="scholar-detail_title" style="font-size: 25px;">3. Reciting the Talbiyah</h3>
+                            <p class="text-justify">Upon entering Ihram, recite the <b>Talbiyah</b> frequently:<br><br>لَبَّيْكَ اللهُمَّ لَبَّيْكَ، لَبَّيْكَ لَا شَرِيْكَ لَكَ لَبَّيْكَ، إِنَّ الْحَمْدَ وَالنِّعْمَةَ لَكَ وَالْمُلْكَ، لَا شَرِيْكَ لَكَ<br><i>"Labbayk Allahumma labbayk, labbayka la sharika laka labbayk, innal-hamda wan-ni’mata laka wal-mulk, la sharika lak."</i></p>
+
+                            <h3 class="scholar-detail_title" style="font-size: 25px;">4. Spiritual Preparation</h3>
+                            <p class="text-justify">Increase acts of worship (<i>dhikr</i>, prayer, Quran recitation) and seek forgiveness before departure. Mentally prepare to embrace humility and patience throughout Umrah.</p>
+
+                            <!-- Button -->
+                            <div class="welcome-three_button mt-4">
                                 <a href="{{ route('frontend.contact.us') }}" class="theme-btn btn-style-one">
                                     <span class="btn-wrap">
-                                        <span class="text-one">Schedule For A Meeting</span>
-                                        <span class="text-two">Schedule For A Meeting</span>
+                                        <span class="text-one">Plan Your Umrah Today</span>
+                                        <span class="text-two">Plan Your Umrah Today</span>
                                     </span>
                                 </a>
                             </div>
@@ -184,45 +184,42 @@
                 <div class="row clearfix align-items-center">
                     <div class="scholar-detail_content-column col-lg-12 col-md-12 col-sm-12">
                         <div class="scholar-detail_content-outer wow fadeInRight" data-wow-delay="0ms" data-wow-duration="1000ms">
-                            <h3 class="scholar-detail_title mb-3">The rites of Umrah: A profound spiritual journey</h3>
-                            <p class="text-justify">The rites of Umrah offer a unique opportunity for self-reflection, devotion, and a renewed connection with the divine, making this journey an unforgettable and life-changing experience.</p>
+                            <h3 class="scholar-detail_title mb-3">The Rites of Umrah: A Profound Spiritual Journey</h3>
+                            <p class="text-justify">Umrah is a sacred pilgrimage that purifies the soul, strengthens faith, and brings believers closer to Allah. Through its timeless rituals, pilgrims experience deep devotion, humility, and spiritual renewal.</p>
                         </div>
                     </div>
                 </div>
 
                 <div class="row clearfix align-items-center">
-
                     <div class="scholar-detail_content-column col-lg-6 col-md-6 col-sm-12">
                         <div class="scholar-detail_content-outer wow fadeInRight" data-wow-delay="0ms" data-wow-duration="1000ms">
-                            <h3 class="scholar-detail_title" style="font-size: 25px;">Tawaf: Circumambulation of the Kaaba</h3>
-                            <p class="text-justify">Upon reaching the Masjid al-Haram in Mecca, pilgrims perform Tawaf, which involves walking seven times around the Kaaba in a counterclockwise direction. This ritual represents the commitment to Allah and the solidarity of Muslims.</p>
-                            <h3 class="scholar-detail_title" style="font-size: 25px;">Sa’yee: Walking between Safa and Marwah</h3>
-                            <p class="text-justify">After Tawaf, pilgrims perform Sai, walking seven times between the hills of Safa and Marwah. This commemorates the actions of Hajar, the wife of Prophet Ibrahim (peace be upon them), who searched for water for her son Ismail in the exact location.</p>
+                            <h3 class="scholar-detail_title" style="font-size: 25px;">Tawaf: Circling the House of Allah</h3>
+                            <p class="text-justify">Pilgrims begin Umrah by performing Tawaf—seven rounds around the Kaaba in devotion to Allah. This act symbolizes unity, submission, and the eternal bond between the Creator and His servants.</p>
+                            <h3 class="scholar-detail_title" style="font-size: 25px;">Sa’yee: The Walk of Faith</h3>
+                            <p class="text-justify">Pilgrims reenact Hajar’s (AS) search for water by walking seven times between Safa and Marwah. This ritual embodies trust in Allah’s mercy and the perseverance of a mother’s love.</p>
                         </div>
                     </div>
-
                     <div class="scholar-detail_image-column col-lg-6 col-md-6 col-sm-12">
                         <div class="scholar-detail_image-outer wow fadeInLeft" data-wow-delay="0ms" data-wow-duration="1000ms">
                             <div class="scholar-detail_image">
-                                <img src="{{ asset('frontend/assets/images/the-rites-of-umrah.png') }}" alt="" />
+                                <img src="{{ asset('frontend/assets/images/the-rites-of-umrah.png') }}" alt="Pilgrims performing Umrah" />
                             </div>
                         </div>
                     </div>
-
                 </div>
 
                 <div class="row clearfix align-items-center">
                     <div class="scholar-detail_content-column col-lg-12 col-md-12 col-sm-12">
                         <div class="scholar-detail_content-outer wow fadeInRight" data-wow-delay="0ms" data-wow-duration="1000ms">
-                            <h3 class="scholar-detail_title" style="font-size: 25px;">Halq or Taqsir</h3>
-                            <p class="text-justify">Halaq refers to the act of shaving or trimming the hair after completing the Hajj pilgrimage, a mandatory religious duty for Muslims who are physically and financially able to undertake it. For those, who choose not to shave their heads completely, trimming a portion of the hair is also acceptable.</p>
-                            <h3 class="scholar-detail_title" style="font-size: 25px;">Prayers and supplications</h3>
-                            <p class="text-justify">Throughout the Umrah journey, prayers and supplications hold great significance. Pilgrims are encouraged to spend time in reflection, asking for forgiveness, and making sincere prayers for themselves, their families, and the entire Muslim community.</p> <!-- Button Box -->
+                            <h3 class="scholar-detail_title" style="font-size: 25px;">Halq or Taqsir: A Symbol of Renewal</h3>
+                            <p class="text-justify">Men shave their heads (Halq) or trim their hair (Taqsir) to mark the completion of Umrah, signifying spiritual rebirth and detachment from worldly vanity.</p>
+                            <h3 class="scholar-detail_title" style="font-size: 25px;">The Power of Du’a</h3>
+                            <p class="text-justify">Umrah is a journey of heartfelt prayers. Pilgrims seek forgiveness, blessings, and divine guidance, leaving with a soul uplifted by the mercy of Allah.</p>
                             <div class="welcome-three_button">
                                 <a href="{{ route('frontend.contact.us') }}" class="theme-btn btn-style-one">
                                     <span class="btn-wrap">
-                                        <span class="text-one">Contact Us Today</span>
-                                        <span class="text-two">Contact Us Today</span>
+                                        <span class="text-one">Begin Your Spiritual Journey</span>
+                                        <span class="text-two">Begin Your Spiritual Journey</span>
                                     </span>
                                 </a>
                             </div>
@@ -244,8 +241,8 @@
                 <div class="row clearfix align-items-center">
                     <div class="scholar-detail_content-column col-lg-12 col-md-12 col-sm-12">
                         <div class="scholar-detail_content-outer wow fadeInRight" data-wow-delay="0ms" data-wow-duration="1000ms">
-                            <h3 class="scholar-detail_title mb-3">Umrah: A journey of a lifetime</h3>
-                            <p class="text-justify">Undertaking the sacred journey of Umrah is a deeply enriching experience that leaves a lasting impact on the hearts and souls of believers. It is a unique opportunity to seek closeness to Allah, purify the soul, and strengthen one's faith. By following these essential Umrah guidelines, you can embark on a journey of a lifetime, leaving behind a transformed and spiritually fulfilled self.</p>
+                            <h3 class="scholar-detail_title mb-3">Umrah: A Journey of a Lifetime</h3>
+                            <p class="text-justify">Umrah is a soul-stirring pilgrimage that brings Muslims closer to Allah, offering forgiveness, blessings, and spiritual renewal. This sacred journey to Makkah and Madinah is a chance to disconnect from worldly distractions and immerse in devotion. With Muslim Tour & Travels, experience a seamless and spiritually uplifting Umrah—a transformative voyage that leaves hearts purified and faith strengthened forever.</p>
                         </div>
                     </div>
                 </div>
@@ -280,12 +277,12 @@
                                 <li class="accordion block">
                                     <div class="acc-btn active">
                                         <div class="icon-outer"><span class="icon icon-plus fa fa-plus"></span> <span class="icon icon-minus fa fa-minus"></span></div>
-                                        What is the significance of the Ihram attire during Umrah?
+                                        What is Umrah?
                                     </div>
                                     <div class="acc-content current">
                                         <div class="content">
-                                            <div class="text">
-                                                The Ihram attire, consisting of two white, seamless clothes for men, and modest clothing for women, symbolizes purity, humility, and equality before Allah. It is a state of ritual consecration, and specific rules and restrictions apply while in Ihram.
+                                            <div class="text text-justify">
+                                                Umrah is a non-mandatory Islamic pilgrimage to Makkah that can be performed at any time of the year, unlike Hajj. It involves rituals like Ihram, Tawaf, Sa’i, and Halq/Taqsir.
                                             </div>
                                         </div>
                                     </div>
@@ -295,12 +292,18 @@
                                 <li class="accordion block">
                                     <div class="acc-btn">
                                         <div class="icon-outer"><span class="icon icon-plus fa fa-plus"></span> <span class="icon icon-minus fa fa-minus"></span></div>
-                                        Can I combine Umrah with a visit to other places in Saudi Arabia?
+                                        What are the essential steps of Umrah?
                                     </div>
                                     <div class="acc-content">
                                         <div class="content">
-                                            <div class="text">
-                                                Yes, it is possible to combine Umrah with visits to other cities and historical sites in Saudi Arabia. However, ensure that you fulfill the essential rituals of Umrah first and allocate sufficient time for the pilgrimage.
+                                            <div class="text text-justify">
+                                                The key steps are:
+                                                <ul class="scholar-detail_list mt-0">
+                                                    <li>Enter Ihram (sacred state) at the Miqat.</li>
+                                                    <li>Perform Tawaf (circumambulation) around the Kaaba.</li>
+                                                    <li>Perform Sa’i (walking between Safa & Marwah).</li>
+                                                    <li>Shave or trim hair (Halq/Taqsir) to complete Umrah.</li>
+                                                </ul>
                                             </div>
                                         </div>
                                     </div>
@@ -310,12 +313,12 @@
                                 <li class="accordion block">
                                     <div class="acc-btn">
                                         <div class="icon-outer"><span class="icon icon-plus fa fa-plus"></span> <span class="icon icon-minus fa fa-minus"></span></div>
-                                        Are there age restrictions for performing Umrah?
+                                        Do I need a visa for Umrah?
                                     </div>
                                     <div class="acc-content">
                                         <div class="content">
-                                            <div class="text">
-                                                There are no specific age restrictions for Umrah, and people of all ages can undertake the pilgrimage. However, elderly or physically challenged individuals may need assistance during certain rituals.
+                                            <div class="text text-justify">
+                                                Yes, you need a valid Umrah visa (or a tourist visa for some nationalities) issued by Saudi Arabia. Your travel agency can assist with the application.
                                             </div>
                                         </div>
                                     </div>
@@ -325,12 +328,16 @@
                                 <li class="accordion block">
                                     <div class="acc-btn">
                                         <div class="icon-outer"><span class="icon icon-plus fa fa-plus"></span> <span class="icon icon-minus fa fa-minus"></span></div>
-                                        How many days are typically required for an Umrah trip?
+                                        What should I pack for Umrah?
                                     </div>
                                     <div class="acc-content">
                                         <div class="content">
-                                            <div class="text">
-                                                The duration of an Umrah trip can vary, but a standard itinerary may last around 7 to 10 days. This period allows sufficient time for performing the rituals, visiting holy sites, and experiencing the spiritual essence of the journey.
+                                            <div class="text text-justify">
+                                                <ul class="scholar-detail_list mt-0">
+                                                    <li>Ihram clothing (for men), modest attire (for women).</li>
+                                                    <li>Comfortable shoes, personal hygiene items, and necessary medications.</li>
+                                                    <li>Copies of travel documents and a small bag for Zamzam water.</li>
+                                                </ul>
                                             </div>
                                         </div>
                                     </div>
@@ -340,12 +347,12 @@
                                 <li class="accordion block">
                                     <div class="acc-btn">
                                         <div class="icon-outer"><span class="icon icon-plus fa fa-plus"></span> <span class="icon icon-minus fa fa-minus"></span></div>
-                                        What should I do if I miss a ritual during Umrah?
+                                        Can women perform Umrah without a Mahram?
                                     </div>
                                     <div class="acc-content">
                                         <div class="content">
-                                            <div class="text">
-                                                If a ritual is missed during Umrah due to unforeseen circumstances, there is no need to panic. Repent sincerely, seek forgiveness, and perform the missed ritual as soon as possible once the situation is resolved.
+                                            <div class="text text-justify">
+                                                According to Saudi rules, women below 45 years must be accompanied by a Mahram (male guardian). Women over 45 may travel in an approved group without a Mahram but need a No Objection Certificate (NOC).
                                             </div>
                                         </div>
                                     </div>
