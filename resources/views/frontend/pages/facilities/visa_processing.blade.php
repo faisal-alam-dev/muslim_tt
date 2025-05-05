@@ -27,8 +27,8 @@
                 <div class="scholar-detail_content-column col-lg-6 col-md-6 col-sm-12">
                     <div class="scholar-detail_content-outer wow fadeInRight" data-wow-delay="0ms" data-wow-duration="1000ms">
                         <h3 class="scholar-detail_title mb-4" style="line-height: 45px;">Hassle-free Umrah visa processing from Bangladesh</h3>
-                        <p class="text-justify">At <b>Hijaz Hajj &amp; Umrah Kafela</b>, we understand the importance of the visa application process, which is why we have simplified the entire procedure for pilgrims from Bangladesh. Our knowledgeable staff will guide you through each stage, ensuring that all the required documents are correctly prepared and submitted. </p>
-                        <p class="text-justify">From filling out the application forms to arranging appointments and submitting the necessary paperwork, we handle it all with <b>utmost professionalism</b>. Contact us today and experience a simplified and <b>hassle-free visa processing</b> service from Bangladesh. </p>
+                        <p class="text-justify">At <b>Muslim Tour & Travels</b>, we recognize the significance of a smooth Umrah visa application for Bangladeshi pilgrims. Our dedicated team provides expert guidance at every step, ensuring all required documents are accurately prepared and submitted without delay.</p>
+                        <p class="text-justify">From application form assistance to document verification and embassy coordination, we manage the entire process with <b>efficiency and care</b>. Trust us for a <b>seamless and stress-free visa experience</b>—contact us today to begin your spiritual journey.</p>
                         <!-- Button Box -->
                         <div class="welcome-three_button">
                             <a href="{{ route('frontend.contact.us') }}" class="theme-btn btn-style-one">
@@ -77,8 +77,8 @@
                 <div class="scholar-detail_content-column col-lg-6 col-md-6 col-sm-12">
                     <div class="scholar-detail_content-outer wow fadeInRight" data-wow-delay="0ms" data-wow-duration="1000ms">
                         <h3 class="scholar-detail_title mb-4" style="line-height: 45px;">Umrah visa application support for Bangladeshi pilgrims</h3>
-                        <p class="text-justify">Embarking on the sacred journey of Hajj or Umrah is a profound experience that holds immense significance for Muslims around the world. At <b>Hijaz Hajj &amp; Umrah Kafela</b>, we understand the importance of a hassle-free visa application process, particularly for Bangladeshi pilgrims. </p>
-                        <p class="text-justify">We are dedicated to simplifying and streamlining the <b>Saudi visa application process</b>, ensuring that you can focus on the spiritual aspects of your pilgrimage without unnecessary stress or complications.</p>
+                        <p class="text-justify">Performing Umrah is a deeply spiritual journey that every Muslim aspires to undertake. At <b>Muslim Tour & Travels</b>, we recognize the importance of a smooth and efficient visa application process for our Bangladeshi pilgrims.</p>
+                        <p class="text-justify">Our dedicated team provides comprehensive <b>Umrah visa application support</b>, ensuring all documentation and requirements are met seamlessly. Let us handle the formalities while you prepare your heart for this blessed pilgrimage.</p>
                         <!-- Button Box -->
                         <div class="welcome-three_button">
                             <a href="{{ route('frontend.contact.us') }}" class="theme-btn btn-style-one">
@@ -109,14 +109,16 @@
                 <div class="scholar-detail_content-column col-lg-6 col-md-6 col-sm-12">
                     <div class="scholar-detail_content-outer wow fadeInRight" data-wow-delay="0ms" data-wow-duration="1000ms">
                         <h3 class="scholar-detail_title mb-4" style="line-height: 45px;">Necessary documents for the Umrah visa application</h3>
-                        <p>The Saudi visa application process is a <b>crucial step</b> in planning your Hajj or Umrah pilgrimage. To help you prepare for your journey, we have compiled a list of the <b>necessary documents</b> required for a successful Saudi visa application.</p>
-                        <p>Trust in our expertise to guide you through the visa application process, allowing you to focus on the spiritual significance of your pilgrimage. Important documents required for Saudi visa application are:</p>
+                        <p class="text-justify">The Umrah visa application is a <b>vital step</b> in preparing for your spiritual journey. To ensure a smooth process, we have outlined the <b>essential documents</b> required for your Umrah visa approval.</p>
+                        <p class="text-justify">Rely on our expertise to handle your visa application, so you can focus on the sacred purpose of your pilgrimage. The key documents needed for the Umrah visa include:</p>
                         <ul class="scholar-detail_list mt-0">
-                            <li>Valid passport</li>
-                            <li>Recent photographs</li>
-                            <li>Completed visa application form</li>
-                            <li>Vaccination certificates</li>
-                            <li>Proof of relationship (for family travel)</li>
+                            <li>Valid passport (minimum 6 months validity)</li>
+                            <li>Passport-sized photographs (white background)</li>
+                            <li>Completed Umrah visa application form</li>
+                            <li>Confirmed flight reservations</li>
+                            <li>Vaccination certificates (including mandatory meningitis vaccine)</li>
+                            <li>Proof of accommodation in Saudi Arabia</li>
+                            <li>For women and children: Mahram proof (if applicable)</li>
                         </ul>
                         <!-- Button Box -->
                         <div class="welcome-three_button">
@@ -166,12 +168,12 @@
                 <div class="scholar-detail_content-column col-lg-6 col-md-6 col-sm-12">
                     <div class="scholar-detail_content-outer wow fadeInRight" data-wow-delay="0ms" data-wow-duration="1000ms">
                         <h3 class="scholar-detail_title mb-4" style="line-height: 45px;">Steps for Umrah visa processing</h3>
-                        <p>When it comes to the Hajj and Umrah visa processing, <b>Hijaz Hajj &amp; Umrah Kafela</b> is committed to simplifying the steps and ensuring a smooth journey for our pilgrims. Below are the <b>essential steps</b> involved in the Hajj and Umrah visa processing:</p>
+                        <p class="text-justify">At <b>Muslim Tour & Travels</b>, we make Umrah visa processing simple and hassle-free for our valued pilgrims. Below are the <b>key steps</b> involved in obtaining your Umrah visa:</p>
                         <ul class="scholar-detail_list mt-0">
-                            <li>Understanding the Visa Requirements</li>
-                            <li>Compiling the Required Documents</li>
-                            <li>Submission of the Application</li>
-                            <li>Tracking the Visa Application</li>
+                            <li>Checking Visa Eligibility & Requirements</li>
+                            <li>Gathering Necessary Documents</li>
+                            <li>Submitting the Visa Application</li>
+                            <li>Monitoring Visa Approval Status</li>
                         </ul>
                         <!-- Button Box -->
                         <div class="welcome-three_button">
@@ -215,12 +217,12 @@
                             <li class="accordion block">
                                 <div class="acc-btn active">
                                     <div class="icon-outer"><span class="icon icon-plus fa fa-plus"></span> <span class="icon icon-minus fa fa-minus"></span></div>
-                                    How can Hijaz Hajj & Umrah Kafela make the Saudi visa application process hassle-free?
+                                    What are the essential documents required for an Umrah visa?
                                 </div>
                                 <div class="acc-content current">
                                     <div class="content">
-                                        <div class="text">
-                                            We have a team of experienced professionals who are well-versed in the Saudi visa requirements and procedures. We provide expert guidance, streamlined documentation assistance, and dedicated support to ensure a smooth and stress-free visa application process.
+                                        <div class="text text-justify">
+                                            Applicants need a valid passport, passport-sized photos, a completed visa application form, proof of vaccination (including meningitis and COVID-19, if required), a confirmed flight itinerary, and hotel bookings in Saudi Arabia. Women and children must also provide a Mahram certificate if applicable.
                                         </div>
                                     </div>
                                 </div>
@@ -230,12 +232,12 @@
                             <li class="accordion block">
                                 <div class="acc-btn">
                                     <div class="icon-outer"><span class="icon icon-plus fa fa-plus"></span> <span class="icon icon-minus fa fa-minus"></span></div>
-                                    Can Hijaz Hajj & Umrah Kafela assist with family visa applications?
+                                    How long does it take to process an Umrah visa?
                                 </div>
                                 <div class="acc-content">
                                     <div class="content">
-                                        <div class="text">
-                                            Yes, we can assist with family visa applications. We understand the importance of family unity during the pilgrimage, and our team will guide you through the additional requirements, such as proof of relationship, to ensure a smooth visa application process for all family members.
+                                        <div class="text text-justify">
+                                            The processing time usually takes <b>7 to 14 working days</b>, but it may vary depending on the Saudi embassy’s workload and the completeness of the submitted documents.
                                         </div>
                                     </div>
                                 </div>
@@ -245,12 +247,12 @@
                             <li class="accordion block">
                                 <div class="acc-btn">
                                     <div class="icon-outer"><span class="icon icon-plus fa fa-plus"></span> <span class="icon icon-minus fa fa-minus"></span></div>
-                                    What if my visa application is rejected?
+                                    Can I apply for an Umrah visa without a travel agency?
                                 </div>
                                 <div class="acc-content">
                                     <div class="content">
-                                        <div class="text">
-                                            While the chances of rejection are minimal if all the requirements are met, visa rejections can still occur due to various factors. If your visa application is rejected, our team at Hijaz Hajj & Umrah Kafela will assist you in understanding the reason behind the rejection and guide you on the necessary steps to rectify the issue and reapply, if applicable.
+                                        <div class="text text-justify">
+                                            No, Saudi Arabia requires Umrah visas to be processed through <b>authorized travel agencies</b> like Muslim Tour & Travels. Individual applications are not accepted.
                                         </div>
                                     </div>
                                 </div>
@@ -260,12 +262,12 @@
                             <li class="accordion block">
                                 <div class="acc-btn">
                                     <div class="icon-outer"><span class="icon icon-plus fa fa-plus"></span> <span class="icon icon-minus fa fa-minus"></span></div>
-                                    How can I contact Hijaz Hajj & Umrah Kafela for visa processing assistance?
+                                    Is there an age limit for Umrah visa applicants?
                                 </div>
                                 <div class="acc-content">
                                     <div class="content">
-                                        <div class="text">
-                                            You can reach out to our team at Hijaz Hajj & Umrah Kafela through our website, email, or phone. We have dedicated customer support ready to assist you with any queries or concerns regarding the Saudi visa application process.
+                                        <div class="text text-justify">
+                                            There is no strict age limit, but minors (under 18) must travel with a <b>Mahram</b> (male guardian) and provide a birth certificate and guardian’s identification.
                                         </div>
                                     </div>
                                 </div>
@@ -275,12 +277,12 @@
                             <li class="accordion block">
                                 <div class="acc-btn">
                                     <div class="icon-outer"><span class="icon icon-plus fa fa-plus"></span> <span class="icon icon-minus fa fa-minus"></span></div>
-                                    Does Hijaz Hajj & Umrah Kafela offer other services besides visa processing?
+                                    What should I do if my Umrah visa is rejected?
                                 </div>
                                 <div class="acc-content">
                                     <div class="content">
-                                        <div class="text">
-                                            Yes, in addition to our visa processing services, we provide comprehensive assistance for Hajj and Umrah journeys, including travel arrangements, accommodation, transportation, and guidance throughout the pilgrimage. Our aim is to ensure a seamless and memorable experience for our clients.
+                                        <div class="text text-justify">
+                                            If your visa is rejected, we will assist you in identifying the reason (e.g., incomplete documents, eligibility issues) and guide you on reapplying with the correct requirements.
                                         </div>
                                     </div>
                                 </div>

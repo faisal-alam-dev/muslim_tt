@@ -35,16 +35,15 @@
                 <div class="scholar-detail_content-column col-lg-6 col-md-6 col-sm-12">
                     <div class="scholar-detail_content-outer wow fadeInRight" data-wow-delay="0ms" data-wow-duration="1000ms">
                         <p class="text-justify">
-                            Are you planning to undertake the sacred pilgrimage of Hajj or Umrah from Bangladesh?
-                            <b>Hijaz Hajj &amp; Umrah Kafela</b> is your trusted companion in ensuring a seamless and fulfilling experience.
-                            With our extensive expertise and <b>dedicated services</b>, we simplify the process of
-                            <b>hotel bookings in Makkah and Medina</b>, allowing you to focus on the spiritual significance of your
-                            journey.
+                            Are you preparing for the blessed Umrah journey to Makkah and Madinah?
+                            <b>Muslim Tour & Travels</b> is your reliable partner in ensuring a smooth and spiritually enriching experience.
+                            With our years of expertise and <b>personalized services</b>, we take care of your
+                            <b>hotel bookings in Makkah and Madinah</b>, so you can devote yourself fully to worship and devotion.
                         </p>
                         <p class="text-justify">
-                            We offer a wide range of hotel options in Makkah and Medina to cater to the diverse requirements of pilgrims
-                            from Bangladesh. Whether you seek luxurious accommodations or more affordable alternatives, our team will
-                            assist you in finding the perfect hotel that aligns with your preferences and budget.
+                            We provide a variety of hotel options in Makkah and Madinah, catering to the needs of pilgrims from all backgrounds.
+                            Whether you prefer <b>luxury stays near the Haram</b> or <b>budget-friendly accommodations</b>, our team will help you
+                            find the perfect hotel to match your comfort and financial plan.
                         </p>
                         <!-- Button Box -->
                         <div class="welcome-three_button">
@@ -94,16 +93,8 @@
                 <div class="scholar-detail_content-column col-lg-6 col-md-6 col-sm-12">
                     <div class="scholar-detail_content-outer wow fadeInRight" data-wow-delay="0ms" data-wow-duration="1000ms">
                         <h3 class="scholar-detail_title mb-4" style="line-height: 45px;">We provide hotel booking service according to your needs</h3>
-                        <p>
-                            At Hijaz Hajj &amp; Umrah Kafela, we believe that your accommodation plays a crucial role in enhancing your
-                            overall journey. That's why we are committed to providing <b>hotel booking facilities</b> tailored to your
-                            specific needs, ensuring your utmost <b>comfort and convenience</b> throughout your sacred journey.
-                        </p>
-                        <p>
-                            We provide different hotel facilities in Makkah or Medina such as 5 Star, 4 Star, 3 star &amp; other hotels
-                            according to your need. <a href="{{ route('frontend.contact.us') }}">Contact us today</a> to learn about our hotel
-                            facilities in Makkah and Medina to embark on a journey where your needs and comfort are our top priority.
-                        </p>
+                        <p class="text-justify"> At Muslim Tour & Travels, we understand that comfortable accommodation is essential for a fulfilling journey. That’s why we offer <b>personalized hotel booking services</b> to match your preferences, ensuring a seamless and relaxing stay during your travels. </p>
+                        <p class="text-justify"> Whether you prefer luxury 5-star hotels, budget-friendly 3-star options, or anything in between, we provide a range of accommodations in Makkah, Medina, and beyond. <a href="{{ route('frontend.contact.us') }}">Contact us today</a> to find the perfect stay, tailored to your needs and comfort. </p>
                         <!-- Button Box -->
                         <div class="welcome-three_button">
                             <a href="{{ route('frontend.contact.us') }}" class="theme-btn btn-style-one">
@@ -273,14 +264,15 @@
                     <div class="scholar-detail_content-outer wow fadeInRight" data-wow-delay="0ms" data-wow-duration="1000ms">
                         <h3 class="scholar-detail_title mb-4" style="line-height: 45px;">Facilities & Hotel Amenities</h3>
                         <ul class="scholar-detail_list mt-0">
-                            <li>Luxurious Accommodations</li>
-                            <li>Air-conditioned Rooms</li>
-                            <li>Proximity to the Holy Sites</li>
-                            <li>Facilities for Disabled Guests</li>
-                            <li>Separate Rooms for Families</li>
-                            <li>Gourmet Dining Options</li>
-                            <li>Impeccable Service</li>
-                            <li>Safety and Security</li>
+                            <li>Halal-Certified Dining</li>
+                            <li>Prayer Facilities (Salah Mats & Qibla Direction)</li>
+                            <li>Proximity to Mosques & Islamic Sites</li>
+                            <li>Family-Friendly Accommodations</li>
+                            <li>Air-Conditioned Rooms with Islamic Decor</li>
+                            <li>24/7 Quran Channels & Prayer Timetables</li>
+                            <li>Separate Swimming Pools/Gym Hours for Men & Women</li>
+                            <li>Halal Room Service & Dining Options</li>
+                            <li>Safety & Privacy for Families</li>
                         </ul>
                     </div>
                 </div>
@@ -323,12 +315,12 @@
                             <li class="accordion block">
                                 <div class="acc-btn active">
                                     <div class="icon-outer"><span class="icon icon-plus fa fa-plus"></span> <span class="icon icon-minus fa fa-minus"></span></div>
-                                    What types of hotels are available for booking in Makkah and Medina?
+                                    How can I book a hotel for Umrah through Muslim Tour & Travels?
                                 </div>
                                 <div class="acc-content current">
                                     <div class="content">
-                                        <div class="text">
-                                            We offer a wide range of hotel options to cater to the diverse needs of our clients. Whether you prefer luxury accommodations or more budget-friendly alternatives, our team will help you find the perfect hotel that suits your requirements.
+                                        <div class="text text-justify">
+                                            You can book a hotel by contacting our team via phone, email, or our website. We offer a variety of options near Haram in Makkah and Masjid an-Nabawi in Madinah.
                                         </div>
                                     </div>
                                 </div>
@@ -338,12 +330,12 @@
                             <li class="accordion block">
                                 <div class="acc-btn">
                                     <div class="icon-outer"><span class="icon icon-plus fa fa-plus"></span> <span class="icon icon-minus fa fa-minus"></span></div>
-                                    How can I ensure that the hotel I book is conveniently located near the holy sites in Makkah and Medina?
+                                    What types of hotels are available for Umrah pilgrims?
                                 </div>
                                 <div class="acc-content">
                                     <div class="content">
-                                        <div class="text">
-                                            At Hijaz Hajj & Umrah Kafela, we understand the importance of accessibility. Our team carefully selects hotels that are strategically situated in close proximity to the Grand Mosque (Masjid al-Haram) in Makkah and the Prophet's Mosque (Al-Masjid an-Nabawi) in Medina. Rest assured, your hotel will be conveniently located for easy travel during your pilgrimage.
+                                        <div class="text text-justify">
+                                            We provide a range of accommodations, from budget-friendly hotels to 5-star luxury stays, all within walking distance to the holy mosques.
                                         </div>
                                     </div>
                                 </div>
@@ -353,12 +345,12 @@
                             <li class="accordion block">
                                 <div class="acc-btn">
                                     <div class="icon-outer"><span class="icon icon-plus fa fa-plus"></span> <span class="icon icon-minus fa fa-minus"></span></div>
-                                    What level of service can I expect from Hijaz Hajj & Umrah Kafela?
+                                    Can I modify or cancel my hotel booking after confirmation?
                                 </div>
                                 <div class="acc-content">
                                     <div class="content">
-                                        <div class="text">
-                                            We take pride in providing exceptional service to our clients. Our dedicated team is available round-the-clock to assist you at every step of your journey, ensuring a hassle-free experience. From handling hotel bookings to offering guidance and support, we strive to make your pilgrimage a memorable and spiritually fulfilling one.
+                                        <div class="text text-justify">
+                                            Yes, modifications or cancellations are possible depending on the hotel’s policy. Please check with our team for specific terms and conditions.
                                         </div>
                                     </div>
                                 </div>
@@ -368,12 +360,12 @@
                             <li class="accordion block">
                                 <div class="acc-btn">
                                     <div class="icon-outer"><span class="icon icon-plus fa fa-plus"></span> <span class="icon icon-minus fa fa-minus"></span></div>
-                                    Are there affordable hotel options available through Hijaz Hajj & Umrah Kafela?
+                                    Are meals included in the hotel booking?
                                 </div>
                                 <div class="acc-content">
                                     <div class="content">
-                                        <div class="text">
-                                            Absolutely! We understand that pilgrims may have varying budget constraints. Hence, we offer a range of hotel options to accommodate different budgets while maintaining quality standards. Our aim is to make the pilgrimage experience accessible to all, regardless of financial limitations.
+                                        <div class="text text-justify">
+                                            Some hotels offer meal plans (breakfast, half-board, or full-board), while others do not. We can guide you based on your preferred package.
                                         </div>
                                     </div>
                                 </div>
@@ -383,12 +375,12 @@
                             <li class="accordion block">
                                 <div class="acc-btn">
                                     <div class="icon-outer"><span class="icon icon-plus fa fa-plus"></span> <span class="icon icon-minus fa fa-minus"></span></div>
-                                    How do I get started with booking a hotel in Makkah or Medina through Hijaz Hajj & Umrah Kafela?
+                                    What is the check-in/check-out time for Umrah hotels?
                                 </div>
                                 <div class="acc-content">
                                     <div class="content">
-                                        <div class="text">
-                                            To initiate the booking process or seek more information, simply contact us through our website or helpline. Our experienced team will guide you through the necessary steps, answer your queries, and assist you in securing the ideal hotel for your Hajj or Umrah journey.
+                                        <div class="text text-justify">
+                                            Typically, check-in is after <b>2 PM</b>, and check-out is before <b>12 PM</b>, but timings may vary. Early check-in/late check-out can be requested, subject to availability.
                                         </div>
                                     </div>
                                 </div>
