@@ -55,10 +55,13 @@ Route::group(
                 Route::get('/package/{slug}', 'PackageDetails')->name('package.details');
                 Route::post('/package/confirmation', 'PackageConfirmation')->name('package.confirmation');
 
-                // Umrah Packages
+                // Umrah
                 Route::get('/umrah-packages', 'UmrahPackages')->name('umrah.packages');
+                Route::get('/benefit-of-umrah', 'BenefitOfUmrah')->name('benefit.of.umrah');
+                Route::get('/how-to-perform-umrah', 'HowToPerformUmrah')->name('how.to.perform.umrah');
+                Route::get('/umrah-visa-requirement', 'UmrahVisaRequirement')->name('umrah.visa.requirement');
 
-                // Hajj Packages
+                // Hajj
                 Route::get('/hajj-packages', 'HajjPackages')->name('hajj.packages');
                 Route::get('/hajj-pre-registration', 'HajjPreRegistration')->name('hajj.pre.registration');
                 Route::get('/hajj-visa-requirements', 'HajjVisaRequirements')->name('hajj.visa.requirements');
@@ -83,10 +86,6 @@ Route::group(
                 Route::get('/ziyarat-tours', 'ZiyaratTours')->name('ziyarat.tours');
                 Route::get('/air-ticketing', 'AirTicketing')->name('air.ticketing');
                 Route::get('/umrah-training', 'UmrahTraining')->name('umrah.training');
-
-
-
-
 
                 Route::get('/services', 'AllServiceList')->name('all.services.list');
                 Route::get('/services/{slug}', 'ServiceDetails')->name('service.details');

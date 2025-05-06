@@ -97,7 +97,22 @@ class FrontendController extends Controller
     public function UmrahPackages()
     {
         $packages = Package::where('package_status', 'active')->where('package_type', 'umrah')->orderBy('id', 'desc')->get();
-        return view('frontend.pages.umrah_packages', compact('packages'));
+        return view('frontend.pages.umrah.umrah_packages', compact('packages'));
+    } // End Method
+
+    public function BenefitOfUmrah()
+    {
+        return view('frontend.pages.umrah.benefit_of_umrah');
+    } // End Method
+
+    public function HowToPerformUmrah()
+    {
+        return view('frontend.pages.umrah.how_to_perform_umrah');
+    } // End Method
+
+    public function UmrahVisaRequirement()
+    {
+        return view('frontend.pages.umrah.umrah_visa_requirement');
     } // End Method
 
     public function HajjPackages()
@@ -175,16 +190,6 @@ class FrontendController extends Controller
     {
         return view('frontend.pages.facilities.umrah_training');
     } // End Method
-
-
-
-
-
-
-
-
-
-
 
     public function ServiceDetails($slug)
     {

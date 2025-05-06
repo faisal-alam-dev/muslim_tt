@@ -33,7 +33,7 @@
             <div class="row clearfix align-items-center">
                 <div class="scholar-detail_content-column col-lg-6 col-md-6 col-sm-12">
                     <div class="scholar-detail_content-outer wow fadeInRight" data-wow-delay="0ms" data-wow-duration="1000ms">
-                        <p>
+                        <p class="text-justify">
                             As you prepare for the sacred journey of Hajj, ensuring a seamless experience is essential. <strong>Muslim Tour & Travels’</strong> Hajj visa requirements checklist for 2025 from Bangladesh will help you organize the necessary documents for this blessed pilgrimage. May your Hajj be accepted and filled with spiritual blessings.
                         </p>
                         <ul class="scholar-detail_list mt-0">
@@ -83,7 +83,7 @@
                 <div class="scholar-detail_content-column col-lg-12 col-md-12 col-sm-12">
                     <div class="scholar-detail_content-outer wow fadeInRight" data-wow-delay="0ms" data-wow-duration="1000ms">
                         <h3 class="scholar-detail_title mb-4" style="line-height: 45px;">Hajj Visa Requirements from Bangladesh</h3>
-                        <p>
+                        <p class="text-justify">
                             The Hajj pilgrimage is a <strong>once-in-a-lifetime spiritual journey</strong> for every Muslim. If you are a Bangladeshi citizen planning to perform Hajj <strong>in 2025 / 2026,</strong> you must meet specific visa requirements set by Saudi authorities. Ensure you have a valid passport, confirmed Hajj package, vaccination certificates, and other necessary documents for a hassle-free pilgrimage.
                             <a href="{{ route('frontend.contact.us') }}">Contact us</a> for expert guidance on Hajj visa processing and requirements.
                         </p>
@@ -108,7 +108,7 @@
                 <div class="scholar-detail_content-column col-lg-6 col-md-6 col-sm-12">
                     <div class="scholar-detail_content-outer wow fadeInRight" data-wow-delay="0ms" data-wow-duration="1000ms">
                         <h3 class="scholar-detail_title mb-4" style="line-height: 45px;">How to apply for a Hajj visa 2025 from Bangladesh?</h3>
-                        <p>
+                        <p class="text-justify">
                             <strong>Applying for a Hajj visa</strong> from Bangladesh requires following the official process through an authorized Hajj agency. Here’s a simple guide to help you with your application:
                         </p>
                         <ul class="scholar-detail_list mt-0">
@@ -160,7 +160,7 @@
                 <div class="scholar-detail_content-column col-lg-12 col-md-12 col-sm-12">
                     <div class="scholar-detail_content-outer wow fadeInRight" data-wow-delay="0ms" data-wow-duration="1000ms">
                         <h3 class="scholar-detail_title mb-4" style="line-height: 45px;">Eligibility Criteria for Saudi Arabia Hajj Visa</h3>
-                        <p>To obtain a Hajj visa for Saudi Arabia, applicants must meet the following essential requirements:</p>
+                        <p class="text-justify">To obtain a Hajj visa for Saudi Arabia, applicants must meet the following essential requirements:</p>
                         <ul class="scholar-detail_list mt-0">
                             <li><strong>Muslim Faith:</strong> Only Muslims are permitted to perform Hajj, and applicants must provide proof of their faith.</li>
                             <li><strong>Valid Passport:</strong> A passport with at least six months validity from the date of travel is mandatory.</li>
@@ -199,7 +199,7 @@
                 <div class="scholar-detail_content-column col-lg-12 col-md-12 col-sm-12">
                     <div class="scholar-detail_content-outer wow fadeInRight" data-wow-delay="0ms" data-wow-duration="1000ms">
                         <h3 class="scholar-detail_title mb-3">Hajj Visa for Women and Children from Bangladesh</h3>
-                        <p>For women and children traveling from Bangladesh, Hajj visa regulations ensure a safe and spiritually fulfilling journey. Here’s a quick guide:</p>
+                        <p class="text-justify">For women and children traveling from Bangladesh, Hajj visa regulations ensure a safe and spiritually fulfilling journey. Here’s a quick guide:</p>
                     </div>
                 </div>
             </div>
@@ -264,7 +264,7 @@
                 <div class="scholar-detail_content-column col-lg-6 col-md-6 col-sm-12">
                     <div class="scholar-detail_content-outer wow fadeInRight" data-wow-delay="0ms" data-wow-duration="1000ms">
                         <h3 class="scholar-detail_title mb-4" style="line-height: 45px;">Tips for a Smooth Hajj Visa Acquisition</h3>
-                        <p>Ensure a hassle-free Hajj visa process with these essential tips:</p>
+                        <p class="text-justify">Ensure a hassle-free Hajj visa process with these essential tips:</p>
                         <div class="row">
                             <div class="col-md-6">
                                 <ul class="scholar-detail_list mt-0">
@@ -324,12 +324,12 @@
                             <li class="accordion block">
                                 <div class="acc-btn active">
                                     <div class="icon-outer"><span class="icon icon-plus fa fa-plus"></span> <span class="icon icon-minus fa fa-minus"></span></div>
-                                    What are the essential documents required for an Umrah visa?
+                                    What documents are required for a Hajj visa?
                                 </div>
                                 <div class="acc-content current">
                                     <div class="content">
                                         <div class="text text-justify">
-                                            Applicants need a valid passport, passport-sized photos, a completed visa application form, proof of vaccination (including meningitis and COVID-19, if required), a confirmed flight itinerary, and hotel bookings in Saudi Arabia. Women and children must also provide a Mahram certificate if applicable.
+                                            You need a valid passport (with at least 6 months validity), a completed Hajj application form, recent passport-sized photos, a confirmed round-trip ticket, proof of vaccination (especially meningitis), and a Mahram certificate (for women under 45).
                                         </div>
                                     </div>
                                 </div>
@@ -339,12 +339,12 @@
                             <li class="accordion block">
                                 <div class="acc-btn">
                                     <div class="icon-outer"><span class="icon icon-plus fa fa-plus"></span> <span class="icon icon-minus fa fa-minus"></span></div>
-                                    How long does it take to process an Umrah visa?
+                                    Can I perform Hajj on a tourist visa?
                                 </div>
                                 <div class="acc-content">
                                     <div class="content">
                                         <div class="text text-justify">
-                                            The processing time usually takes <b>7 to 14 working days</b>, but it may vary depending on the Saudi embassy’s workload and the completeness of the submitted documents.
+                                            No, Hajj can only be performed with an official Hajj visa issued by Saudi Arabia. Tourist or Umrah visas are not valid for Hajj.
                                         </div>
                                     </div>
                                 </div>
@@ -354,12 +354,12 @@
                             <li class="accordion block">
                                 <div class="acc-btn">
                                     <div class="icon-outer"><span class="icon icon-plus fa fa-plus"></span> <span class="icon icon-minus fa fa-minus"></span></div>
-                                    Can I apply for an Umrah visa without a travel agency?
+                                    Is there an age limit for Hajj visas?
                                 </div>
                                 <div class="acc-content">
                                     <div class="content">
                                         <div class="text text-justify">
-                                            No, Saudi Arabia requires Umrah visas to be processed through <b>authorized travel agencies</b> like Muslim Tour & Travels. Individual applications are not accepted.
+                                            Yes, Saudi authorities restrict Hajj visas for children under 12 and elderly pilgrims with serious health conditions. Each applicant must meet health and fitness requirements.
                                         </div>
                                     </div>
                                 </div>
@@ -369,12 +369,12 @@
                             <li class="accordion block">
                                 <div class="acc-btn">
                                     <div class="icon-outer"><span class="icon icon-plus fa fa-plus"></span> <span class="icon icon-minus fa fa-minus"></span></div>
-                                    Is there an age limit for Umrah visa applicants?
+                                    Do I need a Mahram for a Hajj visa as a woman?
                                 </div>
                                 <div class="acc-content">
                                     <div class="content">
                                         <div class="text text-justify">
-                                            There is no strict age limit, but minors (under 18) must travel with a <b>Mahram</b> (male guardian) and provide a birth certificate and guardian’s identification.
+                                            Yes, women under 45 must travel with a Mahram (male guardian such as a husband, father, or brother) and provide proof of relationship for the visa application.
                                         </div>
                                     </div>
                                 </div>
@@ -384,12 +384,12 @@
                             <li class="accordion block">
                                 <div class="acc-btn">
                                     <div class="icon-outer"><span class="icon icon-plus fa fa-plus"></span> <span class="icon icon-minus fa fa-minus"></span></div>
-                                    What should I do if my Umrah visa is rejected?
+                                    How long is the Hajj visa valid?
                                 </div>
                                 <div class="acc-content">
                                     <div class="content">
                                         <div class="text text-justify">
-                                            If your visa is rejected, we will assist you in identifying the reason (e.g., incomplete documents, eligibility issues) and guide you on reapplying with the correct requirements.
+                                            The Hajj visa is valid only for the Hajj season (usually from Shawwal to Dhul Hijjah). Pilgrims must enter and exit Saudi Arabia within the specified dates.
                                         </div>
                                     </div>
                                 </div>

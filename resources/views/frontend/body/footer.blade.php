@@ -38,7 +38,7 @@
                                     <ul class="footer-list">
                                         <li><a href="{{ route('frontend.umrah.packages') }}">Umrah Packages</a></li>
                                         <li><a href="{{ route('frontend.hajj.packages') }}">Hajj Packages</a></li>
-                                        <li><a href="#">Client Testimonials</a></li>
+                                        <li><a href="{{ route('frontend.how.to.perform.umrah') }}">How To Perform Umrah</a></li>
                                         <li><a href="{{ route('frontend.terms.of.use') }}">Terms of use</a></li>
                                         <li><a href="{{ route('frontend.privacy.policy') }}">Privacy Policy</a></li>
                                     </ul>

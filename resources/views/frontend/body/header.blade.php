@@ -61,9 +61,9 @@
                                     <li class="dropdown"><a>Umrah</a>
                                         <ul>
                                             <li><a href="{{ route('frontend.umrah.packages') }}">Umrah Packages</a></li>
-                                            <li><a href="#!">Benefit of Umrah</a></li>
-                                            <li><a href="#!">How to perform Umrah</a></li>
-                                            <li><a href="#!">Umrah Visa Requirement</a></li>
+                                            <li><a href="{{ route('frontend.benefit.of.umrah') }}">Benefit of Umrah</a></li>
+                                            <li><a href="{{ route('frontend.how.to.perform.umrah') }}">How to perform Umrah</a></li>
+                                            <li><a href="{{ route('frontend.umrah.visa.requirement') }}">Umrah Visa Requirement</a></li>
                                         </ul>
                                     </li>
 

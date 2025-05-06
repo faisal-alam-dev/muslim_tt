@@ -10,7 +10,7 @@
             <h2>Hajj Packages</h2>
             <ul class="bread-crumb clearfix">
                 <li><a href="{{ route('frontend.index') }}">Home</a></li>
-                <li>Hajj Packages</li>
+                <li>Hajj</li>
             </ul>
         </div>
     </section>
