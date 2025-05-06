@@ -47,8 +47,10 @@ Route::group(
                 'as' => 'frontend.',
             ],
             function () {
-                // Home About Us
+                // About Us
                 Route::get('/about-us', 'AboutUs')->name('about.us');
+                Route::get('/customer-reviews', 'CustomerReviews')->name('customer.reviews');
+                Route::get('/board-of-director', 'BoardOfDirector')->name('board.of.director');
 
                 // Packages
                 Route::get('/package', 'PackagesList')->name('packages.list');

@@ -52,7 +52,7 @@
 
                                     <li class="dropdown"><a href="#">About Us</a>
                                         <ul>
-                                            <li><a href="#!">About Us</a></li>
+                                            <li><a href="{{ route('frontend.about.us') }}">About Us</a></li>
                                             <li><a href="#!">Customer Reviews</a></li>
                                             <li><a href="#!">Board of Director</a></li>
                                         </ul>

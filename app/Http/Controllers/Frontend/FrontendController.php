@@ -63,6 +63,13 @@ class FrontendController extends Controller
         return view('frontend.index', compact('slider', 'about_us', 'packages', 'blog', 'services', 'our_team', 'top_level_team', 'client'));
     } // End Method
 
+    public function AboutUs()
+    {
+        $about_us = AboutUs::where('id', 1)->latest()->get()->first();
+
+        return view('frontend.pages.about_us.about_us', compact('about_us'));
+    } // End Method
+
     public function PackageDetails($slug)
     {
         $package = Package::where('package_name_slug', $slug)->first();
@@ -204,33 +211,33 @@ class FrontendController extends Controller
         return view('frontend.pages.all_services', compact('services'));
     } // End Method
 
-    public function AboutUs()
-    {
-        $about_us = AboutUs::where('id', 1)->latest()->get()->first();
+    // public function AboutUs()
+    // {
+    //     $about_us = AboutUs::where('id', 1)->latest()->get()->first();
 
-        $about_message = AboutUs::where('id', 2)->latest()->get()->first();
+    //     $about_message = AboutUs::where('id', 2)->latest()->get()->first();
 
-        $team = OurTeam::where('status', 'active')->latest()->get();
+    //     $team = OurTeam::where('status', 'active')->latest()->get();
 
-        $top_level_team = $team->filter(function ($item) {
-            return $item->type == 'top_level';
-        });
+    //     $top_level_team = $team->filter(function ($item) {
+    //         return $item->type == 'top_level';
+    //     });
 
-        $student_level_team = $team
-            ->filter(function ($item) {
-                return $item->type == 'student_level';
-            })
-            ->sortBy('id');
+    //     $student_level_team = $team
+    //         ->filter(function ($item) {
+    //             return $item->type == 'student_level';
+    //         })
+    //         ->sortBy('id');
 
-        $our_mission = OurContents::where('id', 1)->latest()->get()->first();
-        $our_vision = OurContents::where('id', 2)->latest()->get()->first();
-        $shared_beliefs = OurContents::where('id', 3)->latest()->get()->first();
-        $organizational_strength = OurContents::where('id', 4)->latest()->get()->first();
-        $operational_strength = OurContents::where('id', 5)->latest()->get()->first();
-        $commitment = OurContents::where('id', 6)->latest()->get()->first();
+    //     $our_mission = OurContents::where('id', 1)->latest()->get()->first();
+    //     $our_vision = OurContents::where('id', 2)->latest()->get()->first();
+    //     $shared_beliefs = OurContents::where('id', 3)->latest()->get()->first();
+    //     $organizational_strength = OurContents::where('id', 4)->latest()->get()->first();
+    //     $operational_strength = OurContents::where('id', 5)->latest()->get()->first();
+    //     $commitment = OurContents::where('id', 6)->latest()->get()->first();
 
-        return view('frontend.pages.about_us', compact('about_us', 'about_message', 'team', 'top_level_team', 'student_level_team', 'our_mission', 'our_vision', 'shared_beliefs', 'organizational_strength', 'operational_strength', 'commitment'));
-    } // End Method
+    //     return view('frontend.pages.about_us', compact('about_us', 'about_message', 'team', 'top_level_team', 'student_level_team', 'our_mission', 'our_vision', 'shared_beliefs', 'organizational_strength', 'operational_strength', 'commitment'));
+    // } // End Method
 
     public function ImportantEnlistment()
     {
