@@ -72,7 +72,7 @@
                                     <div class="form-group row mb-4">
                                         <div class="col-md-12">
                                             <label class="col-form-label">Footer Text</label>
-                                            <textarea class="form-control @error('footer_text') is-invalid @enderror" name="footer_text" data-parsley-required-message="Site Footer Text is required*" required>{{ $site_setting->footer_text }}</textarea>
+                                            <textarea class="form-control" name="footer_text">{{ $site_setting->footer_text }}</textarea>
                                         </div>
                                     </div>
 
@@ -127,12 +127,12 @@
                                         </div>
                                     </div>
 
-                                    <div class="form-group row mb-4">
+                                    {{-- <div class="form-group row mb-4">
                                         <div class="col-md-12">
                                             <label class="col-form-label">Branch Address</label>
                                             <textarea class="form-control @error('branch_address') is-invalid @enderror" name="branch_address" data-parsley-required-message="Site Address is required*">{{ $site_setting->branch_address }}</textarea>
                                         </div>
-                                    </div>
+                                    </div> --}}
 
                                     <div class="form-group row mb-4">
                                         <div class="col-md-12">

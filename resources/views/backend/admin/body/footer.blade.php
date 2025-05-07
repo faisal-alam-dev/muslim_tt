@@ -5,7 +5,7 @@
         <script>
             document.write(new Date().getFullYear());
         </script>
-        <a href="#!" target="_blank">
+        <a href="#!">
             {{ siteSetting()->copyright }}
         </a>
         , All right reserved.

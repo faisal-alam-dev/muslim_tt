@@ -13,7 +13,7 @@
                             <!-- Footer Column -->
                             <div class="footer-column col-lg-6 col-md-6 col-sm-12">
                                 <div class="footer-widget logo-widget">
-                                    <div class="footer-logo"><a href="{{ route('frontend.index') }}"><img src="{{ asset('uploads/demo_logo_white.png') }}" alt="" title="" width="184px"></a></div>
+                                    <div class="footer-logo"><a href="{{ route('frontend.index') }}"><img src="{{ asset($site_setting->footer_logo) }}" alt="Site Logo" title="" width="184px"></a></div>
                                     <!-- Footer List -->
                                     <div class="footer_list">
                                         <li>{!! $site_setting->head_address !!}</li>
@@ -88,7 +88,7 @@
         <div class="footer_bottom-bg" style="background-image: url({{ asset('frontend/assets/images/background/footer-bg_2.jpg') }})"></div>
         <div class="auto-container">
             <div class="text-center">
-                <div class="copyright">All rights reserved 2025 &copy; <a href="{{ route('frontend.index') }}">Muslim Tour and Travels</a>. Developed by <a href="https://nebulaitbd.com/" target="_blank;">Nebula IT.</a></div>
+                <div class="copyright">All rights reserved 2025 &copy; <a href="{{ route('frontend.index') }}">{{ $site_setting->copyright }}</a>. Developed by <a href="https://nebulaitbd.com/" target="_blank;">Nebula IT.</a></div>
             </div>
         </div>
     </div>

@@ -35,7 +35,7 @@
                 <div class="scholar-detail_content-column col-lg-6 col-md-6 col-sm-12">
                     <div class="scholar-detail_content-outer wow fadeInRight" data-wow-delay="0ms" data-wow-duration="1000ms">
                         <h3 class="scholar-detail_title">{{ $team->name }} <span>{{ $team->designation }}</span></h3>
-                        <div>
+                        <div class="text-justify scholar-detail_text">
                             {!! $team->description !!}
                         </div>
 

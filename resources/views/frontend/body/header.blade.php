@@ -30,7 +30,7 @@
                 <div class="d-flex justify-content-between align-items-center flex-wrap">
 
                     <div class="logo-box">
-                        <div class="logo"><a href="{{ route('frontend.index') }}"><img src="{{ asset('uploads/demo_logo.png') }}" alt="" title="" width="184px"></a></div>
+                        <div class="logo"><a href="{{ route('frontend.index') }}"><img src="{{ asset($site_setting->header_logo) }}" alt="Site Logo" title="" width="184px"></a></div>
                     </div>
 
                     <div class="nav-outer">
@@ -70,7 +70,7 @@
                                     <li class="dropdown"><a>Hajj</a>
                                         <ul>
                                             <li><a href="{{ route('frontend.hajj.packages') }}">Hajj Packages</a></li>
-                                            <li><a href="{{ route('frontend.hajj.pre.registration') }}">Hajj Pre Registration</a></li>
+                                            {{-- <li><a href="{{ route('frontend.hajj.pre.registration') }}">Hajj Pre Registration</a></li> --}}
                                             <li><a href="{{ route('frontend.hajj.visa.requirements') }}">Hajj Visa Requirements</a></li>
                                         </ul>
                                     </li>

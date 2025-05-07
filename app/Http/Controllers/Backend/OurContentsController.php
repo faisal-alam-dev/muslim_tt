@@ -63,7 +63,7 @@ class OurContentsController extends Controller
                 $manager = new ImageManager(new Driver());
                 $name_gen = hexdec(uniqid()) . '.' . $image->getClientOriginalExtension();
                 $image = $manager->read($image);
-                $image->resize(900, 500);
+                // $image->resize(900, 500);
                 $image->toJpeg(80)->save(base_path('public/uploads/our_contents/' . $name_gen));
                 $data->image = 'uploads/our_contents/' . $name_gen;
             }

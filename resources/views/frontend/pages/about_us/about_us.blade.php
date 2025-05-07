@@ -68,5 +68,70 @@
 
     </section>
 
+    <!-- Our mission -->
+    <section class="courses-three">
+
+        <div class="courses-three_bg" style="background-image:url({{ asset('frontend/assets/images/background/3.jpg') }})"></div>
+
+        <div class="auto-container">
+
+            <div class="row clearfix align-items-center">
+
+                <div class="scholar-detail_content-column col-lg-6 col-md-6 col-sm-12">
+                    <div class="scholar-detail_content-outer wow fadeInRight" data-wow-delay="0ms" data-wow-duration="1000ms">
+                        <h3 class="scholar-detail_title mb-4" style="line-height: 45px;">Our Mission</h3>
+                        <div class="text-justify">
+                            {!! $our_mission->description !!}
+                        </div>
+                    </div>
+                </div>
+
+                <div class="scholar-detail_image-column col-lg-6 col-md-6 col-sm-12">
+                    <div class="scholar-detail_image-outer wow fadeInLeft" data-wow-delay="0ms" data-wow-duration="1000ms">
+                        <div class="scholar-detail_image">
+                            <img src="{{ asset($our_mission->image) }}" alt="Our Mission" />
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+    <!-- End Our mission -->
+
+
+    <!-- Our vision -->
+    <section class="courses-three">
+
+        <div class="auto-container">
+
+            <div class="row clearfix align-items-center">
+
+                <div class="scholar-detail_image-column col-lg-6 col-md-6 col-sm-12">
+                    <div class="scholar-detail_image-outer wow fadeInLeft" data-wow-delay="0ms" data-wow-duration="1000ms">
+                        <div class="scholar-detail_image">
+                            <img src="{{ asset($our_vision->image) }}" alt="Our Vision" />
+                        </div>
+                    </div>
+                </div>
+
+                <div class="scholar-detail_content-column col-lg-6 col-md-6 col-sm-12">
+                    <div class="scholar-detail_content-outer wow fadeInRight" data-wow-delay="0ms" data-wow-duration="1000ms">
+                        <h3 class="scholar-detail_title mb-4" style="line-height: 45px;">Our Vision</h3>
+                        <div class="text-justify">
+                            {!! $our_vision->description !!}
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+    <!-- End Our vision -->
+
 
 @endsection

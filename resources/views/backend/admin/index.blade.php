@@ -39,7 +39,7 @@
                     </div>
                 </div>
 
-                {{-- Package Messages --}}
+                {{-- Package Booking --}}
                 <div class="col-xl-4 col-lg-6 col-md-6 col-sm-6 col-xs-12">
                     <div class="card">
                         <div class="card-statistic-4">
@@ -47,7 +47,7 @@
                                 <div class="row ">
                                     <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 pr-0 pt-3">
                                         <div class="card-content">
-                                            <h5 class="font-20"><a href="{{ url('admin/package/confirmation-message') }}" class="custom_dashboard_title">Package Messages</a></h5>
+                                            <h5 class="font-20"><a href="{{ url('admin/package/confirmation-message') }}" class="custom_dashboard_title">Package Booking</a></h5>
                                             <h2 class="mb-3 font-18">{{ $package_messages->count() }}</h2>
                                         </div>
                                     </div>
@@ -62,6 +62,7 @@
                     </div>
                 </div>
 
+                {{-- About Us --}}
                 <div class="col-xl-4 col-lg-6 col-md-6 col-sm-6 col-xs-12">
                     <div class="card">
                         <div class="card-statistic-4">
@@ -69,7 +70,7 @@
                                 <div class="row ">
                                     <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 pr-0 pt-3">
                                         <div class="card-content">
-                                            <h5 class="font-20"><a href="{{ route('admin.about-us.list') }}" class="custom_dashboard_title">About Our Firm</a></h5>
+                                            <h5 class="font-20"><a href="{{ route('admin.about-us.list') }}" class="custom_dashboard_title">About Us</a></h5>
                                             <h2 class="mb-3 font-18">{{ $about_us->count() }}</h2>
                                         </div>
                                     </div>
@@ -84,6 +85,7 @@
                     </div>
                 </div>
 
+                {{-- Board Of Director --}}
                 <div class="col-xl-4 col-lg-6 col-md-6 col-sm-6 col-xs-12">
                     <div class="card">
                         <div class="card-statistic-4">
@@ -91,7 +93,7 @@
                                 <div class="row ">
                                     <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 pr-0 pt-3">
                                         <div class="card-content">
-                                            <h5 class="font-20"><a href="{{ route('admin.our-team.list') }}" class="custom_dashboard_title">Our Team</a></h5>
+                                            <h5 class="font-20"><a href="{{ route('admin.our-team.list') }}" class="custom_dashboard_title">Board Of Director</a></h5>
                                             <h2 class="mb-3 font-18">{{ $our_team->count() }}</h2>
                                         </div>
                                     </div>
@@ -106,7 +108,7 @@
                     </div>
                 </div>
 
-                <div class="col-xl-4 col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                {{-- <div class="col-xl-4 col-lg-6 col-md-6 col-sm-6 col-xs-12">
                     <div class="card">
                         <div class="card-statistic-4">
                             <div class="align-items-center justify-content-between">
@@ -126,8 +128,9 @@
                             </div>
                         </div>
                     </div>
-                </div>
+                </div> --}}
 
+                {{-- Blog --}}
                 <div class="col-xl-4 col-lg-6 col-md-6 col-sm-6 col-xs-12">
                     <div class="card">
                         <div class="card-statistic-4">
@@ -135,8 +138,8 @@
                                 <div class="row ">
                                     <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 pr-0 pt-3">
                                         <div class="card-content">
-                                            <h5 class="font-20"><a href="{{ route('admin.gallery.list') }}" class="custom_dashboard_title">Gallery</a></h5>
-                                            <h2 class="mb-3 font-18">{{ $galleries->count() }}</h2>
+                                            <h5 class="font-20"><a href="{{ route('admin.blog.list') }}" class="custom_dashboard_title">Blog</a></h5>
+                                            <h2 class="mb-3 font-18">{{ $blog->count() }}</h2>
                                         </div>
                                     </div>
                                     <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 pl-0">
@@ -150,6 +153,7 @@
                     </div>
                 </div>
 
+                {{-- Contact Messages --}}
                 <div class="col-xl-4 col-lg-6 col-md-6 col-sm-6 col-xs-12">
                     <div class="card">
                         <div class="card-statistic-4">
@@ -172,6 +176,7 @@
                     </div>
                 </div>
 
+                {{-- Site Setting --}}
                 <div class="col-xl-4 col-lg-6 col-md-6 col-sm-6 col-xs-12">
                     <div class="card">
                         <div class="card-statistic-4">

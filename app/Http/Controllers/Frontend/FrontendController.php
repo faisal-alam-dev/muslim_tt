@@ -67,7 +67,11 @@ class FrontendController extends Controller
     {
         $about_us = AboutUs::where('id', 1)->latest()->get()->first();
 
-        return view('frontend.pages.about_us.about_us', compact('about_us'));
+        $our_mission = OurContents::where('id', 1)->latest()->get()->first();
+
+        $our_vision = OurContents::where('id', 2)->latest()->get()->first();
+
+        return view('frontend.pages.about_us.about_us', compact('about_us', 'our_mission', 'our_vision'));
     } // End Method
 
     public function BoardOfDirector()

@@ -41,7 +41,9 @@ class AdminController extends Controller
 
         $contact_message = Contact::latest()->get();
 
-        return view('backend.admin.index', compact('slider', 'package_messages', 'about_us', 'our_team', 'service', 'galleries', 'contact_message'));
+        $blog = Blog::latest()->get();
+
+        return view('backend.admin.index', compact('slider', 'package_messages', 'about_us', 'our_team', 'service', 'galleries', 'contact_message', 'blog'));
     } // End Method
 
     public function AdminLogout(Request $request)

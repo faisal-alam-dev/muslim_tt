@@ -26,13 +26,13 @@
                 <div class="scholar-detail_content-column col-lg-6 col-md-6 col-sm-12">
                     <div class="scholar-detail_content-outer wow fadeInRight" data-wow-delay="0ms" data-wow-duration="1000ms">
                         <h3 class="scholar-detail_title mb-4" style="line-height: 45px;">Meet the Board of Directors of Muslim Tour & Travels</h3>
-                        <p>
+                        <p class="text-justify">
                             Muslim Tour & Travels is a trusted name in Islamic pilgrimage and travel services.
                             Since our establishment, we have been committed to providing seamless Hajj and Umrah
                             experiences with dedication and professionalism. Our services include visa processing,
                             flight arrangements, luxury accommodations, guided tours, and transportation in the holy cities.
                         </p>
-                        <p>
+                        <p class="text-justify">
                             We offer a range of tailored packages, from budget-friendly to premium options, ensuring
                             a spiritually fulfilling journey for every pilgrim. Our operations are led by a dynamic
                             and experienced **board of directors**, each bringing expertise and passion to serve our clients.
