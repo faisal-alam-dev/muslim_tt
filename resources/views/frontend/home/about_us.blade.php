@@ -35,13 +35,13 @@
                         Since 1995 Operating in the world
                     </div>
 
-                    <div class="welcome-three_text text-justify"> 
-                        {!! Str::limit(strip_tags($about_us->description), 650) !!} 
+                    <div class="welcome-three_text text-justify">
+                        {!! Str::limit(strip_tags($about_us->description), 650) !!}
                     </div>
 
                     <!-- Button Box -->
                     <div class="welcome-three_button">
-                        <a href="about.html" class="theme-btn btn-style-one">
+                        <a href="{{ route('frontend.about.us') }}" class="theme-btn btn-style-one">
                             <span class="btn-wrap">
                                 <span class="text-one">Discover More</span>
                                 <span class="text-two">Discover More</span>

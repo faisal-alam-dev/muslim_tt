@@ -4796,7 +4796,7 @@ Scholar Detail
 
 .scholar-detail_socials {
 	position: relative;
-	margin-left: var(--margin-left-40);
+	/* margin-left: var(--margin-left-40); */
 }
 
 .scholar-detail_socials a {
@@ -8341,7 +8341,7 @@ News Three
 	position: relative;
 	/* padding: 120px 0px 120px; */
 	padding-top: 30px;
-	margin-bottom: 80px;
+	/* margin-bottom: 80px; */
 }
 
 .news-three_bg {

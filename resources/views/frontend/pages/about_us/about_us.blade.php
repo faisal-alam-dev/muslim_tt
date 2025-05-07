@@ -25,7 +25,7 @@
 
         <div class="auto-container">
 
-            <div class="row clearfix">
+            <div class="row clearfix align-items-center">
 
                 <!-- Image Column -->
                 <div class="welcome-three_image-column col-lg-6 col-md-12 col-sm-12">
@@ -55,17 +55,7 @@
                         </div>
 
                         <div class="welcome-three_text text-justify">
-                            {!! Str::limit(strip_tags($about_us->description), 650) !!}
-                        </div>
-
-                        <!-- Button Box -->
-                        <div class="welcome-three_button">
-                            <a href="about.html" class="theme-btn btn-style-one">
-                                <span class="btn-wrap">
-                                    <span class="text-one">Discover More</span>
-                                    <span class="text-two">Discover More</span>
-                                </span>
-                            </a>
+                            {!! $about_us->description !!}
                         </div>
 
                     </div>

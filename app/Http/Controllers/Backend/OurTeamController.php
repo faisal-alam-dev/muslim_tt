@@ -17,16 +17,16 @@ class OurTeamController extends Controller
 {
     public function OurTeamList()
     {
-        $title = 'Our Team List';
+        $title = 'Board Of Director List';
 
-        $our_teams = OurTeam::orderBy('id', 'asc')->get();
+        $our_teams = OurTeam::latest()->get();
 
         return view('backend.our_team.list', compact('title', 'our_teams'));
     } // End Method
 
     public function OurTeamAdd()
     {
-        $title = 'Our Team Add';
+        $title = 'Board Of Director Add';
 
         return view('backend.our_team.add', compact('title'));
     } // End Method
@@ -40,7 +40,7 @@ class OurTeamController extends Controller
             [
                 'name' => 'required|max:100',
                 'designation' => 'required|max:100',
-                'type' => 'required',
+                // 'type' => 'required',
                 'team_image' => 'required|image|max:1024',
             ],
             [
@@ -48,7 +48,7 @@ class OurTeamController extends Controller
                 'name.max' => 'Name is too long',
                 'designation.required' => 'Designation is required',
                 'designation.max' => 'Designation is too long',
-                'type.required' => 'Type is required',
+                // 'type.required' => 'Type is required',
                 'team_image.required' => 'Image is required',
                 'team_image.image' => 'Image must be an image',
                 'team_image.max' => 'Image must be less than 1MB',
@@ -61,7 +61,7 @@ class OurTeamController extends Controller
             $data->slug = Str::slug($request->name . ' ' . $request->designation);
             $data->designation = $request->designation;
             $data->description = $request->description;
-            $data->type = $request->type;
+            $data->type = 'founder';
             $data->created_by = Auth::user()->id;
             $data->updated_by = null;
 
@@ -70,7 +70,7 @@ class OurTeamController extends Controller
                 $manager = new ImageManager(new Driver());
                 $name_gen = hexdec(uniqid()) . '.' . $team_image->getClientOriginalExtension();
                 $image = $manager->read($team_image);
-                $image->resize(306, 337);
+                // $image->resize(530, 600);
                 $image->toJpeg(80)->save(base_path('public/uploads/our_team/' . $name_gen));
                 $data->team_image = 'uploads/our_team/' . $name_gen;
             }
@@ -79,11 +79,11 @@ class OurTeamController extends Controller
 
             DB::commit();
 
-            return redirect()->route('admin.our-team.list')->with('success', 'Team Created Successfully');
+            return redirect()->route('admin.our-team.list')->with('success', 'Board Of Director Created Successfully');
         } catch (\Exception $e) {
             DB::rollBack();
 
-            Log::error('Error occurred while creating our team: ' . $e->getMessage());
+            Log::error('Error occurred while creating Board Of Director: ' . $e->getMessage());
 
             if ($validator->fails()) {
                 return redirect()->back()->withErrors($validator)->withInput();
@@ -95,7 +95,7 @@ class OurTeamController extends Controller
 
     public function OurTeamEdit($id)
     {
-        $title = 'Our Team Edit';
+        $title = 'Board Of Director Edit';
 
         $our_team = OurTeam::findOrFail($id);
 
@@ -112,7 +112,7 @@ class OurTeamController extends Controller
                 'id' => 'required|integer',
                 'name' => 'required|max:100',
                 'designation' => 'required|max:100',
-                'type' => 'required',
+                // 'type' => 'required',
                 'status' => 'required',
                 'team_image' => 'image|max:1024',
             ],
@@ -122,7 +122,7 @@ class OurTeamController extends Controller
                 'name.max' => 'Name is too long',
                 'designation.required' => 'Designation is required',
                 'designation.max' => 'Designation is too long',
-                'type.required' => 'Type is required',
+                // 'type.required' => 'Type is required',
                 'status.required' => 'Status is required',
                 'team_image.image' => 'Image must be an image',
                 'team_image.max' => 'Image must be less than 1MB',
@@ -138,7 +138,7 @@ class OurTeamController extends Controller
             $data->slug = Str::slug($request->name . ' ' . $request->designation);
             $data->designation = $request->designation;
             $data->description = $request->description;
-            $data->type = $request->type;
+            // $data->type = $request->type;
             $data->status = $request->status;
             $data->created_by = null;
             $data->updated_by = Auth::user()->id;
@@ -151,7 +151,7 @@ class OurTeamController extends Controller
                 $manager = new ImageManager(new Driver());
                 $name_gen = hexdec(uniqid()) . '.' . $team_image->getClientOriginalExtension();
                 $image = $manager->read($team_image);
-                $image->resize(306, 337);
+                // $image->resize(530, 600);
                 $image->toJpeg(80)->save(base_path('public/uploads/our_team/' . $name_gen));
                 $data->team_image = 'uploads/our_team/' . $name_gen;
             }
@@ -160,11 +160,11 @@ class OurTeamController extends Controller
 
             DB::commit();
 
-            return redirect()->route('admin.our-team.list')->with('success', 'Team Updated Successfully');
+            return redirect()->route('admin.our-team.list')->with('success', 'Board Of Director Updated Successfully');
         } catch (\Exception $e) {
             DB::rollBack();
 
-            Log::error('Error occurred while updating our team: ' . $e->getMessage());
+            Log::error('Error occurred while updating Board Of Director: ' . $e->getMessage());
 
             if ($validator->fails()) {
                 return redirect()->back()->withErrors($validator)->withInput();
@@ -187,11 +187,11 @@ class OurTeamController extends Controller
 
             DB::commit();
 
-            return redirect()->route('admin.our-team.list')->with('success', 'Team Deleted Successfully');
+            return redirect()->route('admin.our-team.list')->with('success', 'Board Of Director Deleted Successfully');
         } catch (\Exception $e) {
             DB::rollBack();
 
-            Log::error('Error occurred while deleting our team: ' . $e->getMessage());
+            Log::error('Error occurred while deleting Board Of Director: ' . $e->getMessage());
 
             return redirect()->back()->with('error', 'Something Went Wrong!');
         }

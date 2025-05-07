@@ -35,11 +35,10 @@
 
                                         <thead>
                                             <tr>
-                                                <th>SN</th>
                                                 <th>Image</th>
                                                 <th>Name</th>
                                                 <th>Designation</th>
-                                                <th>Type</th>
+                                                {{-- <th>Type</th> --}}
                                                 <th>Status</th>
                                                 <th>Action</th>
                                             </tr>
@@ -48,13 +47,12 @@
                                         <tbody>
                                             @foreach ($our_teams as $key => $item)
                                                 <tr>
-                                                    <td>{{ $our_teams->count() - $key }}</td>
                                                     <td>
                                                         <div class="table_slider_list_image" style="background-image: url({{ asset($item->team_image) }});"></div>
                                                     </td>
                                                     <td>{{ $item->name }}</td>
                                                     <td>{{ $item->designation }}</td>
-                                                    <td>
+                                                    {{-- <td>
                                                         @if ($item->type == 'founder')
                                                             <span>Founder</span>
                                                         @elseif ($item->type == 'top_level')
@@ -64,7 +62,7 @@
                                                         @elseif ($item->type == 'student_level')
                                                             <span>Team Level</span>
                                                         @endif
-                                                    </td>
+                                                    </td> --}}
                                                     <td>
                                                         <div class="badges">
                                                             @if ($item->status == 'active')

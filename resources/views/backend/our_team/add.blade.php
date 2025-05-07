@@ -33,7 +33,7 @@
 
                                     <div class="form-group row mb-4">
                                         <div class="col-md-8">
-                                            <label class="col-form-label">Image [300px by 280px]</label>
+                                            <label class="col-form-label">Image [530px by 600px]</label>
                                             <div id="image-preview" class="image-preview">
                                                 <label for="image-upload" id="image-label">Choose File</label>
                                                 <input type="file" name="team_image" id="image-upload" data-parsley-required-message="Team Image is required*" required />
@@ -62,7 +62,7 @@
                                         </div>
                                     </div>
 
-                                    <div class="form-group row mb-4">
+                                    {{-- <div class="form-group row mb-4">
                                         <div class="col-md-8">
                                             <label class="col-form-label">Type</label>
                                             <select class="form-control selectric" name="type">
@@ -73,7 +73,7 @@
                                                 <option value="student_level" {{ old('type') == 'student_level' ? 'selected' : '' }}>Team Level</option>
                                             </select>
                                         </div>
-                                    </div>
+                                    </div> --}}
 
                                     <div class="form-group row mb-4">
                                         <div class="col-md-8">

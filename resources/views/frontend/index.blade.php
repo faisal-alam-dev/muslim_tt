@@ -29,12 +29,12 @@
     @include('frontend.home.institute')
 
     <!-- Testimonial One -->
-    @include('frontend.home.testimonial')
+    {{-- @include('frontend.home.testimonial') --}}
 
     <!-- Blog -->
     @include('frontend.home.blog')
 
     <!-- CTA One -->
-    @include('frontend.home.cta_two')
+    {{-- @include('frontend.home.cta_two') --}}
 
 @endsection

@@ -70,6 +70,18 @@ class FrontendController extends Controller
         return view('frontend.pages.about_us.about_us', compact('about_us'));
     } // End Method
 
+    public function BoardOfDirector()
+    {
+        $team = OurTeam::where('status', 'active')->orderBy('id', 'asc')->get();
+        return view('frontend.pages.about_us.board_of_director', compact('team'));
+    } // End Method
+
+    public function BoardOfDirectorDetails($slug)
+    {
+        $team = OurTeam::where('slug', $slug)->first();
+        return view('frontend.details.team_details', compact('team'));
+    } // End Method
+
     public function PackageDetails($slug)
     {
         $package = Package::where('package_name_slug', $slug)->first();
@@ -282,27 +294,27 @@ class FrontendController extends Controller
         return view('frontend.pages.terms_conditions');
     } // End Method
 
-    public function TeamList()
-    {
-        $team = OurTeam::where('status', 'active')->orderBy('id', 'desc')->get();
-        $top_level_team = $team->filter(function ($item) {
-            return $item->type == 'top_level';
-        });
-        $middle_level_team = $team->filter(function ($item) {
-            return $item->type == 'middle_level';
-        });
-        $student_level_team = $team->filter(function ($item) {
-            return $item->type == 'student_level';
-        });
-        $team_founder = OurTeam::where('status', 'active')->where('type', 'founder')->get()->first();
-        return view('frontend.pages.our_team', compact('team', 'top_level_team', 'middle_level_team', 'student_level_team', 'team_founder'));
-    } // End Method
+    // public function TeamList()
+    // {
+    //     $team = OurTeam::where('status', 'active')->orderBy('id', 'desc')->get();
+    //     $top_level_team = $team->filter(function ($item) {
+    //         return $item->type == 'top_level';
+    //     });
+    //     $middle_level_team = $team->filter(function ($item) {
+    //         return $item->type == 'middle_level';
+    //     });
+    //     $student_level_team = $team->filter(function ($item) {
+    //         return $item->type == 'student_level';
+    //     });
+    //     $team_founder = OurTeam::where('status', 'active')->where('type', 'founder')->get()->first();
+    //     return view('frontend.pages.our_team', compact('team', 'top_level_team', 'middle_level_team', 'student_level_team', 'team_founder'));
+    // } // End Method
 
-    public function TeamDetails($slug)
-    {
-        $team = OurTeam::where('slug', $slug)->first();
-        return view('frontend.details.team_details', compact('team'));
-    } // End Method
+    // public function TeamDetails($slug)
+    // {
+    //     $team = OurTeam::where('slug', $slug)->first();
+    //     return view('frontend.details.team_details', compact('team'));
+    // } // End Method
 
     public function Career()
     {

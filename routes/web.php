@@ -51,6 +51,7 @@ Route::group(
                 Route::get('/about-us', 'AboutUs')->name('about.us');
                 Route::get('/customer-reviews', 'CustomerReviews')->name('customer.reviews');
                 Route::get('/board-of-director', 'BoardOfDirector')->name('board.of.director');
+                Route::get('/board-of-director/{slug}', 'BoardOfDirectorDetails')->name('board.of.director.details');
 
                 // Packages
                 Route::get('/package', 'PackagesList')->name('packages.list');
@@ -94,8 +95,8 @@ Route::group(
 
                 Route::get('/important-enlistment', 'ImportantEnlistment')->name('important.enlistment');
 
-                Route::get('/team', 'TeamList')->name('team.list');
-                Route::get('/team/{slug}', 'TeamDetails')->name('team.details');
+                // Route::get('/team', 'TeamList')->name('team.list');
+                // Route::get('/team/{slug}', 'TeamDetails')->name('team.details');
 
                 Route::get('/client', 'Client')->name('client');
 

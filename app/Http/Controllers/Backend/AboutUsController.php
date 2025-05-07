@@ -16,7 +16,7 @@ class AboutUsController extends Controller
 {
     public function AboutUsList()
     {
-        $title = 'About Our Firm';
+        $title = 'About Us';
 
         $about_us = AboutUs::where('id', 1)->latest()->take(1)->get();
 
@@ -25,7 +25,7 @@ class AboutUsController extends Controller
 
     public function AboutUsEdit($id)
     {
-        $title = 'About Our Firm Edit';
+        $title = 'About Us Edit';
 
         $about_us = AboutUs::where('id', 1)->take(1)->get()->first();
 

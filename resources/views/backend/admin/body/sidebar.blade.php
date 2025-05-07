@@ -61,12 +61,12 @@
                     <span>About Us</span>
                 </a>
                 <ul class="dropdown-menu">
-                    <li><a class="nav-link" href="{{ route('admin.about-us.list') }}">About Our Firm</a></li>
+                    <li><a class="nav-link" href="{{ route('admin.about-us.list') }}">About Us</a></li>
                     <li><a class="nav-link" href="{{ route('admin.our-contents.list') }}">Our Contents</a></li>
-                    <li><a class="nav-link" href="{{ route('admin.enlistment.list') }}">Important Enlistment</a></li>
-                    <li><a class="nav-link" href="{{ route('admin.successful_portfolios.list') }}">Firm Profile</a></li>
-                    <li><a class="nav-link" href="{{ route('admin.about-message.list') }}">Managing Partner Message</a></li>
-                    <li><a class="nav-link" href="{{ route('admin.our-team.list') }}">Our Team</a></li>
+                    {{-- <li><a class="nav-link" href="{{ route('admin.enlistment.list') }}">Important Enlistment</a></li> --}}
+                    {{-- <li><a class="nav-link" href="{{ route('admin.successful_portfolios.list') }}">Firm Profile</a></li> --}}
+                    {{-- <li><a class="nav-link" href="{{ route('admin.about-message.list') }}">Managing Partner Message</a></li> --}}
+                    <li><a class="nav-link" href="{{ route('admin.our-team.list') }}">Board Of Director</a></li>
                 </ul>
             </li>
 
