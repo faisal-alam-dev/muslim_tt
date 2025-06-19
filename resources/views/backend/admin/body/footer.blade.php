@@ -12,7 +12,7 @@
     </div>
 
     <div class="footer-right">
-        Designed By <a href="https://nebulaitbd.com/" target="_blank">Nebula IT</a>
+        Designed By <a href="https://web.nebulaitbd.com/" target="_blank">Nebula IT</a>
     </div>
 
 </footer>

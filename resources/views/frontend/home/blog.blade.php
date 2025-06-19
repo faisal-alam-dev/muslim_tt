@@ -1,4 +1,4 @@
-<section class="news-three">
+<section class="news-three" style="padding-bottom: -25px;">
     <div class="team-one_bg" style="background-image:url({{ asset('frontend/assets/images/background/5.png') }})"></div>
     <div class="auto-container">
         <!-- Sec Title -->

@@ -88,7 +88,7 @@
         <div class="footer_bottom-bg" style="background-image: url({{ asset('frontend/assets/images/background/footer-bg_2.jpg') }})"></div>
         <div class="auto-container">
             <div class="text-center">
-                <div class="copyright">All rights reserved 2025 &copy; <a href="{{ route('frontend.index') }}">{{ $site_setting->copyright }}</a>. Developed by <a href="https://nebulaitbd.com/" target="_blank;">Nebula IT.</a></div>
+                <div class="copyright">All rights reserved 2025 &copy; <a href="{{ route('frontend.index') }}">{{ $site_setting->copyright }}</a>. Developed by <a href="https://web.nebulaitbd.com/" target="_blank;">Nebula IT.</a></div>
             </div>
         </div>
     </div>
