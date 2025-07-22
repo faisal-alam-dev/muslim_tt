@@ -13,7 +13,11 @@
                             <!-- Footer Column -->
                             <div class="footer-column col-lg-6 col-md-6 col-sm-12">
                                 <div class="footer-widget logo-widget">
-                                    <div class="footer-logo"><a href="{{ route('frontend.index') }}"><img src="{{ asset($site_setting->footer_logo) }}" alt="Site Logo" title="" width="184px"></a></div>
+                                    <div class="footer-logo">
+                                        <a href="{{ route('frontend.index') }}">
+                                            <img src="{{ asset($site_setting->footer_logo) }}" alt="Site Logo" title="Site Logo" style="width: 80px; height: 80px;">
+                                        </a>
+                                    </div>
                                     <!-- Footer List -->
                                     <div class="footer_list">
                                         <li>{!! $site_setting->head_address !!}</li>

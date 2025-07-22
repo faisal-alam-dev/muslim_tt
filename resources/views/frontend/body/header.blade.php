@@ -30,7 +30,11 @@
                 <div class="d-flex justify-content-between align-items-center flex-wrap">
 
                     <div class="logo-box">
-                        <div class="logo"><a href="{{ route('frontend.index') }}"><img src="{{ asset($site_setting->header_logo) }}" alt="Site Logo" title="" width="184px"></a></div>
+                        <div class="logo">
+                            <a href="{{ route('frontend.index') }}">
+                                <img src="{{ asset($site_setting->header_logo) }}" alt="Site Logo" title="Site Logo" style="width: 80px; height: 80px;">
+                            </a>
+                        </div>
                     </div>
 
                     <div class="nav-outer">
@@ -136,7 +140,11 @@
         <div class="close-btn"><span class="icon flaticon-close-1"></span></div>
 
         <nav class="menu-box">
-            <div class="nav-logo"><a href="{{ route('frontend.index') }}"><img src="{{ asset('uploads/demo_logo.png') }}" alt="" title=""></a></div>
+            <div class="nav-logo">
+                <a href="{{ route('frontend.index') }}">
+                    <img src="{{ asset($site_setting->header_logo) }}" alt="Site Logo" title="Site Logo" style="width: 80px; height: 80px;">
+                </a>
+                </div>
             <div class="menu-outer"><!--Here Menu Will Come Automatically Via Javascript / Same Menu as in Header--></div>
         </nav>
     </div>

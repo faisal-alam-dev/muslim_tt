@@ -12,15 +12,15 @@
     <aside id="sidebar-wrapper">
 
         {{-- Admin Sidebar Logo --}}
-        <div class="sidebar-brand">
+        <div class="sidebar-brand mt-3">
             <a href="{{ route('admin.dashboard') }}">
-                <img alt="image" src="{{ asset($site_setting->header_logo) }}" class="Site Logo" alt="muslim tt logo" width="60%" />
+                <img alt="image" src="{{ asset($site_setting->header_logo) }}" class="Site Logo" alt="Site Logo" style="width: 80px; height: 80px;" />
                 {{-- <span class="logo-name">Muslim TT</span> --}}
             </a>
         </div>
 
         {{-- Admin Sidebar Menus --}}
-        <ul class="sidebar-menu">
+        <ul class="sidebar-menu mt-4">
 
             <li class="menu-header">Main</li>
 

@@ -505,11 +505,26 @@ Route::get('admin/login', function () {
     return view('auth.login'); // Adjust the view name based on your setup
 })->name('login');
 
-
-
-// Agent Routes
+// ############################## Routes for agents ##############################
 Route::get('agent/login', [AgentController::class, 'AgentLogin'])->name('agent.login');
+Route::post('agent/login/submit', [AgentController::class, 'AgentLoginSubmit'])->name('agent.login.submit');
 Route::get('agent/registration', [AgentController::class, 'AgentRegistration'])->name('agent.registration');
 Route::post('agent/registration/store', [AgentController::class, 'AgentRegistrationStore'])->name('agent.registration.store');
 
-
+Route::group(
+    [
+        'prefix' => 'agent',
+        'middleware' => ['auth', RoleMiddleware::class . ':agent'],
+        'as' => 'agent.',
+    ],
+    function () {
+        // Agent Dashboard
+        Route::controller(AgentController::class)->group(function () {
+            Route::get('/dashboard', 'AgentDashboard')->name('dashboard');
+            Route::get('/logout', 'AgentLogout')->name('logout');
+            Route::get('/profile', 'AgentProfile')->name('profile');
+            Route::post('/profile/update', 'AgentProfileUpdate')->name('profile.update');
+            Route::post('/password/update', 'AgentPasswordUpdate')->name('password.update');
+        });
+    },
+);

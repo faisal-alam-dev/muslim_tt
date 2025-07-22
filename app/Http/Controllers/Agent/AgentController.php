@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Agent;
 use App\Http\Controllers\Controller;
 use App\Models\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Log;
@@ -12,19 +13,53 @@ use Illuminate\Support\Facades\Validator;
 
 class AgentController extends Controller
 {
+    public function AgentDashboard()
+    {
+        if (Auth::check() && Auth::user()->role === 'agent' && Auth::user()->status === 'active') {
+            return view('agent.index');
+        }
+        return redirect()->route('agent.login')->withErrors('Unauthorized access.');
+    } // End Method
+
     public function AgentLogin()
     {
-        // if (Auth::check()) {
-        //     return redirect('admin/dashboard');
-        // }
+        if (Auth::check() && Auth::user()->role === 'agent') {
+            return redirect('agent/dashboard');
+        }
         return view('agent.auth.login');
     } // End Method
 
+    public function AgentLoginSubmit(Request $request)
+    {
+        $credentials = $request->validate([
+            'email' => 'required|email',
+            'password' => 'required',
+        ]);
+
+        if (Auth::attempt($credentials)) {
+            $user = Auth::user();
+
+            // Redirect based on role
+            if ($user->role === 'agent' && $user->status === 'active') {
+                return redirect()->route('agent.dashboard');
+            }
+
+            Auth::logout();
+            return back()->withErrors('Unauthorized access.');
+        }
+
+        return back()
+            ->withErrors([
+                'email' => 'The provided credentials do not match our records.',
+            ])
+            ->onlyInput('email');
+    }
+
     public function AgentRegistration()
     {
-        // if (Auth::check()) {
-        //     return redirect('admin/dashboard');
-        // }
+        if (Auth::check()) {
+            return redirect('agent/dashboard');
+        }
         return view('agent.auth.register');
     } // End Method
 
@@ -82,5 +117,16 @@ class AgentController extends Controller
             Log::error('Error registering agent: ' . $e->getMessage());
             return redirect()->back()->with('error', 'An error occurred during registration. Please try again.')->withInput();
         }
-    }
+    } // End Method
+
+    public function AgentLogout(Request $request)
+    {
+        Auth::guard('web')->logout();
+
+        $request->session()->invalidate();
+
+        $request->session()->regenerateToken();
+
+        return redirect()->route('agent.login');
+    } // End Method
 }
