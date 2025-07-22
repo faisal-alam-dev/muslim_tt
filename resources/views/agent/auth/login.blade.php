@@ -38,7 +38,7 @@
                     @endphp
 
                     <div class="col-12 custom_login_logo">
-                        <img src="{{ asset($site_setting->footer_logo) }}" alt="" style="width: 30%;">
+                        <img src="{{ asset($site_setting->footer_logo) }}" alt="Site Logo" style="width: 80px;">
                     </div>
 
                     <div class="col-12 col-sm-8 offset-sm-2 col-md-6 offset-md-3 col-lg-6 offset-lg-3 col-xl-4 offset-xl-4">
