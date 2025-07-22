@@ -15,7 +15,7 @@
                                 <div class="footer-widget logo-widget">
                                     <div class="footer-logo">
                                         <a href="{{ route('frontend.index') }}">
-                                            <img src="{{ asset($site_setting->footer_logo) }}" alt="Site Logo" title="Site Logo" style="width: 80px; height: 80px;">
+                                            <img src="{{ asset($site_setting->footer_logo) }}" alt="Site Logo" title="Site Logo" style="width: 80px;">
                                         </a>
                                     </div>
                                     <!-- Footer List -->

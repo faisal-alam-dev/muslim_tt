@@ -32,7 +32,7 @@
                     <div class="logo-box">
                         <div class="logo">
                             <a href="{{ route('frontend.index') }}">
-                                <img src="{{ asset($site_setting->header_logo) }}" alt="Site Logo" title="Site Logo" style="width: 80px; height: 80px;">
+                                <img src="{{ asset($site_setting->header_logo) }}" alt="Site Logo" title="Site Logo" style="width: 80px;">
                             </a>
                         </div>
                     </div>
@@ -142,7 +142,7 @@
         <nav class="menu-box">
             <div class="nav-logo">
                 <a href="{{ route('frontend.index') }}">
-                    <img src="{{ asset($site_setting->header_logo) }}" alt="Site Logo" title="Site Logo" style="width: 80px; height: 80px;">
+                    <img src="{{ asset($site_setting->header_logo) }}" alt="Site Logo" title="Site Logo" style="width: 80px;">
                 </a>
                 </div>
             <div class="menu-outer"><!--Here Menu Will Come Automatically Via Javascript / Same Menu as in Header--></div>

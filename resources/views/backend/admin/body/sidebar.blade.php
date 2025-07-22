@@ -14,7 +14,7 @@
         {{-- Admin Sidebar Logo --}}
         <div class="sidebar-brand mt-3">
             <a href="{{ route('admin.dashboard') }}">
-                <img alt="image" src="{{ asset($site_setting->header_logo) }}" class="Site Logo" alt="Site Logo" style="width: 80px; height: 80px;" />
+                <img alt="image" src="{{ asset($site_setting->header_logo) }}" class="Site Logo" alt="Site Logo" style="width: 80px;" />
                 {{-- <span class="logo-name">Muslim TT</span> --}}
             </a>
         </div>
