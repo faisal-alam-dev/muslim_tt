@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Agent\AgentController;
 use App\Http\Controllers\Backend\AboutUsController;
 use App\Http\Controllers\Backend\Admin\AdminController;
 use App\Http\Controllers\Backend\Blog\BlogCategoryController;
@@ -503,3 +504,12 @@ Route::get('admin/login', function () {
     }
     return view('auth.login'); // Adjust the view name based on your setup
 })->name('login');
+
+
+
+// Agent Routes
+Route::get('agent/login', [AgentController::class, 'AgentLogin'])->name('agent.login');
+Route::get('agent/registration', [AgentController::class, 'AgentRegistration'])->name('agent.registration');
+Route::post('agent/registration/store', [AgentController::class, 'AgentRegistrationStore'])->name('agent.registration.store');
+
+

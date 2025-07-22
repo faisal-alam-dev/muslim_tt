@@ -36,6 +36,7 @@
                                 <div class="footer-widget links-widget">
                                     <h4 class="footer-title">Quick Link</h4>
                                     <ul class="footer-list">
+                                        <li><a href="{{ route('agent.registration') }}">Become An Agent</a></li>
                                         <li><a href="{{ route('frontend.umrah.packages') }}">Umrah Packages</a></li>
                                         <li><a href="{{ route('frontend.hajj.packages') }}">Hajj Packages</a></li>
                                         <li><a href="{{ route('frontend.how.to.perform.umrah') }}">How To Perform Umrah</a></li>

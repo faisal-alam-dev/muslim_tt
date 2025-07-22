@@ -9,6 +9,7 @@ class Settings
         return [
             'admin' => 'Admin',
             'user' => 'User',
+            'agent' => 'Agent',
         ];
     }
 

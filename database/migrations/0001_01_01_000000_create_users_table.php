@@ -19,7 +19,7 @@ return new class extends Migration {
             $table->string('thumbnail')->nullable();
             $table->string('phone')->nullable();
             $table->text('address')->nullable();
-            $table->enum('role', ['admin', 'user'])->default('user');
+            $table->enum('role', ['admin', 'user', 'agent'])->default('user');
             $table->enum('status', ['active', 'inactive'])->default('active');
             $table->integer('created_by')->nullable();
             $table->integer('updated_by')->nullable();

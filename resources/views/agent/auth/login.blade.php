@@ -7,7 +7,7 @@
 <head>
     <meta charset="UTF-8">
     <meta content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no" name="viewport">
-    <title>Admin Login</title>
+    <title>Agent Login</title>
     {{-- App CSS --}}
     <link rel="stylesheet" href="{{ asset('/backend/assets/css/app.min.css') }}">
     {{-- Bootstrap Social CSS --}}
@@ -27,7 +27,7 @@
 
     <div id="app">
 
-        <section class="section custom_login">
+        <section class="section custom_agent_login">
 
             <div class="container">
 
@@ -46,12 +46,12 @@
                         <div class="card card-primary">
 
                             <div class="card-header">
-                                <h4>Admin Login</h4>
+                                <h4>Agent Login</h4>
                             </div>
 
                             <div class="card-body">
 
-                                <form method="POST" action="{{ route('login') }}" class="needs-validation" novalidate="">
+                                <form method="POST" action="{{ route('agent.login') }}" class="needs-validation" novalidate="">
 
                                     @include('widgets.errors')
 
