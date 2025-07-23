@@ -10,7 +10,8 @@
         {{-- Agent Sidebar Logo --}}
         <div class="sidebar-brand">
             <a href="{{ route('agent.dashboard') }}">
-                <img alt="image" src="{{ asset($site_setting->header_logo) }}" class="Site Logo" alt="muslim tt logo" width="60%" />
+                <img alt="image" src="{{ asset($site_setting->header_logo) }}" class="Site Logo" alt="Site Logo" style="width: 50px;" />
+                <span class="logo-name">Muslim TT</span>
             </a>
         </div>
 

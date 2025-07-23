@@ -129,4 +129,11 @@ class AgentController extends Controller
 
         return redirect()->route('agent.login');
     } // End Method
+
+    public function AgentProfile()
+    {
+        $title = 'Agent Profile';
+        $agent_profile_info = Auth::user();
+        return view('agent.profile.profile_view', compact('title', 'agent_profile_info'));
+    } // End Method
 }
