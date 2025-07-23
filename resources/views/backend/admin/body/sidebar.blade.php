@@ -51,16 +51,12 @@
                 </a>
                 <ul class="dropdown-menu">
                     <li><a class="nav-link {{ request()->routeIs('admin.about-us.list') ? 'active' : '' }}" href="{{ route('admin.about-us.list') }}">About Us</a></li>
-                    {{-- <li><a class="nav-link" href="{{ route('admin.our-contents.list') }}">Our Contents</a></li> --}}
                     @if ($our_mission)
                         <li><a class="nav-link {{ request()->routeIs('admin.our-contents.edit') && $our_mission->id == request()->route('id') ? 'active' : '' }}" href="{{ route('admin.our-contents.edit', $our_mission->id) }}">Our Mission</a></li>
                     @endif
                     @if ($our_vision)
                         <li><a class="nav-link {{ request()->routeIs('admin.our-contents.edit') && $our_vision->id == request()->route('id') ? 'active' : '' }}" href="{{ route('admin.our-contents.edit', $our_vision->id) }}">Our Vision</a></li>
                     @endif
-                    {{-- <li><a class="nav-link" href="{{ route('admin.enlistment.list') }}">Important Enlistment</a></li> --}}
-                    {{-- <li><a class="nav-link" href="{{ route('admin.successful_portfolios.list') }}">Firm Profile</a></li> --}}
-                    {{-- <li><a class="nav-link" href="{{ route('admin.about-message.list') }}">Managing Partner Message</a></li> --}}
                     <li><a class="nav-link {{ request()->routeIs('admin.our-team.list') ? 'active' : '' }}" href="{{ route('admin.our-team.list') }}">Board Of Director</a></li>
                 </ul>
             </li>
@@ -89,40 +85,6 @@
                 </ul>
             </li>
 
-            {{-- <li class="dropdown {{ request()->routeIs(['admin.service.list', 'admin.client.list']) ? 'active' : '' }}">
-                <a href="#" class="menu-toggle nav-link has-dropdown">
-                    <i data-feather="list"></i>
-                    <span>Services</span>
-                </a>
-                <ul class="dropdown-menu">
-                    <li><a class="nav-link" href="{{ route('admin.service.list') }}">Services</a></li>
-                    <li><a class="nav-link" href="{{ route('admin.client.list') }}">Our Clients</a></li>
-                </ul>
-            </li> --}}
-
-            {{-- <li class="dropdown {{ request()->routeIs(['admin.publications.list', 'admin.circular.list', 'admin.gallery.list']) ? 'active' : '' }}">
-                <a href="#" class="menu-toggle nav-link has-dropdown">
-                    <i data-feather="list"></i>
-                    <span>Resources</span>
-                </a>
-                <ul class="dropdown-menu">
-                    <li><a class="nav-link" href="{{ route('admin.publications.list') }}">Publications</a></li>
-                    <li><a class="nav-link" href="{{ route('admin.circular.list') }}">Notice/Circular</a></li>
-                    <li><a class="nav-link" href="{{ route('admin.gallery.list') }}">Gallery</a></li>
-                </ul>
-            </li> --}}
-
-            {{-- <li class="dropdown {{ request()->routeIs('admin.career.list') ? 'active' : '' }}">
-                <a href="#" class="menu-toggle nav-link has-dropdown">
-                    <i data-feather="list"></i>
-                    <span>Careers</span>
-                </a>
-                <ul class="dropdown-menu">
-                    <li><a class="nav-link" href="{{ route('admin.career.list') }}">Job Post</a></li>
-                    <li><a class="nav-link" href="{{ route('admin.job_apply.list') }}">Job Application</a></li>
-                </ul>
-            </li> --}}
-
             {{-- Contact Message --}}
             <li class="dropdown {{ request()->routeIs('admin.contact.list') ? 'active' : '' }}">
                 <a href="#" class="menu-toggle nav-link has-dropdown">
@@ -131,6 +93,17 @@
                 </a>
                 <ul class="dropdown-menu">
                     <li><a class="nav-link" href="{{ route('admin.contact.list') }}">Contact Message</a></li>
+                </ul>
+            </li>
+
+            {{-- User List --}}
+            <li class="dropdown {{ request()->routeIs('admin.users.list') ? 'active' : '' }}">
+                <a href="#" class="menu-toggle nav-link has-dropdown">
+                    <i data-feather="list"></i>
+                    <span>Users</span>
+                </a>
+                <ul class="dropdown-menu">
+                    <li><a class="nav-link" href="{{ route('admin.users.list') }}">User List</a></li>
                 </ul>
             </li>
 

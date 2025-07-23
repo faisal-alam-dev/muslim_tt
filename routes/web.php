@@ -22,6 +22,7 @@ use App\Http\Controllers\Backend\ServiceSubCategoryController;
 use App\Http\Controllers\Backend\Settings\SettingController;
 use App\Http\Controllers\Backend\SliderController;
 use App\Http\Controllers\Backend\SuccessfulPortfoliosController;
+use App\Http\Controllers\Backend\UserController;
 use App\Http\Controllers\Backend\WhoWeAreController;
 use App\Http\Controllers\Frontend\FrontendController;
 use App\Http\Controllers\ProfileController;
@@ -491,6 +492,22 @@ Route::group(
                 Route::get('/list', 'OurContentList')->name('list');
                 Route::get('/edit/{id}', 'OurContentEdit')->name('edit');
                 Route::post('/update', 'OurContentUpdate')->name('update');
+            },
+        );
+
+        //  User List Routes
+        Route::group(
+            [
+                'prefix' => 'users',
+                'controller' => UserController::class,
+                'as' => 'users.',
+            ],
+            function () {
+                Route::get('/list', 'UsersList')->name('list');
+                Route::get('/add', 'UserAdd')->name('add');
+                Route::post('/store', 'UserStore')->name('store');
+                Route::post('/status-update', 'UserStatusUpdate')->name('status.update');
+                Route::get('/delete/{id}', 'UserDelete')->name('delete');
             },
         );
     },

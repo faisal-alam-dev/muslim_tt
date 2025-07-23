@@ -87,7 +87,7 @@
                                                 <div class="row">
                                                     <div class="form-group row mb-4">
                                                         <div class="col-md-8">
-                                                            <label class="col-form-label">Image</label>
+                                                            <label class="col-form-label">Thumbnail [200px by 200px]</label>
                                                             <div id="image-preview" class="image-preview">
                                                                 <label for="image-upload" id="image-label">Choose File</label>
                                                                 <input type="file" name="thumbnail" id="image-upload" />

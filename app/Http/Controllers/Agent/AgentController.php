@@ -172,7 +172,6 @@ class AgentController extends Controller
             $data->phone = $request->phone;
             $data->address = $request->address;
 
-
             if ($request->file('thumbnail')) {
                 if (file_exists(base_path('public/' . $data->thumbnail))) {
                     unlink(base_path('public/' . $data->thumbnail));
@@ -181,9 +180,9 @@ class AgentController extends Controller
                 $manager = new ImageManager(new Driver());
                 $name_gen = hexdec(uniqid()) . '.' . $thumbnail->getClientOriginalExtension();
                 $image = $manager->read($thumbnail);
-                // $image->resize(1600, 700);
-                $image->toJpeg(80)->save(base_path('public/uploads/agent_profile/' . $name_gen));
-                $data->thumbnail = 'uploads/agent_profile/' . $name_gen;
+                $image->resize(200, 200);
+                $image->toJpeg(80)->save(base_path('public/uploads/user_image/' . $name_gen));
+                $data->thumbnail = 'uploads/user_image/' . $name_gen;
             }
 
             $data->save();
@@ -204,7 +203,7 @@ class AgentController extends Controller
         }
     } // End Method
 
-     public function AgentPasswordUpdate(Request $request)
+    public function AgentPasswordUpdate(Request $request)
     {
         $validator = Validator::make(
             $request->all(),
