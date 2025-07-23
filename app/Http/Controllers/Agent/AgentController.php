@@ -10,6 +10,8 @@ use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Log;
 use Illuminate\Support\Facades\Validator;
+use Intervention\Image\ImageManager;
+use Intervention\Image\Drivers\Gd\Driver;
 
 class AgentController extends Controller
 {
@@ -135,5 +137,108 @@ class AgentController extends Controller
         $title = 'Agent Profile';
         $agent_profile_info = Auth::user();
         return view('agent.profile.profile_view', compact('title', 'agent_profile_info'));
+    } // End Method
+
+    public function AgentProfileUpdate(Request $request)
+    {
+        DB::beginTransaction();
+
+        $validator = Validator::make(
+            $request->all(),
+            [
+                'id' => 'required|integer',
+                'name' => 'required|max:100',
+                'email' => 'required|max:100',
+                'thumbnail' => 'image|max:1024',
+            ],
+            [
+                'id.required' => 'ID is required',
+                'name.required' => 'Name is required',
+                'name.max' => 'Name is too long',
+                'email.required' => 'Email is required',
+                'email.max' => 'Email is too long',
+                'thumbnail.image' => 'Thumbnail must be an image',
+                'thumbnail.max' => 'Thumbnail must be less than 1MB',
+            ],
+        );
+
+        try {
+            $data = User::findOrFail($request->id);
+            if (!$data) {
+                abort(404);
+            }
+            $data->name = $request->name;
+            $data->email = $request->email;
+            $data->phone = $request->phone;
+            $data->address = $request->address;
+
+
+            if ($request->file('thumbnail')) {
+                if (file_exists(base_path('public/' . $data->thumbnail))) {
+                    unlink(base_path('public/' . $data->thumbnail));
+                }
+                $thumbnail = $request->file('thumbnail');
+                $manager = new ImageManager(new Driver());
+                $name_gen = hexdec(uniqid()) . '.' . $thumbnail->getClientOriginalExtension();
+                $image = $manager->read($thumbnail);
+                // $image->resize(1600, 700);
+                $image->toJpeg(80)->save(base_path('public/uploads/agent_profile/' . $name_gen));
+                $data->thumbnail = 'uploads/agent_profile/' . $name_gen;
+            }
+
+            $data->save();
+
+            DB::commit();
+
+            return redirect()->route('agent.profile')->with('success', 'Agent Profile Updated Successfully');
+        } catch (\Exception $e) {
+            DB::rollBack();
+
+            Log::error('Error occurred while updating agent profile: ' . $e->getMessage());
+
+            if ($validator->fails()) {
+                return redirect()->back()->withErrors($validator)->withInput();
+            } else {
+                return redirect()->back()->with('error', 'Something Went Wrong!');
+            }
+        }
+    } // End Method
+
+     public function AgentPasswordUpdate(Request $request)
+    {
+        $validator = Validator::make(
+            $request->all(),
+            [
+                'id' => 'required|integer',
+                'old_password' => 'required',
+                'new_password' => 'required|min:8|confirmed',
+            ],
+            [
+                'id.required' => 'ID is required',
+                'old_password.required' => 'Current Password is required',
+                'new_password.required' => 'New Password is required',
+                'new_password.min' => 'New Password must be at least 8 characters',
+                'new_password.confirmed' => 'New Password confirmation does not match',
+            ],
+        );
+
+        if ($validator->fails()) {
+            return redirect()->back()->withErrors($validator)->withInput();
+        }
+
+        try {
+            $user = User::findOrFail($request->id);
+            if (!$user || !Hash::check($request->old_password, $user->password)) {
+                return redirect()->back()->with('error', 'Current Password does not match');
+            }
+
+            $user->password = Hash::make($request->new_password);
+            $user->save();
+
+            return redirect()->route('agent.profile')->with('success', 'Password Updated Successfully');
+        } catch (\Exception $e) {
+            Log::error('Error occurred while updating password: ' . $e->getMessage());
+            return redirect()->back()->with('error', 'Something Went Wrong!');
+        }
     } // End Method
 }

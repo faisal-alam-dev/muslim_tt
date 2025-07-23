@@ -76,15 +76,13 @@
 
                                 <div class="tab-content tab-bordered" id="myTab3Content">
 
+                                    {{-- Agent Edit Profile Form --}}
                                     <div class="tab-pane fade show active" id="editProfile" role="tabpanel" aria-labelledby="profile-tab2">
                                         @include('widgets.errors')
                                         @include('widgets.success')
-                                        <form id="form" action="{{ route('admin.profile.update') }}" method="post" enctype="multipart/form-data" data-parsley-validate>
+                                        <form id="form" action="{{ route('agent.profile.update') }}" method="post" enctype="multipart/form-data" data-parsley-validate>
                                             @csrf
                                             <input type="hidden" name="id" value="{{ $agent_profile_info->id }}">
-                                            <div class="card-header">
-                                                <h4>Edit Profile</h4>
-                                            </div>
                                             <div class="card-body">
                                                 <div class="row">
                                                     <div class="form-group row mb-4">
@@ -130,10 +128,11 @@
                                         </form>
                                     </div>
 
+                                    {{-- Agent Edit Password Form --}}
                                     <div class="tab-pane fade" id="changePassword" role="tabpanel" aria-labelledby="profile-tab2">
                                         @include('widgets.errors')
                                         @include('widgets.success')
-                                        <form id="form" action="{{ route('admin.password.update') }}" method="post" data-parsley-validate>
+                                        <form id="form" action="{{ route('agent.password.update') }}" method="post" data-parsley-validate>
                                             @csrf
                                             <input type="hidden" name="id" value="{{ $agent_profile_info->id }}">
                                             <div class="form-group row mb-4">
