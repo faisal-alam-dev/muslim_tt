@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\Agent\AgentController;
+use App\Http\Controllers\Agent\AgentPackageListController;
 use App\Http\Controllers\Backend\AboutUsController;
 use App\Http\Controllers\Backend\Admin\AdminController;
 use App\Http\Controllers\Backend\Blog\BlogCategoryController;
@@ -543,5 +544,17 @@ Route::group(
             Route::post('/profile/update', 'AgentProfileUpdate')->name('profile.update');
             Route::post('/password/update', 'AgentPasswordUpdate')->name('password.update');
         });
+
+        // Package Routes
+        Route::group(
+            [
+                'prefix' => 'package',
+                'controller' => AgentPackageListController::class,
+                'as' => 'package.',
+            ],
+            function () {
+                Route::get('/list', 'AgentPackageList')->name('list');
+            },
+        );
     },
 );

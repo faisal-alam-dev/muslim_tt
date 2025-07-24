@@ -28,6 +28,14 @@
                 </a>
             </li>
 
+            {{-- Package List --}}
+            <li class="dropdown {{ request()->routeIs('agent.package.list') ? 'active' : '' }}">
+                <a href="{{ route('agent.package.list') }}" class="nav-link">
+                    <i data-feather="list"></i>
+                    <span>Package List</span>
+                </a>
+            </li>
+
         </ul>
 
     </aside>
