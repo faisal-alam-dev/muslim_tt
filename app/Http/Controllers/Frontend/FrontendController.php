@@ -24,6 +24,7 @@ use App\Models\SuccessfulPortfolios;
 use App\Models\User;
 use App\Models\WhoWeAre;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 use Intervention\Image\ImageManager;
 use Intervention\Image\Drivers\Gd\Driver;
 
@@ -98,10 +99,11 @@ class FrontendController extends Controller
 
         $data = new PackageConfirmation();
         $data->package_id = $request->package_id;
-        $data->user_name = $request->full_name;
-        $data->user_phone = $request->phone;
-        $data->user_email = $request->email;
-        $data->user_message = $request->message;
+        $data->user_name = $request->user_name;
+        $data->user_phone = $request->user_phone;
+        $data->user_email = $request->user_email;
+        $data->user_message = $request->user_message;
+
         if ($request->file('nid_passport')) {
             $nid_passport = $request->file('nid_passport');
             $manager = new ImageManager(new Driver());
@@ -111,7 +113,7 @@ class FrontendController extends Controller
             $image->toJpeg(80)->save(public_path('uploads/packages/package_booking/' . $name_gen));
             $data->nid_passport = 'uploads/packages/package_booking/' . $name_gen;
         }
-        // dd($data);
+
         $data->save();
 
         return view('frontend.confirmation.package_confirmation');

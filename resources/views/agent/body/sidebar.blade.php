@@ -28,12 +28,24 @@
                 </a>
             </li>
 
-            {{-- Package List --}}
+            {{-- Agent Package List --}}
             <li class="dropdown {{ request()->routeIs('agent.package.list') ? 'active' : '' }}">
                 <a href="{{ route('agent.package.list') }}" class="nav-link">
                     <i data-feather="list"></i>
                     <span>Package List</span>
                 </a>
+            </li>
+
+            {{-- Agent Package Booking List --}}
+            <li class="dropdown {{ request()->routeIs(['agent.package_booking.list', 'agent.package_booking.add']) ? 'active' : '' }}">
+                <a href="#" class="menu-toggle nav-link has-dropdown">
+                    <i data-feather="list"></i>
+                    <span>Packages Booking</span>
+                </a>
+                <ul class="dropdown-menu">
+                    <li><a class="nav-link" href="{{ route('agent.package_booking.list') }}">Package Booking List</a></li>
+                    <li><a class="nav-link" href="{{ route('agent.package_booking.add') }}">Package Booking Add</a></li>
+                </ul>
             </li>
 
         </ul>

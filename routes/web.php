@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\Agent\AgentController;
+use App\Http\Controllers\Agent\AgentPackageBookingController;
 use App\Http\Controllers\Agent\AgentPackageListController;
 use App\Http\Controllers\Backend\AboutUsController;
 use App\Http\Controllers\Backend\Admin\AdminController;
@@ -545,7 +546,7 @@ Route::group(
             Route::post('/password/update', 'AgentPasswordUpdate')->name('password.update');
         });
 
-        // Package Routes
+        // Agent Package Routes
         Route::group(
             [
                 'prefix' => 'package',
@@ -554,6 +555,26 @@ Route::group(
             ],
             function () {
                 Route::get('/list', 'AgentPackageList')->name('list');
+            },
+        );
+
+        // Agent Package Booking Routes
+        Route::group(
+            [
+                'prefix' => 'package_booking',
+                'controller' => AgentPackageBookingController::class,
+                'as' => 'package_booking.',
+            ],
+            function () {
+                Route::get('/list', 'AgentPackageBookingList')->name('list');
+                Route::get('/add', 'AgentPackageBookingAdd')->name('add');
+
+                Route::get('/get-packages-by-type', 'getPackagesByType')->name('get.packages.by.type');
+
+                Route::post('/store', 'AgentPackageBookingStore')->name('store');
+                Route::get('/edit/{id}', 'AgentPackageBookingEdit')->name('edit');
+                Route::post('/update', 'AgentPackageBookingUpdate')->name('update');
+                Route::get('/delete/{id}', 'AgentPackageBookingDelete')->name('delete');
             },
         );
     },

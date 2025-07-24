@@ -17,7 +17,11 @@ return new class extends Migration {
             $table->string('user_phone');
             $table->string('user_email');
             $table->text('user_message')->nullable();
+            $table->string('nid_passport')->nullable();
             $table->enum('status', ['pending', 'confirmed', 'cancelled'])->default('pending');
+            $table->string('user_type')->default('user');
+            $table->integer('created_by')->nullable();
+            $table->integer('updated_by')->nullable();
             $table->timestamps();
         });
     }

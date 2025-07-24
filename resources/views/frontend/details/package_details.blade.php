@@ -125,24 +125,24 @@
                                     @csrf
                                     <input type="hidden" name="package_id" value="{{ $package->id }}">
                                     <div class="form-group">
-                                        <label for="full_name">Full Name</label>
-                                        <input type="text" id="full_name" name="full_name" class="form-control" placeholder="Enter your full name" required>
+                                        <label for="user_name">Full Name</label>
+                                        <input type="text" id="user_name" name="user_name" class="form-control" placeholder="Enter your full name" required>
                                     </div>
                                     <div class="form-group">
-                                        <label for="phone">Phone</label>
-                                        <input type="text" id="phone" name="phone" class="form-control" placeholder="Enter your phone number" required>
+                                        <label for="user_phone">Phone</label>
+                                        <input type="text" id="user_phone" name="user_phone" class="form-control" placeholder="Enter your phone number" required>
                                     </div>
                                     <div class="form-group">
-                                        <label for="email">Email</label>
-                                        <input type="email" id="email" name="email" class="form-control" placeholder="Enter your email address">
+                                        <label for="user_email">Email</label>
+                                        <input type="email" id="user_email" name="user_email" class="form-control" placeholder="Enter your email address" required>
                                     </div>
                                     <div class="form-group">
-                                        <label for="file">NID or Password</label>
-                                        <input type="file" id="file" name="nid_passport" class="form-control" accept="image/*,application/pdf,video/*,.doc,.docx,.txt" required>
+                                        <label for="nid_passport">NID or Password</label>
+                                        <input type="file" id="nid_passport" name="nid_passport" class="form-control" accept="image/*,application/pdf,video/*,.doc,.docx,.txt" required>
                                     </div>
                                     <div class="form-group">
-                                        <label for="message">Message or Comments</label>
-                                        <textarea id="message" name="message" class="form-control" rows="4" placeholder="Enter your message or comments"></textarea>
+                                        <label for="user_message">Message or Comments</label>
+                                        <textarea id="user_message" name="user_message" class="form-control" rows="4" placeholder="Enter your message or comments"></textarea>
                                     </div>
                                     <button type="submit" class="theme-btn course-appy_btn w-100 mt-4">Submit</button>
                                 </form>
