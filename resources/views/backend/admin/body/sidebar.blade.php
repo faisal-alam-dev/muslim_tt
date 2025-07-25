@@ -96,6 +96,17 @@
                 </ul>
             </li>
 
+            {{-- Agent Manage --}}
+            <li class="dropdown {{ request()->routeIs('admin.agent.list') ? 'active' : '' }}">
+                <a href="#" class="menu-toggle nav-link has-dropdown">
+                    <i data-feather="list"></i>
+                    <span>Agent Manage</span>
+                </a>
+                <ul class="dropdown-menu">
+                    <li><a class="nav-link" href="{{ route('admin.agent.list') }}">Agent List</a></li>
+                </ul>
+            </li>
+
             {{-- User List --}}
             <li class="dropdown {{ request()->routeIs('admin.users.list') ? 'active' : '' }}">
                 <a href="#" class="menu-toggle nav-link has-dropdown">

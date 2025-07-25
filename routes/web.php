@@ -5,6 +5,7 @@ use App\Http\Controllers\Agent\AgentPackageBookingController;
 use App\Http\Controllers\Agent\AgentPackageListController;
 use App\Http\Controllers\Backend\AboutUsController;
 use App\Http\Controllers\Backend\Admin\AdminController;
+use App\Http\Controllers\Backend\AgentManageController;
 use App\Http\Controllers\Backend\Blog\BlogCategoryController;
 use App\Http\Controllers\Backend\Blog\BlogController;
 use App\Http\Controllers\Backend\CareerController;
@@ -510,6 +511,22 @@ Route::group(
                 Route::post('/store', 'UserStore')->name('store');
                 Route::post('/status-update', 'UserStatusUpdate')->name('status.update');
                 Route::get('/delete/{id}', 'UserDelete')->name('delete');
+            },
+        );
+
+        //  Agent List Routes
+        Route::group(
+            [
+                'prefix' => 'agent',
+                'controller' => AgentManageController::class,
+                'as' => 'agent.',
+            ],
+            function () {
+                Route::get('/list', 'AgentList')->name('list');
+                // Route::get('/add', 'UserAdd')->name('add');
+                // Route::post('/store', 'UserStore')->name('store');
+                // Route::post('/status-update', 'UserStatusUpdate')->name('status.update');
+                // Route::get('/delete/{id}', 'UserDelete')->name('delete');
             },
         );
     },
