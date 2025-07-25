@@ -10,7 +10,7 @@ class AgentPackageListController extends Controller
 {
     public function AgentPackageList()
     {
-        $title = 'Package List';
+        $title = 'Packages List';
 
         $packages = Package::orderBy('id', 'asc')->get();
 

@@ -32,7 +32,7 @@
             <li class="dropdown {{ request()->routeIs('agent.package.list') ? 'active' : '' }}">
                 <a href="{{ route('agent.package.list') }}" class="nav-link">
                     <i data-feather="list"></i>
-                    <span>Package List</span>
+                    <span>Packages List</span>
                 </a>
             </li>
 
@@ -40,7 +40,7 @@
             <li class="dropdown {{ request()->routeIs(['agent.package_booking.list', 'agent.package_booking.add']) ? 'active' : '' }}">
                 <a href="#" class="menu-toggle nav-link has-dropdown">
                     <i data-feather="list"></i>
-                    <span>Packages Booking</span>
+                    <span>Package Booking</span>
                 </a>
                 <ul class="dropdown-menu">
                     <li><a class="nav-link" href="{{ route('agent.package_booking.list') }}">Package Booking List</a></li>

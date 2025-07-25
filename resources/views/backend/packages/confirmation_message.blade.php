@@ -40,6 +40,8 @@
                                                         </th>
                                                         <th>Package Name</th>
                                                         <th>Package Type</th>
+                                                        <th>Auth Type</th>
+                                                        <th>Auth Name</th>
                                                         <th>User Name</th>
                                                         <th>User Phone</th>
                                                         <th>User Email</th>
@@ -66,6 +68,8 @@
                                                                     @endif
                                                                 </div>
                                                             </td>
+                                                            <td>{{ $item->user_type }}</td>
+                                                            <td>{{ $item->created_by }}</td>
                                                             <td>{{ $item->user_name }}</td>
                                                             <td>{{ $item->user_phone }}</td>
                                                             <td>{{ $item->user_email }}</td>

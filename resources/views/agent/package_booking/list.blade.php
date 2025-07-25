@@ -35,16 +35,14 @@
                                         <table class="table table-striped table-hover" id="tableExport" style="width:100%; white-space: nowrap;">
                                             <thead>
                                                 <tr>
-                                                    <th>
-                                                        <input type="checkbox" id="selectAll" />
-                                                    </th>
+                                                    <th>#</th>
                                                     <th>Package Name</th>
                                                     <th>Package Type</th>
-                                                    <th>User Name</th>
-                                                    <th>User Phone</th>
-                                                    <th>User Email</th>
-                                                    <th>User Message</th>
-                                                    <th>User File</th>
+                                                    <th>Customer Name</th>
+                                                    <th>Customer Phone</th>
+                                                    <th>Customer Email</th>
+                                                    <th>Customer Message</th>
+                                                    <th>Customer File</th>
                                                     <th>Status</th>
                                                     <th>Action</th>
                                                 </tr>
@@ -53,9 +51,7 @@
                                             <tbody>
                                                 @foreach ($agent_package_booking_list as $key => $item)
                                                     <tr>
-                                                        <td>
-                                                            <input type="checkbox" class="selectItem" name="ids[]" value="{{ $item->id }}">
-                                                        </td>
+                                                        <td>{{ $key + 1 }}</td>
                                                         <td>{{ $item->package->package_name }}</td>
                                                         <td>
                                                             <div class="badges">
@@ -98,11 +94,11 @@
                                                                         <i class="far fa-edit"></i> Edit
                                                                     </a>
                                                                 @endif
-
-                                                                <a href="{{ route('agent.package_booking.delete', $item->id) }}" class="btn btn-outline-danger">
-                                                                    <i class="fas fa-trash"></i> Delete
-                                                                </a>
-
+                                                                @if ($item->status == 'pending')
+                                                                    <a href="{{ route('agent.package_booking.delete', $item->id) }}" class="btn btn-outline-danger">
+                                                                        <i class="fas fa-trash"></i> Delete
+                                                                    </a>
+                                                                @endif
                                                             </div>
                                                         </td>
                                                     </tr>
