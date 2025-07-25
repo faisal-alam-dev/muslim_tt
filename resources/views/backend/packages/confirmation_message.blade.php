@@ -40,13 +40,13 @@
                                                         </th>
                                                         <th>Package Name</th>
                                                         <th>Package Type</th>
-                                                        <th>Auth Type</th>
-                                                        <th>Auth Name</th>
+                                                        <th>User Type</th>
                                                         <th>User Name</th>
-                                                        <th>User Phone</th>
-                                                        <th>User Email</th>
-                                                        <th>User Message</th>
-                                                        <th>User File</th>
+                                                        <th>Customer Name</th>
+                                                        <th>Customer Phone</th>
+                                                        <th>Customer Email</th>
+                                                        <th>Customer Message</th>
+                                                        <th>Customer File</th>
                                                         <th>Status</th>
                                                         <th>Action</th>
                                                     </tr>
@@ -69,7 +69,7 @@
                                                                 </div>
                                                             </td>
                                                             <td>{{ $item->user_type }}</td>
-                                                            <td>{{ $item->created_by }}</td>
+                                                            <td>{{ $item->userNameByID->name ?? 'N/A' }}</td>
                                                             <td>{{ $item->user_name }}</td>
                                                             <td>{{ $item->user_phone }}</td>
                                                             <td>{{ $item->user_email }}</td>

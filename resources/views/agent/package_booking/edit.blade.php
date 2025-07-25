@@ -66,28 +66,28 @@
 
                                     <div class="form-group row mb-4">
                                         <div class="col-md-8">
-                                            <label class="col-form-label">User Name</label>
+                                            <label class="col-form-label">Customer Name</label>
                                             <input type="text" class="form-control @error('user_name') is-invalid @enderror" name="user_name" value="{{ $agent_package_booking_data->user_name }}" data-parsley-required-message="Usr Name is required*" required>
                                         </div>
                                     </div>
 
                                     <div class="form-group row mb-4">
                                         <div class="col-md-8">
-                                            <label class="col-form-label">User Phone</label>
+                                            <label class="col-form-label">Customer Phone</label>
                                             <input type="text" class="form-control @error('user_phone') is-invalid @enderror" name="user_phone" value="{{ $agent_package_booking_data->user_phone }}" data-parsley-required-message="User Phone is required*" required>
                                         </div>
                                     </div>
 
                                     <div class="form-group row mb-4">
                                         <div class="col-md-8">
-                                            <label class="col-form-label">User Email</label>
+                                            <label class="col-form-label">Customer Email</label>
                                             <input type="email" class="form-control @error('user_email') is-invalid @enderror" name="user_email" value="{{ $agent_package_booking_data->user_email }}" data-parsley-required-message="User Email is required*" required>
                                         </div>
                                     </div>
 
                                     <div class="form-group row mb-4">
                                         <div class="col-md-8">
-                                            <label class="col-form-label">User Message</label>
+                                            <label class="col-form-label">Customer Message</label>
                                             <textarea name="user_message" rows="4" class="form-control">{{ $agent_package_booking_data->user_message }}</textarea>
                                         </div>
                                     </div>

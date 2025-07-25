@@ -12,4 +12,9 @@ class PackageConfirmation extends Model
     {
         return $this->belongsTo(Package::class, 'package_id', 'id');
     }
+
+    public function userNameByID()
+    {
+        return $this->belongsTo(User::class, 'created_by', 'id');
+    }
 }
