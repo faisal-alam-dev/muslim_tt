@@ -47,12 +47,12 @@
                                         <tbody>
                                             @foreach ($agent_data as $key => $item)
                                                 <tr>
-                                                    <td>{{ $agent_data->count() - $key }}</td>
+                                                    <td>{{ $key + 1 }}</td>
                                                     <td>
                                                         <div class="table_slider_list_image" style="background-image: url({{ asset($item->thumbnail) }});"></div>
                                                     </td>
                                                     <td>{{ $item->name }}</td>
-                                                    <td>N/A</td>
+                                                    <td>{{ $item->package_confirmations_count }}</td>
                                                     <td>
                                                         <div class="badges">
                                                             @if ($item->status == 'active')
