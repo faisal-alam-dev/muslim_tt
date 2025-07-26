@@ -17,4 +17,14 @@ class PackageConfirmation extends Model
     {
         return $this->belongsTo(User::class, 'created_by', 'id');
     }
+
+    /**
+     * Get the agent that owns the PackageConfirmation
+     *
+     * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
+     */
+    public function agent()
+    {
+        return $this->belongsTo(\App\Models\User::class, 'created_by');
+    }
 }

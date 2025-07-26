@@ -12,6 +12,7 @@ return new class extends Migration {
     {
         Schema::create('package_confirmations', function (Blueprint $table) {
             $table->id();
+            $table->string('invoice_number')->unique()->nullable();
             $table->foreignId('package_id')->constrained()->onDelete('cascade');
             $table->string('user_name');
             $table->string('user_phone');

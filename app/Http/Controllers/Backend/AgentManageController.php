@@ -29,4 +29,13 @@ class AgentManageController extends Controller
 
         return View::make('backend.agent_manage.agent_package_book_list', compact('title', 'agent_package_booking_data'));
     }
+
+    public function ViewInvoice($id)
+    {
+        $confirmation = PackageConfirmation::with(['package', 'agent'])->findOrFail($id);
+
+        $title = 'Invoice - ' . $confirmation->invoice_number;
+
+        return view('backend.invoice.package_booking_invoice', compact('confirmation', 'title'));
+    }
 }

@@ -524,6 +524,7 @@ Route::group(
             function () {
                 Route::get('/list', 'AgentList')->name('list');
                 Route::get('/package-booking-list/{agent_id}', 'AgentPackageBookingList')->name('package_booking_list');
+                Route::get('/package-booking/invoice/{id}', 'ViewInvoice')->name('package_booking.invoice.view');
                 // Route::get('/add', 'UserAdd')->name('add');
                 // Route::post('/store', 'UserStore')->name('store');
                 // Route::post('/status-update', 'UserStatusUpdate')->name('status.update');
@@ -593,6 +594,8 @@ Route::group(
                 Route::get('/edit/{id}', 'AgentPackageBookingEdit')->name('edit');
                 Route::post('/update', 'AgentPackageBookingUpdate')->name('update');
                 Route::get('/delete/{id}', 'AgentPackageBookingDelete')->name('delete');
+
+                Route::get('/package-booking/invoice/{id}', 'ViewInvoice')->name('package_booking.invoice.view');
             },
         );
     },

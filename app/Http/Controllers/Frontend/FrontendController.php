@@ -104,6 +104,9 @@ class FrontendController extends Controller
         $data->user_email = $request->user_email;
         $data->user_message = $request->user_message;
 
+        // Generate a unique invoice number
+        $data->invoice_number = 'INV-' . date('Ymd') . '-' . strtoupper(uniqid());
+
         if ($request->file('nid_passport')) {
             $nid_passport = $request->file('nid_passport');
             $manager = new ImageManager(new Driver());

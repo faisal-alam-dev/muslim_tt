@@ -97,6 +97,10 @@
                                                                         <i class="fas fa-eye"></i> Status
                                                                     </a>
 
+                                                                    <a href="{{ route('admin.agent.package_booking.invoice.view', $item->id) }}" class="btn btn-outline-info" target="_blank">
+                                                                        <i class="fas fa-eye"></i> View Invoice
+                                                                    </a>
+
                                                                     <a href="{{ route('admin.package.confirmation.delete', $item->id) }}" class="btn btn-outline-danger">
                                                                         <i class="fas fa-trash"></i> Delete
                                                                     </a>

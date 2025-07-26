@@ -77,6 +77,9 @@ class AgentPackageBookingController extends Controller
             $data->user_type = 'agent';
             $data->created_by = Auth::user()->id;
 
+            // Generate a unique invoice number
+            $data->invoice_number = 'INV-' . date('Ymd') . '-' . strtoupper(uniqid());
+
             if ($request->file('nid_passport')) {
                 $nid_passport = $request->file('nid_passport');
                 $manager = new ImageManager(new Driver());
@@ -214,4 +217,13 @@ class AgentPackageBookingController extends Controller
             }
         }
     } // End Method
+
+    public function ViewInvoice($id)
+    {
+        $confirmation = PackageConfirmation::with(['package', 'agent'])->findOrFail($id);
+
+        $title = 'Invoice - ' . $confirmation->invoice_number;
+
+        return view('backend.invoice.package_booking_invoice', compact('confirmation', 'title'));
+    }
 }

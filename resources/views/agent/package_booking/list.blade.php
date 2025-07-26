@@ -94,6 +94,9 @@
                                                                         <i class="far fa-edit"></i> Edit
                                                                     </a>
                                                                 @endif
+                                                                <a href="{{ route('agent.package_booking.package_booking.invoice.view', $item->id) }}" class="btn btn-outline-info" target="_blank">
+                                                                    <i class="fas fa-eye"></i> View Invoice
+                                                                </a>
                                                                 @if ($item->status == 'pending')
                                                                     <a href="{{ route('agent.package_booking.delete', $item->id) }}" class="btn btn-outline-danger">
                                                                         <i class="fas fa-trash"></i> Delete
