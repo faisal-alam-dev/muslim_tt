@@ -523,6 +523,7 @@ Route::group(
             ],
             function () {
                 Route::get('/list', 'AgentList')->name('list');
+                Route::get('/package-booking-list/{agent_id}', 'AgentPackageBookingList')->name('package_booking_list');
                 // Route::get('/add', 'UserAdd')->name('add');
                 // Route::post('/store', 'UserStore')->name('store');
                 // Route::post('/status-update', 'UserStatusUpdate')->name('status.update');

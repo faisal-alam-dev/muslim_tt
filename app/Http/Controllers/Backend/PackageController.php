@@ -184,7 +184,7 @@ class PackageController extends Controller
 
             DB::commit();
 
-            return redirect()->route('admin.package.confirmation.message')->with('success', 'Package Booking Status Updated Successfully');
+            return redirect()->back()->with('success', 'Package Booking Status Updated Successfully');
         } catch (\Exception $e) {
             DB::rollBack();
             Log::error('Error occurred while updating package booking status: ' . $e->getMessage());
