@@ -38,7 +38,7 @@
                                                 <th>Image</th>
                                                 <th>Name</th>
                                                 <th>Type</th>
-                                                <th>Status</th>
+                                                <th>Price (with food)</th>
                                                 <th>Action</th>
                                             </tr>
                                         </thead>
@@ -60,18 +60,10 @@
                                                             @endif
                                                         </div>
                                                     </td>
-                                                    <td>
-                                                        <div class="badges">
-                                                            @if ($item->package_status == 'active')
-                                                                <span class="badge badge-success">Active</span>
-                                                            @elseif ($item->package_status == 'inactive')
-                                                                <span class="badge badge-danger">Inactive</span>
-                                                            @endif
-                                                        </div>
-                                                    </td>
+                                                    <td><span class="custom_taka">৳</span>{{ $item->package_price_with_food }}</td>
                                                     <td>
                                                         <div class="table_actions">
-                                                            <a href="#" class="btn btn-outline-warning" data-bs-toggle="modal" data-bs-target="#packageDataModal" data-package_image="{{ asset($item->package_image) }}" data-package_name="{{ $item->package_name }}" data-package_short_description="{{ strip_tags($item->package_short_description) }}" data-package_long_description="{{ strip_tags($item->package_long_description) }}" data-package_price_with_food="{{ $item->package_price_with_food }}" data-package_price_without_food="{{ $item->package_price_without_food }}" data-package_duration_start="{{ $item->package_duration_start }}" data-package_duration="{{ $item->package_duration }}" data-package_hotel_makkah="{{ $item->package_hotel_makkah }}" data-package_hotel_madinah="{{ $item->package_hotel_madinah }}" data-package_flights_up="{{ $item->package_flights_up }}" data-package_flights_down="{{ $item->package_flights_down }}" data-package_land_transport="{{ $item->package_land_transport }}" data-package_food="{{ $item->package_food }}" data-package_special_services="{{ $item->package_special_services }}" data-package_type="{{ $item->package_type }}" data-package_status="{{ $item->package_status }}" title="View Package Details">
+                                                            <a href="#" class="btn btn-outline-warning view-package-details" data-bs-toggle="modal" data-bs-target="#packageDataModal" data-package="{{ json_encode($item) }}" title="View Package Details">
                                                                 <i class="fas fa-eye"></i> View Details
                                                             </a>
                                                         </div>
@@ -104,10 +96,6 @@
         <div class="modal-dialog modal-lg modal-dialog-scrollable">
             <div class="modal-content">
                 <div class="modal-body mt-4">
-                    <div>
-                        <h6>Image:</h6>
-                        <img id="modal-package_image" src="" alt="Package Image" class="img-fluid mb-3">
-                    </div>
                     <div>
                         <h6>Name:</h6>
                         <p id="modal-package_name"></p>
@@ -164,14 +152,6 @@
                         <h6>Special Services:</h6>
                         <p id="modal-package_special_services"></p>
                     </div>
-                    <div>
-                        <h6>Type:</h6>
-                        <p id="modal-package_type"></p>
-                    </div>
-                    <div>
-                        <h6>Status:</h6>
-                        <p id="modal-package_status"></p>
-                    </div>
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-outline-dark" data-bs-dismiss="modal">Close</button>
@@ -186,29 +166,30 @@
     <script>
         var packageDataModal = document.getElementById('packageDataModal');
         packageDataModal.addEventListener('show.bs.modal', function(event) {
-            // Button that triggered the modal
-            const button = event.relatedTarget;
+            const button = event.relatedTarget; // Button that triggered the modal
+            const packageData = JSON.parse(button.getAttribute('data-package'));
 
-            // Define an array of data attributes and their corresponding modal element IDs
-            const dataAttributes = [
-                'package_image', 'package_name', 'package_short_description', 'package_long_description',
-                'package_price_with_food', 'package_price_without_food', 'package_duration_start',
-                'package_duration', 'package_hotel_makkah', 'package_hotel_madinah',
-                'package_flights_up', 'package_flights_down', 'package_land_transport',
-                'package_food', 'package_special_services', 'package_type', 'package_status'
-            ];
-
-            dataAttributes.forEach(attr => {
-                const value = button.getAttribute(`data-${attr}`);
-                const element = packageDataModal.querySelector(`#modal-${attr}`);
-                if (element) {
-                    if (attr === 'package_image') {
-                        element.src = value;
-                    } else {
-                        element.textContent = value;
-                    }
-                }
-            });
+            // Populate modal fields
+            document.getElementById('modal-package_name').textContent = packageData.package_name;
+            document.getElementById('modal-package_short_description').textContent = stripHtml(packageData.package_short_description);
+            document.getElementById('modal-package_long_description').textContent = stripHtml(packageData.package_long_description);
+            document.getElementById('modal-package_price_with_food').textContent = packageData.package_price_with_food;
+            document.getElementById('modal-package_price_without_food').textContent = packageData.package_price_without_food;
+            document.getElementById('modal-package_duration_start').textContent = packageData.package_duration_start;
+            document.getElementById('modal-package_duration').textContent = packageData.package_duration;
+            document.getElementById('modal-package_hotel_makkah').textContent = packageData.package_hotel_makkah;
+            document.getElementById('modal-package_hotel_madinah').textContent = packageData.package_hotel_madinah;
+            document.getElementById('modal-package_flights_up').textContent = packageData.package_flights_up;
+            document.getElementById('modal-package_flights_down').textContent = packageData.package_flights_down;
+            document.getElementById('modal-package_land_transport').textContent = packageData.package_land_transport;
+            document.getElementById('modal-package_food').textContent = packageData.package_food;
+            document.getElementById('modal-package_special_services').textContent = packageData.package_special_services;
         });
+
+        // Helper function to strip HTML tags
+        function stripHtml(html) {
+            let doc = new DOMParser().parseFromString(html, 'text/html');
+            return doc.body.textContent || "";
+        }
     </script>
 @endsection

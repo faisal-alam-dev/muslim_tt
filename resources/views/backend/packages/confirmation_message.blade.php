@@ -161,7 +161,11 @@
                                 <option value="cancelled">Cancelled</option>
                             </select>
                         </div>
-                        <button class="btn btn-primary">Submit</button>
+                        <div class="modal-footer" style="justify-content: space-between">
+                            <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">Close</button>
+                            <a href="" id="final_delete" class="btn btn-outline-danger">Submit</a>
+                        </div>
+                        {{-- <button class="btn btn-primary">Submit</button> --}}
                     </form>
 
 

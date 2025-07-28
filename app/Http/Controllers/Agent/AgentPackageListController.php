@@ -12,7 +12,7 @@ class AgentPackageListController extends Controller
     {
         $title = 'Packages List';
 
-        $packages = Package::orderBy('id', 'asc')->get();
+        $packages = Package::where('package_status', 'active')->orderBy('id', 'asc')->get();
 
         return view('agent.package_list.list', compact('title', 'packages'));
     } // End Method

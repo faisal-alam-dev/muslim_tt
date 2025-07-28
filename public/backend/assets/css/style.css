@@ -11782,3 +11782,7 @@ body:not(.sidebar-mini) .sidebar-style-2 .sidebar-menu li.active ul.dropdown-men
     text-align: center;
     padding-bottom: 30px;
 }
+
+.custom_taka {
+    font-size: 20px;
+}
