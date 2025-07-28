@@ -224,6 +224,6 @@ class AgentPackageBookingController extends Controller
 
         $title = 'Invoice - ' . $confirmation->invoice_number;
 
-        return view('backend.invoice.package_booking_invoice', compact('confirmation', 'title'));
+        return view('agent.package_booking.package_booking_invoice', compact('confirmation', 'title'));
     }
 }
