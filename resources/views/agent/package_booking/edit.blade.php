@@ -95,7 +95,7 @@
                                     <div class="form-group row mb-4">
                                         <div class="col-md-8">
                                             <label class="col-form-label"></label>
-                                            <button class="btn btn-primary">Create</button>
+                                            <button class="btn btn-primary">Update</button>
                                         </div>
                                     </div>
 

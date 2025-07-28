@@ -63,8 +63,8 @@
                                                     <td><span class="custom_taka">৳</span>{{ $item->package_price_with_food }}</td>
                                                     <td>
                                                         <div class="table_actions">
-                                                            <a href="#" class="btn btn-outline-warning view-package-details" data-bs-toggle="modal" data-bs-target="#packageDataModal" data-package="{{ json_encode($item) }}" title="View Package Details">
-                                                                <i class="fas fa-eye"></i> View Details
+                                                            <a href="#" class="btn btn-outline-success view-package-details" data-bs-toggle="modal" data-bs-target="#packageDataModal" data-package="{{ json_encode($item) }}" title="View Package Details">
+                                                                <i class="fas fa-eye"></i>
                                                             </a>
                                                         </div>
                                                     </td>
