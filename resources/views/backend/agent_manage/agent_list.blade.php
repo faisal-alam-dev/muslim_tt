@@ -38,6 +38,9 @@
                                                 <th>SN</th>
                                                 <th>Image</th>
                                                 <th>Name</th>
+                                                <th>Email</th>
+                                                <th>Phone</th>
+                                                <th>Address</th>
                                                 <th>Number Of Book Packages</th>
                                                 <th>Status</th>
                                                 <th>Action</th>
@@ -52,8 +55,11 @@
                                                         <div class="table_slider_list_image" style="background-image: url({{ asset($item->thumbnail) }});"></div>
                                                     </td>
                                                     <td>{{ $item->name }}</td>
+                                                    <td>{{ $item->email }}</td>
+                                                    <td>{{ $item->phone }}</td>
+                                                    <td>{{ $item->address }}</td>
                                                     <td>
-                                                        <a href="{{ route('admin.agent.package_booking_list', $item->id) }}">{{ $item->package_confirmations_count }}</a>
+                                                        <a href="{{ route('admin.agent.package_booking_list', $item->id) }}" alt="View Package Booking List" title="View Agent Package Booking List">{{ $item->package_confirmations_count }}</a>
                                                     </td>
                                                     <td>
                                                         <div class="badges">
@@ -66,17 +72,17 @@
                                                     </td>
                                                     <td>
                                                         <div class="table_actions d-flex gap-2">
-                                                            <a href="#" class="btn btn-outline-warning" data-bs-toggle="modal" data-bs-target="#userDataModal" data-name="{{ $item->name }}" data-email="{{ $item->email }}" data-phone="{{ $item->phone ?? 'N/A' }}" data-address="{{ $item->address ?? 'N/A' }}" title="View User">
-                                                                <i class="fas fa-eye"></i> Agent Details
+                                                            {{-- Status Update --}}
+                                                            <a href="#" class="btn btn-outline-primary statusBtn" data-bs-toggle="modal" data-bs-target="#statusUpdateModal" data-id="{{ $item->id }}" alt="Update Agent Status" title="Update Agent Status">
+                                                                <i class="fa-solid fa-arrows-to-eye"></i>
                                                             </a>
-                                                            <a href="{{ route('admin.agent.package_booking_list', $item->id) }}" class="btn btn-outline-info" title="View User">
-                                                                <i class="fas fa-eye"></i> Package Booking List
+                                                            {{-- View Agent Package Booking List --}}
+                                                            <a href="{{ route('admin.agent.package_booking_list', $item->id) }}" class="btn btn-outline-dark" alt="View Package Booking List" title="View Agent Package Booking List">
+                                                                <i class="fas fa-eye"></i>
                                                             </a>
-                                                            <a href="#" class="btn btn-outline-primary statusBtn" data-toggle="modal" data-target="#PackageStatusModal" data-id="{{ $item->id }}">
-                                                                <i class="fas fa-eye"></i> Status
-                                                            </a>
-                                                            {{-- <a href="#!" class="btn btn-outline-danger" data-del="{{ route('admin.users.delete', $item->id) }}" data-bs-toggle="modal" data-bs-target="#user_delete_modal" data-id="{{ $item->id }}" data-name="{{ $item->name }}" alt="Delete" title="Delete">
-                                                                <i class="far fa-trash-alt"></i> Delete
+                                                            {{-- Delete --}}
+                                                            {{-- <a href="#" class="btn btn-outline-danger delete-package-booking" data-bs-toggle="modal" data-bs-target="#deleteConfirmationModal" data-delete-url="{{ route('admin.users.delete', $item->id) }}" alt="Delete Agent" title="Delete Agent">
+                                                                <i class="fas fa-trash"></i>
                                                             </a> --}}
                                                         </div>
                                                     </td>
@@ -102,131 +108,76 @@
 
     </div>
 
-    <!-- User Data Modal -->
-    <div class="modal fade" id="userDataModal" tabindex="-1" aria-labelledby="userDataModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-scrollable">
-            <div class="modal-content">
-                <div class="modal-body mt-4">
-                    <div>
-                        <h6>Name:</h6>
-                        <p id="modal-name"></p> <!-- Set ID for JavaScript targeting -->
-                    </div>
-                    <div>
-                        <h6>Email:</h6>
-                        <p id="modal-email"></p> <!-- Set ID for JavaScript targeting -->
-                    </div>
-                    <div>
-                        <h6>Phone:</h6>
-                        <p id="modal-phone"></p> <!-- Set ID for JavaScript targeting -->
-                    </div>
-                    <div>
-                        <h6>Address:</h6>
-                        <p id="modal-address"></p> <!-- Set ID for JavaScript targeting -->
-                    </div>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-outline-dark" data-bs-dismiss="modal">Close</button>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- Status Modal -->
-    <div class="modal fade" id="PackageStatusModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog">
+    <!-- Status Update Modal -->
+    <div class="modal fade" id="statusUpdateModal" tabindex="-1" aria-labelledby="statusUpdateModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
+                    <h5 class="modal-title" id="statusUpdateModalLabel">Update Agent Status</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
-                <div class="modal-body">
-
-                    <form id="form" action="{{ route('admin.users.status.update') }}" method="post">
+                <form id="packageStatusForm" action="{{ route('admin.users.status.update') }}" method="post">
+                    <div class="modal-body">
                         @csrf
-                        <input type="hidden" name="id" id="id">
-                        <div class="form-group row mb-4">
-                            <label>Status</label>
-                            <select class="form-control selectric" name="status">
+                        <input type="hidden" name="id" id="package_id">
+                        <div class="form-group">
+                            <label for="status_select">Status</label>
+                            <select class="form-control selectric" name="status" id="status_select">
                                 <option value="" disabled selected>- SELECT STATUS -</option>
                                 <option value="active">Active</option>
                                 <option value="inactive">Inactive</option>
                             </select>
                         </div>
-                        <button class="btn btn-primary">Submit</button>
-                    </form>
-
-
-                </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        <button type="submit" class="btn btn-primary">Submit</button>
+                    </div>
+                </form>
             </div>
         </div>
     </div>
 
-    {{-- Delete Modal --}}
-    <div class="modal fade" id="user_delete_modal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <!--Delete Confirmation Modal -->
+    {{-- <div class="modal fade" id="deleteConfirmationModal" tabindex="-1" aria-labelledby="deleteConfirmationModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h3 class="modal-title fs-5" id="exampleModalLabel"></h3>
+                    <h5 class="modal-title" id="deleteConfirmationModalLabel">Confirm Deletion</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
-                    <h5> Are you sure you want to delete this User?</h5>
+                    Are you sure you want to delete this agent?
                 </div>
-                <div class="modal-footer" style="justify-content: space-between">
-                    <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">Close</button>
-                    <a href="" id="final_delete" class="btn btn-outline-danger">Confirm Delete</a>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                    <a href="#" id="confirmDeleteButton" class="btn btn-danger">Delete</a>
                 </div>
             </div>
         </div>
-    </div>
-    {{-- End: Delete Modal --}}
+    </div> --}}
 
 @endsection
 
 @section('footer_script')
 
+    {{-- Package Status Update Modal Logic --}}
     <script>
-        var userDataModal = document.getElementById('userDataModal');
-        userDataModal.addEventListener('show.bs.modal', function(event) {
-            // Button that triggered the modal
+        var statusUpdateModal = document.getElementById('statusUpdateModal');
+        statusUpdateModal.addEventListener('show.bs.modal', function(event) {
             const button = event.relatedTarget;
-
-            // Extract info from data-* attributes
-            const name = button.getAttribute('data-name');
-            const email = button.getAttribute('data-email');
-            const phone = button.getAttribute('data-phone');
-            const address = button.getAttribute('data-address');
-
-            // Update the modal's content
-            const modalName = userDataModal.querySelector('#modal-name');
-            const modalEmail = userDataModal.querySelector('#modal-email');
-            const modalPhone = userDataModal.querySelector('#modal-phone');
-            const modalAddress = userDataModal.querySelector('#modal-address');
-
-            // Set the text content for user data
-            modalName.textContent = name;
-            modalEmail.textContent = email;
-            modalPhone.textContent = phone;
-            modalAddress.textContent = address;
+            const packageId = button.getAttribute('data-id');
+            document.getElementById('package_id').value = packageId;
         });
     </script>
 
-    <script>
-        $(document).on('click', '.statusBtn', function() {
-            let id = $(this).data('id');
-            $('#id').val(id);
+    {{-- Delete Modal Logic --}}
+    {{-- <script>
+        var deleteConfirmationModal = document.getElementById('deleteConfirmationModal');
+        deleteConfirmationModal.addEventListener('show.bs.modal', function(event) {
+            const button = event.relatedTarget;
+            const deleteUrl = button.getAttribute('data-delete-url');
+            document.getElementById('confirmDeleteButton').setAttribute('href', deleteUrl);
         });
-    </script>
-
-    <script>
-        $('#user_delete_modal').on('show.bs.modal', function(event) {
-            var button = $(event.relatedTarget)
-            var id = button.data('id')
-            var name = button.data('name')
-            var modal = $(this)
-            modal.find('.modal-title').html('Delete <span class="text-danger">' + name + '</span>');
-            $('#final_delete').attr('href', button.attr('data-del'))
-        })
-    </script>
+    </script> --}}
 @endsection

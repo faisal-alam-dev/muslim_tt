@@ -18,7 +18,7 @@ class UserController extends Controller
     {
         $title = 'User List';
 
-        $users_data = User::latest()->get();
+        $users_data = User::withCount('packageConfirmations')->orderBy('id', 'asc')->get();
 
         return view('backend.users.list', compact('title', 'users_data'));
     } // End Method
@@ -112,7 +112,7 @@ class UserController extends Controller
 
             DB::commit();
 
-            return redirect()->route('admin.users.list')->with('success', 'User Status Updated Successfully');
+            return redirect()->back()->with('success', 'User Status Updated Successfully');
         } catch (\Exception $e) {
             DB::rollBack();
             Log::error('Error occurred while updating user status: ' . $e->getMessage());

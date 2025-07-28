@@ -8,15 +8,62 @@
         .invoice hr {
             border-top-color: #ccc;
         }
+
+        @media print {
+            @page {
+                size: A4;
+                margin: 0.5cm;
+            }
+
+            body * {
+                visibility: hidden;
+            }
+
+            #invoice-print-area,
+            #invoice-print-area * {
+                visibility: visible;
+            }
+
+            #invoice-print-area {
+                position: absolute;
+                left: 0;
+                top: 0;
+                width: 100%;
+            }
+        }
     </style>
 
     <div class="main-content">
+
+        <section class="section mb-3">
+
+            <div class="section-body">
+
+                <div class="row">
+
+                    <div class="col-12">
+
+                        <div class=" d-flex justify-content-between">
+                            <h4><button class="btn btn-warning btn-icon icon-left" onclick="window.print()"><i class="fas fa-print"></i> Print</button></h4>
+                            <h4>
+                                <a href="{{ URL::previous() }}" class="btn btn-outline-dark"><i class="fas fa-arrow-left"></i> Back</a>
+                            </h4>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
 
         <section class="section">
 
             <div class="section-body">
 
-                <div class="invoice">
+                <div class="invoice" id="invoice-print-area">
 
                     <div class="invoice-print">
 
@@ -32,7 +79,7 @@
                                 <hr>
 
                                 <div class="row">
-                                    <div class="col-md-6">
+                                    <div class="col-6">
                                         <address>
                                             <strong>Billed To:</strong><br>
                                             {{ $confirmation->user_name ?? 'N/A' }}<br>
@@ -40,20 +87,20 @@
                                             {{ $confirmation->user_email ?? 'N/A' }}
                                         </address>
                                     </div>
-                                    <div class="col-md-6 text-md-right">
+                                    <div class="col-6 text-end">
                                         <address>
-                                            <strong>Created By (Agent):</strong><br>
-                                            {{ $confirmation->agent->name ?? 'N/A' }}<br>
-                                            {{ $confirmation->agent->email ?? 'N/A' }}
+                                            <strong>Created By ({{ ucfirst($confirmation->user_type ?? 'User') }}):</strong><br>
+                                            {{ $confirmation->agent->name ?? $confirmation->user_name }}<br>
+                                            {{ $confirmation->agent->email ?? $confirmation->user_email }}
                                         </address>
                                     </div>
                                 </div>
 
                                 <div class="row">
-                                    <div class="col-md-6">
+                                    <div class="col-6">
                                         {{-- This space can be used for payment method details if available in the future --}}
                                     </div>
-                                    <div class="col-md-6 text-md-right">
+                                    <div class="col-6 text-end">
                                         <address>
                                             <strong>Order Date:</strong><br>
                                             {{ $confirmation->created_at->format('F j, Y') }}<br><br>
@@ -86,9 +133,9 @@
                                         <tr>
                                             <td>1</td>
                                             <td>{{ $confirmation->package->package_name ?? 'N/A' }} ({{ ucfirst($confirmation->package->package_type ?? '') }})</td>
-                                            <td class="text-center">${{ number_format($package_price, 2) }}</td>
+                                            <td class="text-center">৳{{ number_format($package_price, 2) }}</td>
                                             <td class="text-center">1</td>
-                                            <td class="text-right">${{ number_format($package_price, 2) }}</td>
+                                            <td class="text-right">৳{{ number_format($package_price, 2) }}</td>
                                         </tr>
                                     </table>
                                 </div>
@@ -102,12 +149,20 @@
                                     <div class="col-lg-4 text-right">
                                         <div class="invoice-detail-item">
                                             <div class="invoice-detail-name">Subtotal</div>
-                                            <div class="invoice-detail-value">${{ number_format($package_price, 2) }}</div>
+                                            <div class="invoice-detail-value">৳{{ number_format($package_price, 2) }}</div>
+                                        </div>
+                                        <div class="invoice-detail-item">
+                                            <div class="invoice-detail-name">Paid Amount</div>
+                                            <div class="invoice-detail-value">৳{{ number_format($confirmation->paid_amount ?? 0, 2) }}</div>
+                                        </div>
+                                        <div class="invoice-detail-item">
+                                            <div class="invoice-detail-name">Due Amount</div>
+                                            <div class="invoice-detail-value">৳{{ number_format($package_price - ($confirmation->paid_amount ?? 0), 2) }}</div>
                                         </div>
                                         <hr class="mt-2 mb-2">
                                         <div class="invoice-detail-item">
                                             <div class="invoice-detail-name">Total</div>
-                                            <div class="invoice-detail-value invoice-detail-value-lg">${{ number_format($package_price, 2) }}</div>
+                                            <div class="invoice-detail-value invoice-detail-value-lg">৳{{ number_format($package_price, 2) }}</div>
                                         </div>
                                     </div>
                                 </div>
@@ -118,18 +173,6 @@
 
                     </div>
 
-                    <hr>
-
-                    <div class="text-md-right">
-
-                        <div class="float-lg-left mb-lg-0 mb-3">
-                            <a href="{{ URL::previous() }}" class="btn btn-danger btn-icon icon-left"><i class="fas fa-times"></i> Back</a>
-                        </div>
-
-                        <button class="btn btn-warning btn-icon icon-left" onclick="window.print()"><i class="fas fa-print"></i> Print</button>
-
-                    </div>
-
                 </div>
 
             </div>
@@ -137,4 +180,5 @@
         </section>
 
     </div>
+
 @endsection

@@ -89,9 +89,9 @@
                                     </div>
                                     <div class="col-6 text-end">
                                         <address>
-                                            <strong>Created By (Agent):</strong><br>
-                                            {{ $confirmation->agent->name ?? 'N/A' }}<br>
-                                            {{ $confirmation->agent->email ?? 'N/A' }}
+                                            <strong>Created By ({{ ucfirst($confirmation->user_type ?? 'User') }}):</strong><br>
+                                            {{ $confirmation->agent->name ?? $confirmation->user_name }}<br>
+                                            {{ $confirmation->agent->email ?? $confirmation->user_email }}
                                         </address>
                                     </div>
                                 </div>

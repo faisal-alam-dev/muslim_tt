@@ -38,13 +38,11 @@
                                                         <th>
                                                             <input type="checkbox" id="selectAll" />
                                                         </th>
-                                                        <th>Package Name</th>
-                                                        <th>Package Type</th>
                                                         <th>Customer Name</th>
                                                         <th>Customer Phone</th>
-                                                        <th>Customer Email</th>
-                                                        <th>Customer Message</th>
-                                                        <th>Customer File</th>
+                                                        <th>Package Name</th>
+                                                        <th>Package Type</th>
+                                                        <th>User Name</th>
                                                         <th>Status</th>
                                                         <th>Action</th>
                                                     </tr>
@@ -56,6 +54,8 @@
                                                             <td>
                                                                 <input type="checkbox" class="selectItem" name="ids[]" value="{{ $item->id }}">
                                                             </td>
+                                                            <td>{{ $item->user_name }}</td>
+                                                            <td>{{ $item->user_phone }}</td>
                                                             <td>{{ $item->package->package_name }}</td>
                                                             <td>
                                                                 <div class="badges">
@@ -66,19 +66,7 @@
                                                                     @endif
                                                                 </div>
                                                             </td>
-                                                            <td>{{ $item->user_name }}</td>
-                                                            <td>{{ $item->user_phone }}</td>
-                                                            <td>{{ $item->user_email }}</td>
-                                                            <td>{{ $item->user_message }}</td>
-                                                            <td>
-                                                                @if ($item->nid_passport)
-                                                                    <a href="{{ asset($item->nid_passport) }}" target="_blank" class="btn btn-outline-info">
-                                                                        <i class="fas fa-file"></i> View File
-                                                                    </a>
-                                                                @else
-                                                                    <span class="text-muted">No File</span>
-                                                                @endif
-                                                            </td>
+                                                            <td>{{ $item->userNameByID->name ?? 'N/A' }} ({{ $item->user_type ?? 'User' }})</td>
                                                             <td>
                                                                 <div class="badges">
                                                                     @if ($item->status == 'pending')
@@ -92,31 +80,37 @@
                                                             </td>
                                                             <td>
                                                                 <div class="table_actions">
-
-                                                                    <a href="#" class="btn btn-outline-primary statusBtn" data-toggle="modal" data-target="#PackageStatusModal" data-id="{{ $item->id }}">
-                                                                        <i class="fas fa-eye"></i> Status
+                                                                    {{-- Status Update --}}
+                                                                    <a href="#" class="btn btn-outline-primary statusBtn" data-bs-toggle="modal" data-bs-target="#statusUpdateModal" data-id="{{ $item->id }}" alt="Update Package Booking Status" title="Update Package Booking Status">
+                                                                        <i class="fa-solid fa-arrows-to-eye"></i>
                                                                     </a>
-
-                                                                    <a href="{{ route('admin.agent.package_booking.invoice.view', $item->id) }}" class="btn btn-outline-info" target="_blank">
-                                                                        <i class="fas fa-eye"></i> View Invoice
+                                                                    {{-- View Booking Details --}}
+                                                                    <a href="#" class="btn btn-outline-success view-package-details" data-bs-toggle="modal" data-bs-target="#packageBookingModal" data-package="{{ json_encode($item) }}" alt="View Package Booking Details" title="View Package Booking Details">
+                                                                        <i class="fas fa-eye"></i>
                                                                     </a>
-
-                                                                    <a href="{{ route('admin.package.confirmation.delete', $item->id) }}" class="btn btn-outline-danger">
-                                                                        <i class="fas fa-trash"></i> Delete
+                                                                    {{-- Invoice --}}
+                                                                    <a href="{{ route('admin.package_booking.invoice.view', $item->id) }}" class="btn btn-outline-info" target="_blank" alt="Package Booking Invoice" title="View Package Booking Invoice">
+                                                                        <i class="fa-solid fa-file-invoice"></i>
                                                                     </a>
-
+                                                                    {{-- Delete --}}
+                                                                    <a href="#" class="btn btn-outline-danger delete-package-booking" data-bs-toggle="modal" data-bs-target="#deleteConfirmationModal" data-delete-url="{{ route('admin.package.confirmation.delete', $item->id) }}" alt="Delete Package Booking" title="Delete Package Booking">
+                                                                        <i class="fas fa-trash"></i>
+                                                                    </a>
                                                                 </div>
                                                             </td>
                                                         </tr>
                                                     @endforeach
                                                 </tbody>
+
                                             </table>
+
                                         </div>
 
-                                        <button type="submit" class="btn btn-outline-danger" id="deleteSelectedButton" disabled>Delete Selected</button>
-                                    </form>
-                                </div>
+                                        <button type="button" class="btn btn-outline-danger" id="deleteSelectedButton" data-bs-toggle="modal" data-bs-target="#deleteSelectedConfirmationModal" disabled>Delete Selected</button>
 
+                                    </form>
+
+                                </div>
 
                             </div>
 
@@ -132,56 +126,175 @@
 
     </div>
 
-
-    <!-- Modal -->
-    <div class="modal fade" id="PackageStatusModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog">
+    <!-- Status Update Modal -->
+    <div class="modal fade" id="statusUpdateModal" tabindex="-1" aria-labelledby="statusUpdateModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
+                    <h5 class="modal-title" id="statusUpdateModalLabel">Update Booking Status</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
-                <div class="modal-body">
-
-                    <form id="form" action="{{ route('admin.package.confirmation.status') }}" method="post">
+                <form id="packageStatusForm" action="{{ route('admin.package.confirmation.status') }}" method="post">
+                    <div class="modal-body">
                         @csrf
-                        <input type="hidden" name="id" id="id">
-                        <div class="form-group row mb-4">
-                            <label>Status</label>
-                            <select class="form-control selectric" name="status">
+                        <input type="hidden" name="id" id="package_id">
+                        <div class="form-group">
+                            <label for="status_select">Status</label>
+                            <select class="form-control selectric" name="status" id="status_select">
                                 <option value="" disabled selected>- SELECT STATUS -</option>
                                 <option value="pending">Pending</option>
                                 <option value="confirmed">Confirmed</option>
                                 <option value="cancelled">Cancelled</option>
                             </select>
                         </div>
-                        <button class="btn btn-primary">Submit</button>
-                    </form>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        <button type="submit" class="btn btn-primary">Submit</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
 
-
+    <!--Package Booking Details Modal -->
+    <div class="modal fade" id="packageBookingModal" tabindex="-1" aria-labelledby="packageBookingModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-scrollable">
+            <div class="modal-content">
+                <div class="modal-body mt-4">
+                    <div>
+                        <h6>Customer Name:</h6>
+                        <p id="modal-user_name"></p>
+                    </div>
+                    <div>
+                        <h6>Customer Phone:</h6>
+                        <p id="modal-user_phone"></p>
+                    </div>
+                    <div>
+                        <h6>Customer Email:</h6>
+                        <p id="modal-user_email"></p>
+                    </div>
+                    <div>
+                        <h6>Customer Message:</h6>
+                        <p id="modal-user_message"></p>
+                    </div>
+                    <div>
+                        <h6>Package Name:</h6>
+                        <p id="modal-package_name"></p>
+                    </div>
+                    <div>
+                        <h6>Package Type:</h6>
+                        <p id="modal-package_type"></p>
+                    </div>
+                    <div>
+                        <h6>Booking Date:</h6>
+                        <p id="modal-created_at"></p>
+                    </div>
+                    <div>
+                        <h6>NID or Passport:</h6>
+                        <p id="modal-nid_passport"></p>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-outline-dark" data-bs-dismiss="modal">Close</button>
                 </div>
             </div>
         </div>
     </div>
 
+    <!--Delete Confirmation Modal -->
+    <div class="modal fade" id="deleteConfirmationModal" tabindex="-1" aria-labelledby="deleteConfirmationModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="deleteConfirmationModalLabel">Confirm Deletion</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    Are you sure you want to delete this booking?
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                    <a href="#" id="confirmDeleteButton" class="btn btn-danger">Delete</a>
+                </div>
+            </div>
+        </div>
+    </div>
 
-
-
+    <!--Delete Selected Confirmation Modal -->
+    <div class="modal fade" id="deleteSelectedConfirmationModal" tabindex="-1" aria-labelledby="deleteSelectedConfirmationModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="deleteSelectedConfirmationModalLabel">Confirm Deletion</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    Are you sure you want to delete all selected bookings?
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                    <button type="button" id="confirmDeleteSelectedBtn" class="btn btn-danger">Delete</button>
+                </div>
+            </div>
+        </div>
+    </div>
 
 @endsection
 
 @section('footer_script')
 
+    {{-- Package Status Update Modal Logic --}}
     <script>
-        $(document).on('click', '.statusBtn', function() {
-            let id = $(this).data('id');
-            $('#id').val(id);
+        var statusUpdateModal = document.getElementById('statusUpdateModal');
+        statusUpdateModal.addEventListener('show.bs.modal', function(event) {
+            const button = event.relatedTarget;
+            const packageId = button.getAttribute('data-id');
+            document.getElementById('package_id').value = packageId;
         });
     </script>
 
+    {{-- Package Booking Details Modal Logic --}}
+    <script>
+        var packageBookingModal = document.getElementById('packageBookingModal');
+        packageBookingModal.addEventListener('show.bs.modal', function(event) {
+            const button = event.relatedTarget; // Button that triggered the modal
+            const packageData = JSON.parse(button.getAttribute('data-package'));
+            console.log(packageData);
 
+            // Populate modal fields
+            document.getElementById('modal-user_name').textContent = packageData.user_name;
+            document.getElementById('modal-user_phone').textContent = packageData.user_phone;
+            document.getElementById('modal-user_email').textContent = packageData.user_email;
+            document.getElementById('modal-user_message').textContent = packageData.user_message;
+            document.getElementById('modal-package_name').textContent = packageData.package.package_name;
+            document.getElementById('modal-package_type').textContent = packageData.package.package_type;
+            document.getElementById('modal-created_at').textContent = new Date(packageData.created_at).toLocaleString();
+
+            const nidPassportLink = document.getElementById('modal-nid_passport');
+            if (packageData.nid_passport) {
+                nidPassportLink.innerHTML = `<a href="{{ asset('') }}${packageData.nid_passport}" target="_blank" class="btn btn-outline-info"><i class="fas fa-file"></i> View File</a>`;
+            } else {
+                nidPassportLink.textContent = 'No File';
+            }
+        });
+
+        // Helper function to strip HTML tags
+        function stripHtml(html) {
+            let doc = new DOMParser().parseFromString(html, 'text/html');
+            return doc.body.textContent || "";
+        }
+    </script>
+
+    {{-- Delete Modal Logic --}}
+    <script>
+        var deleteConfirmationModal = document.getElementById('deleteConfirmationModal');
+        deleteConfirmationModal.addEventListener('show.bs.modal', function(event) {
+            const button = event.relatedTarget;
+            const deleteUrl = button.getAttribute('data-delete-url');
+            document.getElementById('confirmDeleteButton').setAttribute('href', deleteUrl);
+        });
+    </script>
 
     <script>
         document.getElementById('selectAll').addEventListener('change', function() {
@@ -202,5 +315,12 @@
             let selectedItems = document.querySelectorAll('.selectItem:checked').length;
             document.getElementById('deleteSelectedButton').disabled = selectedItems === 0;
         }
+    </script>
+
+    {{-- Bulk Delete Modal Logic --}}
+    <script>
+        document.getElementById('confirmDeleteSelectedBtn').addEventListener('click', function() {
+            document.getElementById('deleteSelectedForm').submit();
+        });
     </script>
 @endsection

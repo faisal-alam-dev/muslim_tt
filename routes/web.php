@@ -524,13 +524,16 @@ Route::group(
             function () {
                 Route::get('/list', 'AgentList')->name('list');
                 Route::get('/package-booking-list/{agent_id}', 'AgentPackageBookingList')->name('package_booking_list');
-                Route::get('/package-booking/invoice/{id}', 'ViewInvoice')->name('package_booking.invoice.view');
+                // Route::get('/package-booking/invoice/{id}', 'ViewInvoice')->name('package_booking.invoice.view');
                 // Route::get('/add', 'UserAdd')->name('add');
                 // Route::post('/store', 'UserStore')->name('store');
                 // Route::post('/status-update', 'UserStatusUpdate')->name('status.update');
                 // Route::get('/delete/{id}', 'UserDelete')->name('delete');
             },
         );
+
+        // Package Booking Invoice
+        Route::get('/package-booking/invoice/{id}', [AgentManageController::class, 'ViewInvoice'])->name('package_booking.invoice.view');
     },
 );
 

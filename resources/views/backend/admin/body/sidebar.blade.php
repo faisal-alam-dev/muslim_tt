@@ -119,7 +119,7 @@
             </li>
 
             {{-- Site Settings --}}
-            <li class="dropdown {{ request()->routeIs('admin.setting.font-awesome') ? 'active' : '' }}">
+            <li class="dropdown {{ request()->routeIs(['admin.setting.edit', 'admin.setting.font-awesome']) ? 'active' : '' }}">
                 <a href="#" class="menu-toggle nav-link has-dropdown">
                     <i data-feather="settings"></i>
                     <span>Settings</span>
@@ -127,7 +127,7 @@
                 <ul class="dropdown-menu">
                     <li><a class="nav-link" href="{{ route('admin.setting.edit', siteSetting()->id) }}">Site Setting</a></li>
                     <li><a class="nav-link" href="{{ route('admin.setting.font-awesome') }}">FontAwesome</a></li>
-                </ul>
+                </ul> 
             </li>
 
         </ul>
