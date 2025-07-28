@@ -3,6 +3,8 @@
 namespace App\Http\Controllers\Agent;
 
 use App\Http\Controllers\Controller;
+use App\Models\Package;
+use App\Models\PackageConfirmation;
 use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -17,8 +19,30 @@ class AgentController extends Controller
 {
     public function AgentDashboard()
     {
-        if (Auth::check() && Auth::user()->role === 'agent' && Auth::user()->status === 'active') {
-            return view('agent.index');
+        if (Auth::check() && Auth::user()->role === 'agent') {
+            $packages = Package::where('package_status', 'active')
+                ->latest()
+                ->get();
+
+            $package_booking_pending = PackageConfirmation::where('user_type', 'agent')
+                ->where('created_by', Auth::user()->id)
+                ->where('status', 'pending')
+                ->latest()
+                ->get();
+
+            $package_booking_confirmed = PackageConfirmation::where('user_type', 'agent')
+                ->where('created_by', Auth::user()->id)
+                ->where('status', 'confirmed')
+                ->latest()
+                ->get();
+
+            $agent_package_booking_list = PackageConfirmation::where('user_type', 'agent')
+                ->where('created_by', Auth::user()->id)
+                ->orderBy('id', 'desc')
+                ->limit(10)
+                ->get();
+
+            return view('agent.index', compact('packages', 'package_booking_pending', 'package_booking_confirmed', 'agent_package_booking_list'));
         }
         return redirect()->route('agent.login')->withErrors('Unauthorized access.');
     } // End Method
