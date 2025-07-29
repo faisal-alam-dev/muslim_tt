@@ -109,7 +109,6 @@ class SliderController extends Controller
                 'id' => 'required|integer',
                 // 'title' => 'required|max:100',
                 // 'link' => 'required|max:100',
-                'status' => 'required',
                 'slider_image' => 'image|max:1024',
             ],
             [
@@ -117,7 +116,6 @@ class SliderController extends Controller
                 // 'title.max' => 'Title is too long',
                 // 'link.required' => 'Link is required',
                 // 'link.max' => 'Link is too long',
-                'status.required' => 'Status is required',
                 'slider_image.image' => 'Slider Image must be an image',
                 'slider_image.max' => 'Slider Image must be less than 1MB',
             ],
@@ -131,7 +129,6 @@ class SliderController extends Controller
             $data->title = $request->title;
             $data->short_description = $request->short_description;
             $data->link = $request->link;
-            $data->status = $request->status;
             $data->created_by = null;
             $data->updated_by = Auth::user()->id;
 
@@ -186,6 +183,25 @@ class SliderController extends Controller
             Log::error('Error occurred while deleting slider: ' . $e->getMessage());
 
             return redirect()->back()->with('error', 'Something Went Wrong!');
+        }
+    } // End Method
+
+    public function StatusUpdate(Request $request)
+    {
+        try {
+            DB::beginTransaction();
+
+            $data = Slider::findOrFail($request->id);
+            $data->status = $request->status;
+            $data->save();
+
+            DB::commit();
+
+            return redirect()->back()->with('success', 'Status Updated Successfully');
+        } catch (\Exception $e) {
+            DB::rollBack();
+            Log::error('Error occurred while updating status: ' . $e->getMessage());
+            return redirect()->back()->with('error', 'Something went wrong!');
         }
     } // End Method
 }

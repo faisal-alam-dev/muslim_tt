@@ -159,6 +159,7 @@ Route::group(
                 Route::get('/edit/{id}', 'SliderEdit')->name('edit');
                 Route::post('/update', 'SliderUpdate')->name('update');
                 Route::get('/delete/{id}', 'SliderDelete')->name('delete');
+                Route::post('/status-update', 'StatusUpdate')->name('status.update');
             },
         );
 

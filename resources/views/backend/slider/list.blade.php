@@ -66,10 +66,18 @@
                                                     </td>
                                                     <td>
                                                         <div class="table_actions d-flex gap-2">
+                                                            {{-- Status Update --}}
+                                                            <a href="#" class="btn btn-outline-secondary statusBtn" data-bs-toggle="modal" data-bs-target="#statusUpdateModal" data-id="{{ $item->id }}" alt="Update Status" title="Update Status">
+                                                                <i class="fa-solid fa-rotate"></i>
+                                                            </a>
                                                             {{-- Edit --}}
-                                                            <a href="{{ route('admin.slider.edit', $item->id) }}" class="btn btn-outline-warning" alt="Edit Item" title="Edit Item"><i class="far fa-edit"></i></a>
+                                                            <a href="{{ route('admin.slider.edit', $item->id) }}" class="btn btn-outline-warning" alt="Edit Item" title="Edit Item">
+                                                                <i class="far fa-edit"></i>
+                                                            </a>
                                                             {{-- Delete --}}
-                                                            <a href="#!" class="btn btn-outline-danger" data-del="{{ route('admin.slider.delete', $item->id) }}" data-bs-toggle="modal" data-bs-target="#slider_delete_modal" data-id="{{ $item->id }}" data-name="{{ $item->title }}" alt="Delete Item" title="Delete Item"><i class="far fa-trash-alt"></i></a>
+                                                            <a href="#!" class="btn btn-outline-danger" data-del="{{ route('admin.slider.delete', $item->id) }}" data-bs-toggle="modal" data-bs-target="#slider_delete_modal" data-id="{{ $item->id }}" data-name="{{ $item->title }}" alt="Delete Item" title="Delete Item">
+                                                                <i class="far fa-trash-alt"></i>
+                                                            </a>
                                                         </div>
                                                     </td>
                                                 </tr>
@@ -94,6 +102,36 @@
 
     </div>
 
+    <!-- Status Update Modal -->
+    <div class="modal fade" id="statusUpdateModal" tabindex="-1" aria-labelledby="statusUpdateModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="statusUpdateModalLabel">Update Booking Status</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <form id="packageStatusForm" action="{{ route('admin.slider.status.update') }}" method="post">
+                    <div class="modal-body">
+                        @csrf
+                        <input type="hidden" name="id" id="package_id">
+                        <div class="form-group">
+                            <label for="status_select">Status</label>
+                            <select class="form-control selectric" name="status" id="status_select">
+                                <option value="" disabled selected>- SELECT STATUS -</option>
+                                <option value="active">Active</option>
+                                <option value="inactive">Inactive</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        <button type="submit" class="btn btn-primary">Submit</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
     {{-- Delete Modal --}}
     <div class="modal fade" id="slider_delete_modal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered">
@@ -116,6 +154,17 @@
 @endsection
 
 @section('footer_script')
+    {{-- Status Update Modal Logic --}}
+    <script>
+        var statusUpdateModal = document.getElementById('statusUpdateModal');
+        statusUpdateModal.addEventListener('show.bs.modal', function(event) {
+            const button = event.relatedTarget;
+            const packageId = button.getAttribute('data-id');
+            document.getElementById('package_id').value = packageId;
+        });
+    </script>
+
+    {{-- Delete Modal Logic --}}
     <script>
         $('#slider_delete_modal').on('show.bs.modal', function(event) {
             var button = $(event.relatedTarget)

@@ -67,22 +67,6 @@
 
                                     <div class="form-group row mb-4">
                                         <div class="col-md-8">
-                                            <label class="col-form-label">Status</label>
-                                            <select class="form-control selectric" name="status">
-                                                <option value="">- SELECT STATUS -</option>
-                                                @if (is_array(App\Inc\Settings::getGlobalStatus()))
-                                                    @foreach (App\Inc\Settings::getGlobalStatus() as $statusKey => $statusName)
-                                                        <option value="{{ $statusKey }}" {{ $slider->status == $statusKey ? 'selected' : '' }}>
-                                                            {{ $statusName }}
-                                                        </option>
-                                                    @endforeach
-                                                @endif
-                                            </select>
-                                        </div>
-                                    </div>
-
-                                    <div class="form-group row mb-4">
-                                        <div class="col-md-8">
                                             <label class="col-form-label"></label>
                                             <button class="btn btn-primary">Update</button>
                                         </div>
