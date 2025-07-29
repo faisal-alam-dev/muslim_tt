@@ -1,6 +1,6 @@
 @extends('backend.admin.master')
 
-@section('admin_title', $title )
+@section('admin_title', $title)
 
 @section('admin_content')
 
@@ -31,48 +31,52 @@
                                 <div class="table-responsive">
                                     <form id="deleteSelectedForm" action="{{ route('admin.contact.deleteSelected') }}" method="POST">
                                         @csrf
-                                        <table class="table table-striped table-hover" id="tableExport" style="width:100%;">
-                                            <thead>
-                                                <tr>
-                                                    <th>
-                                                        <input type="checkbox" id="selectAll" />
-                                                    </th>
-                                                    <th>Name</th>
-                                                    <th>Email</th>
-                                                    <th>Phone</th>
-                                                    <th>Action</th>
-                                                </tr>
-                                            </thead>
-
-                                            <tbody>
-                                                @foreach ($contact_message as $key => $item)
+                                        <div style="overflow-x: auto;">
+                                            <table class="table table-striped table-hover" id="tableExport" style="width:100%;">
+                                                <thead>
                                                     <tr>
-                                                        <td>
-                                                            <input type="checkbox" class="selectItem" name="ids[]" value="{{ $item->id }}">
-                                                        </td>
-                                                        <td>{{ $item->name }}</td>
-                                                        <td>{{ $item->email }}</td>
-                                                        <td>{{ $item->phone }}</td>
-                                                        <td>
-                                                            <div class="table_actions">
-                                                                <a href="#" class="btn btn-outline-primary" data-bs-toggle="modal" data-bs-target="#contactMessageModal" data-subject="{{ $item->subject }}" data-message="{{ $item->message }}">
-                                                                    <i class="fas fa-eye"></i> View Message
-                                                                </a>
-
-                                                                <a href="{{ route('admin.contact.delete', $item->id) }}" class="btn btn-outline-danger">
-                                                                    <i class="fas fa-trash"></i> Delete
-                                                                </a>
-                                                            </div>
-                                                        </td>
+                                                        <th>
+                                                            <input type="checkbox" id="selectAll" />
+                                                        </th>
+                                                        <th>Name</th>
+                                                        <th>Email</th>
+                                                        <th>Phone</th>
+                                                        <th>Action</th>
                                                     </tr>
-                                                @endforeach
-                                            </tbody>
-                                        </table>
+                                                </thead>
 
-                                        <button type="submit" class="btn btn-outline-danger" id="deleteSelectedButton" disabled>Delete Selected</button>
+                                                <tbody>
+                                                    @foreach ($contact_message as $key => $item)
+                                                        <tr>
+                                                            <td>
+                                                                <input type="checkbox" class="selectItem" name="ids[]" value="{{ $item->id }}">
+                                                            </td>
+                                                            <td>{{ $item->name }}</td>
+                                                            <td>{{ $item->email }}</td>
+                                                            <td>{{ $item->phone }}</td>
+                                                            <td>
+                                                                <div class="table_actions">
+                                                                    {{-- View Contact Message --}}
+                                                                    <a href="#" class="btn btn-outline-success view-package-details" data-bs-toggle="modal" data-bs-target="#contactMessageModal" data-package="{{ json_encode($item) }}" alt="View Contact Message Details" title="View Contact Message Details">
+                                                                        <i class="fas fa-eye"></i>
+                                                                    </a>
+                                                                    {{-- Delete --}}
+                                                                    <a href="#" class="btn btn-outline-danger delete-package-booking" data-bs-toggle="modal" data-bs-target="#deleteConfirmationModal" data-delete-url="{{ route('admin.contact.delete', $item->id) }}" alt="Delete Contact Message" title="Delete Contact Message">
+                                                                        <i class="fas fa-trash"></i>
+                                                                    </a>
+                                                                </div>
+                                                            </td>
+                                                        </tr>
+                                                    @endforeach
+                                                </tbody>
+                                            </table>
+                                        </div>
+
+                                        <button type="button" class="btn btn-outline-danger" id="deleteSelectedButton" data-bs-toggle="modal" data-bs-target="#deleteSelectedConfirmationModal" disabled>Delete Selected</button>
+
                                     </form>
-                                </div>
 
+                                </div>
 
                             </div>
 
@@ -88,19 +92,30 @@
 
     </div>
 
-
-    <!-- Modal -->
-    <div class="modal fade" id="contactMessageModal" tabindex="-1" aria-labelledby="contactMessageModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-scrollable">
+    <!--View Contact Message Modal -->
+    <div class="modal fade" id="contactMessageModal" tabindex="-1" aria-labelledby="contactMessageModalLabel" aria-hidden="true" style="max-height: 80vh; overflow-y: auto;">
+        <div class="modal-dialog modal-lg modal-dialog-scrollable">
             <div class="modal-content">
                 <div class="modal-body mt-4">
                     <div>
+                        <h6>Name:</h6>
+                        <p id="modal-name"></p>
+                    </div>
+                    <div>
+                        <h6>Email:</h6>
+                        <p id="modal-email"></p>
+                    </div>
+                    <div>
+                        <h6>Phone:</h6>
+                        <p id="modal-phone"></p>
+                    </div>
+                    <div>
                         <h6>Subject:</h6>
-                        <p id="modal-subject"></p> <!-- Set ID for JavaScript targeting -->
+                        <p id="modal-subject"></p>
                     </div>
                     <div>
                         <h6>Message:</h6>
-                        <p id="modal-message"></p> <!-- Set ID for JavaScript targeting -->
+                        <p id="modal-message"></p>
                     </div>
                 </div>
                 <div class="modal-footer">
@@ -110,31 +125,82 @@
         </div>
     </div>
 
+    <!--Delete Confirmation Modal -->
+    <div class="modal fade" id="deleteConfirmationModal" tabindex="-1" aria-labelledby="deleteConfirmationModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="deleteConfirmationModalLabel">Confirm Deletion</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    Are you sure you want to delete this contact message?
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                    <a href="#" id="confirmDeleteButton" class="btn btn-danger">Delete</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--Delete Selected Confirmation Modal -->
+    <div class="modal fade" id="deleteSelectedConfirmationModal" tabindex="-1" aria-labelledby="deleteSelectedConfirmationModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="deleteSelectedConfirmationModalLabel">Confirm Deletion</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    Are you sure you want to delete all selected bookings?
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                    <button type="button" id="confirmDeleteSelectedBtn" class="btn btn-danger">Delete</button>
+                </div>
+            </div>
+        </div>
+    </div>
 
 
 @endsection
 
 @section('footer_script')
+    {{-- Contact Message Modal Logic --}}
     <script>
         var contactMessageModal = document.getElementById('contactMessageModal');
         contactMessageModal.addEventListener('show.bs.modal', function(event) {
-            // Button that triggered the modal
-            var button = event.relatedTarget;
+            const button = event.relatedTarget; // Button that triggered the modal
+            const packageData = JSON.parse(button.getAttribute('data-package'));
 
-            // Extract info from data-* attributes
-            var subject = button.getAttribute('data-subject');
-            var message = button.getAttribute('data-message');
+            // Populate modal fields
+            document.getElementById('modal-name').textContent = packageData.name;
+            document.getElementById('modal-email').textContent = packageData.email;
+            document.getElementById('modal-phone').textContent = packageData.phone;
+            document.getElementById('modal-subject').textContent = packageData.subject;
+            document.getElementById('modal-message').textContent = packageData.message;
 
-            // Update the modal's content
-            var modalSubject = contactMessageModal.querySelector('#modal-subject');
-            var modalMessage = contactMessageModal.querySelector('#modal-message');
+        });
 
-            // Set the text content for subject and message
-            modalSubject.textContent = subject;
-            modalMessage.textContent = message;
+        // Helper function to strip HTML tags
+        function stripHtml(html) {
+            let doc = new DOMParser().parseFromString(html, 'text/html');
+            return doc.body.textContent || "";
+        }
+    </script>
+
+    {{-- Delete Modal Logic --}}
+    <script>
+        var deleteConfirmationModal = document.getElementById('deleteConfirmationModal');
+        deleteConfirmationModal.addEventListener('show.bs.modal', function(event) {
+            const button = event.relatedTarget;
+            const deleteUrl = button.getAttribute('data-delete-url');
+            document.getElementById('confirmDeleteButton').setAttribute('href', deleteUrl);
         });
     </script>
 
+    {{-- Select All Checkbox Logic --}}
     <script>
         document.getElementById('selectAll').addEventListener('change', function() {
             let checkboxes = document.querySelectorAll('.selectItem');
@@ -154,5 +220,12 @@
             let selectedItems = document.querySelectorAll('.selectItem:checked').length;
             document.getElementById('deleteSelectedButton').disabled = selectedItems === 0;
         }
+    </script>
+
+    {{-- Bulk Delete Modal Logic --}}
+    <script>
+        document.getElementById('confirmDeleteSelectedBtn').addEventListener('click', function() {
+            document.getElementById('deleteSelectedForm').submit();
+        });
     </script>
 @endsection
