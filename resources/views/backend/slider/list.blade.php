@@ -19,7 +19,7 @@
                             <div class="card-header d-flex justify-content-between">
                                 <h4>{{ $title }}</h4>
                                 <h4>
-                                    <a href="{{ route('admin.slider.add') }}" class="btn btn-outline-primary"><i class="fas fa-plus"></i> Add</a>
+                                    <a href="{{ route('admin.slider.add') }}" class="btn btn-outline-primary" alt="Add Item" title="Add Item"><i class="fas fa-plus"></i> Add</a>
                                     <a href="{{ URL::previous() }}" class="btn btn-outline-dark"><i class="fas fa-arrow-left"></i> Back</a>
                                 </h4>
                             </div>
@@ -66,8 +66,10 @@
                                                     </td>
                                                     <td>
                                                         <div class="table_actions d-flex gap-2">
-                                                            <a href="{{ route('admin.slider.edit', $item->id) }}" class="btn btn-outline-primary" alt="Edit" title="Edit"><i class="far fa-edit"></i></a>
-                                                            <a href="#!" class="btn btn-outline-danger" data-del="{{ route('admin.slider.delete', $item->id) }}" data-bs-toggle="modal" data-bs-target="#slider_delete_modal" data-id="{{ $item->id }}" data-name="{{ $item->title }}" alt="Delete" title="Delete"><i class="far fa-trash-alt"></i></a>
+                                                            {{-- Edit --}}
+                                                            <a href="{{ route('admin.slider.edit', $item->id) }}" class="btn btn-outline-warning" alt="Edit Item" title="Edit Item"><i class="far fa-edit"></i></a>
+                                                            {{-- Delete --}}
+                                                            <a href="#!" class="btn btn-outline-danger" data-del="{{ route('admin.slider.delete', $item->id) }}" data-bs-toggle="modal" data-bs-target="#slider_delete_modal" data-id="{{ $item->id }}" data-name="{{ $item->title }}" alt="Delete Item" title="Delete Item"><i class="far fa-trash-alt"></i></a>
                                                         </div>
                                                     </td>
                                                 </tr>

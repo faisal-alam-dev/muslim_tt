@@ -81,7 +81,7 @@
                                                             <td>
                                                                 <div class="table_actions">
                                                                     {{-- Status Update --}}
-                                                                    <a href="#" class="btn btn-outline-primary statusBtn" data-bs-toggle="modal" data-bs-target="#statusUpdateModal" data-id="{{ $item->id }}" alt="Update Package Booking Status" title="Update Package Booking Status">
+                                                                    <a href="#" class="btn btn-outline-secondary statusBtn" data-bs-toggle="modal" data-bs-target="#statusUpdateModal" data-id="{{ $item->id }}" alt="Update Package Booking Status" title="Update Package Booking Status">
                                                                         <i class="fa-solid fa-rotate"></i>
                                                                     </a>
                                                                     {{-- View Booking Details --}}

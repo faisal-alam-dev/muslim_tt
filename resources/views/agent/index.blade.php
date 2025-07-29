@@ -104,7 +104,7 @@
                             <div class="card-header d-flex justify-content-between">
                                 <h4>Agent Package Booking List</h4>
                                 <h4>
-                                    <a href="{{ route('agent.package_booking.list') }}" class="btn btn-outline-dark"><i class="fas fa-eye"></i> View All</a>
+                                    <a href="{{ route('agent.package_booking.list') }}" class="btn btn-outline-success"><i class="fas fa-eye"></i> View All</a>
                                 </h4>
                             </div>
 

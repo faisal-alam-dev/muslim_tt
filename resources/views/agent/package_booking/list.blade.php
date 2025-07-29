@@ -96,7 +96,7 @@
                                                                 </a>
                                                                 {{-- Edit --}}
                                                                 @if ($item->status == 'pending')
-                                                                    <a href="{{ route('agent.package_booking.edit', $item->id) }}" class="btn btn-outline-primary" alt="Edit Package Booking" title="Edit Package Booking">
+                                                                    <a href="{{ route('agent.package_booking.edit', $item->id) }}" class="btn btn-outline-warning" alt="Edit Package Booking" title="Edit Package Booking">
                                                                         <i class="far fa-edit"></i>
                                                                     </a>
                                                                 @endif

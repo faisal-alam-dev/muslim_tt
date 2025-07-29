@@ -49,7 +49,8 @@
                                                     <td>{!! $item->description !!}</td>
                                                     <td>
                                                         <div class="table_actions">
-                                                            <a href="{{ route('admin.about-us.edit', $item->id) }}" class="btn btn-outline-primary" alt="Edit" title="Edit"><i class="far fa-edit"></i></a>
+                                                            {{-- Edit --}}
+                                                            <a href="{{ route('admin.about-us.edit', $item->id) }}" class="btn btn-outline-warning" alt="Edit Item" title="Edit Item"><i class="far fa-edit"></i></a>
                                                         </div>
                                                     </td>
                                                 </tr>

@@ -19,7 +19,7 @@
                             <div class="card-header d-flex justify-content-between">
                                 <h4>{{ $title }}</h4>
                                 <h4>
-                                    <a href="{{ route('admin.users.add') }}" class="btn btn-outline-primary"><i class="fas fa-plus"></i> Add</a>
+                                    <a href="{{ route('admin.users.add') }}" class="btn btn-outline-primary" alt="Add Agent" title="Add Agent"><i class="fas fa-plus"></i> Add</a>
                                     <a href="{{ URL::previous() }}" class="btn btn-outline-dark"><i class="fas fa-arrow-left"></i> Back</a>
                                 </h4>
                             </div>
@@ -73,11 +73,11 @@
                                                     <td>
                                                         <div class="table_actions d-flex gap-2">
                                                             {{-- Status Update --}}
-                                                            <a href="#" class="btn btn-outline-primary statusBtn" data-bs-toggle="modal" data-bs-target="#statusUpdateModal" data-id="{{ $item->id }}" alt="Update Agent Status" title="Update Agent Status">
-                                                                <i class="fa-solid fa-arrows-to-eye"></i>
+                                                            <a href="#" class="btn btn-outline-secondary statusBtn" data-bs-toggle="modal" data-bs-target="#statusUpdateModal" data-id="{{ $item->id }}" alt="Update Agent Status" title="Update Agent Status">
+                                                                <i class="fa-solid fa-rotate"></i>
                                                             </a>
                                                             {{-- View Agent Package Booking List --}}
-                                                            <a href="{{ route('admin.agent.package_booking_list', $item->id) }}" class="btn btn-outline-dark" alt="View Package Booking List" title="View Agent Package Booking List">
+                                                            <a href="{{ route('admin.agent.package_booking_list', $item->id) }}" class="btn btn-outline-success" alt="View Package Booking List" title="View Agent Package Booking List">
                                                                 <i class="fas fa-eye"></i>
                                                             </a>
                                                             {{-- Delete --}}
